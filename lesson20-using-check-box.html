@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Start learning Visual Studio 2013
+
+
+</title>
+
+
+
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<ARTICLE class="post-4765 page type-page status-publish hentry" id="post-4765"><HEADER class="entry-header">
+<h1 class="auto-style1"><strong>Visual Studio 2013
+
+
+ Lesson 20: Using Check Box</strong></h1>
+</HEADER>
+<div class="auto-style1">
+	<h2 class="auto-style2">
+	<a class="auto-style1" href="lesson19-formatting-functions.html"><strong>[Lesson 19] 
+	</strong></a><strong>&lt;&lt;
+	</strong><a class="auto-style1href=" href="index.html" Index.html"="">
+	<strong>[Contents]</strong></a><strong> &gt;&gt;
+	</strong><a class="auto-style1" href="lesson21-using-radio-button.html">
+	<strong>[Lesson 21]</strong></a></h2>
+	<div id="mycontent" class="auto-style1">
+		<div class="auto-style1">
+			We have learned how to use some of the controls in Visual Studio 2013
+
+
+ 
+			in lesson 5, lesson 6 and lesson 7. In this lesson, we shall learn a 
+			very useful control in Visual Studio 2013
+
+
+, the check box. The&nbsp;Check 
+			box allows the user to select one or more items by checking the 
+			check box or check boxes concerned. For example, in the Font dialog 
+			box of any Microsoft Text editor like FrontPage, there are 
+			many&nbsp;check boxes&nbsp;under the Effects section such as that shown in the 
+			diagram below. The user can choose underline, subscript, small caps, 
+			superscript, blink and etc. In Visual Studio 2013
+
+
+, you may create a 
+			shopping cart where the user can click on&nbsp;check boxes&nbsp;that 
+			correspond to the items they intend to buy, and the total payment 
+			can be computed at the same time.</div>
+		<div class="auto-style1">
+			<br />
+	<p class="auto-style1"><strong class="auto-style1">Example 20.1: Shopping 
+	Cart</strong></p>
+	<p class="auto-style1">In this example, we add a few labels, two buttons and 
+	six check boxes. We declare the price of each item using the Const keyword. 
+	If a check box is being ticked, its state is True else its state is False. 
+	To calculate the total amount of purchase, we use the mathematical operator 
+	+=. For example, sum+=BN is actually sum=sum+BN. Finally, we use the 
+	ToString method to display the the amount in currency.</p>
+	<p class="auto-style1"><strong class="auto-style1">
+	<span class="auto-style5">The Code</span></strong></p>
+	<p class="auto-style1"><strong>Public Class Form1</strong></p>
+	<p class="auto-style1"><strong>Private Sub BtnCal_Click(sender As Object, e As 
+	EventArgs) Handles BtnCal.Click<br />
+	Const LX As Integer = 100<br />
+	Const BN As Integer = 500<br />
+	Const SD As Integer = 200<br />
+	Const HD As Integer = 80<br />
+	Const HM As Integer = 300<br />
+	Const AM As Integer = 150<br />
+	Dim sum As Integer<br />
+	If CheckBox1.Checked = True Then<br />
+	sum += LX<br />
+	End If</strong></p>
+	<p class="auto-style1"><strong>If CheckBox2.Checked = True Then<br />
+	sum += BN<br />
+	End If</strong></p>
+	<p class="auto-style1"><strong>If CheckBox3.Checked = True Then<br />
+	sum += SD<br />
+	End If<br />
+	If CheckBox4.Checked = True Then<br />
+	sum += HD<br />
+	End If</strong></p>
+	<p class="auto-style1"><strong>If CheckBox5.Checked = True Then<br />
+	sum += HM<br />
+	End If</strong></p>
+	<p class="auto-style1"><strong>If CheckBox6.Checked = True Then<br />
+	sum += AM<br />
+	End If<br />
+	LblTotal.Text = sum.ToString(“c”)<br />
+	End Sub</strong></p>
+	<p class="auto-style1"><strong>Private Sub BtnReset_Click(sender As Object, e As 
+	EventArgs) Handles BtnReset.Click<br />
+	CheckBox1.Checked = False<br />
+	CheckBox2.Checked = False<br />
+	CheckBox3.Checked = False<br />
+	CheckBox4.Checked = False<br />
+	CheckBox5.Checked = False<br />
+	CheckBox6.Checked = False</strong></p>
+	<p class="auto-style1"><strong>End Sub<br />
+	End Class</strong></p>
+	<p class="auto-style1">The Runtime Interface<br />
+	<a class="auto-style1" href="Images/vb2013_figure20.11.jpg">
+	<img alt="vb2013_figure20.1" class="auto-style1" height="353" src="Images/vb2013_figure20.11.jpg" width="553" /></a></p>
+	<p class="auto-style2">&nbsp;<strong class="auto-style1">Figure 20.1: Shopping 
+	Cart</strong></p>
+	<p class="auto-style1">&nbsp;</p>
+	<p class="auto-style1">Here is another example</p>
+	<p class="auto-style1"><strong class="auto-style1">Example 20.2</strong></p>
+	<p class="auto-style1"><strong>Private Sub Button1_Click(ByVal sender As 
+	System.Object, ByVal e As System.EventArgs) Handles Button1.Click</strong></p>
+	<p class="auto-style1"><strong>Const large As Integer = 10.0<br />
+	Const medium As Integer = 8<br />
+	Const small As Integer = 5<br />
+	Dim sum As Integer</strong></p>
+	<p class="auto-style1"><strong>If CheckBox1.Checked = True Then<br />
+	sum += large<br />
+	End If</strong></p>
+	<p class="auto-style1"><strong>If CheckBox2.Checked = True Then<br />
+	sum += medium<br />
+	End If</strong></p>
+	<p class="auto-style1"><strong>If CheckBox3.Checked = True Then<br />
+	sum += small<br />
+	End If<br />
+	Label5.Text = sum.ToString(“c”)</strong></p>
+	<p class="auto-style1"><strong>End Sub</strong></p>
+	<p class="auto-style1"><strong class="auto-style1">Example 20.3</strong></p>
+	<p class="auto-style1">In this example, the text on the label can be 
+	formatting using the three check boxes that represent bold, italic and 
+	underline.</p>
+	<p class="auto-style1"><strong class="auto-style1">The Code</strong></p>
+	<p class="auto-style1"><strong>Public Class Form1</strong></p>
+	<p class="auto-style1"><strong>Private Sub ChkBold_CheckedChanged(sender As Object, 
+	e As EventArgs) Handles ChkBold.CheckedChanged<br />
+	If ChkBold.Checked Then<br />
+	LblDisplay.Font = New Font(LblDisplay.Font, LblDisplay.Font.Style Or 
+	FontStyle.Bold)<br />
+	Else<br />
+	LblDisplay.Font = New Font(LblDisplay.Font, LblDisplay.Font.Style And Not 
+	FontStyle.Bold)</strong></p>
+	<p class="auto-style1"><strong>End If<br />
+	End Sub</strong></p>
+	<p class="auto-style1"><strong>Private Sub ChkItalic_CheckedChanged(sender As 
+	Object, e As EventArgs) Handles ChkItalic.CheckedChanged<br />
+	If ChkItalic.Checked Then<br />
+	LblDisplay.Font = New Font(LblDisplay.Font, LblDisplay.Font.Style Or 
+	FontStyle.Italic)<br />
+	Else<br />
+	LblDisplay.Font = New Font(LblDisplay.Font, LblDisplay.Font.Style And Not 
+	FontStyle.Italic)</strong></p>
+	<p class="auto-style1"><strong>End If<br />
+	End Sub</strong></p>
+	<p class="auto-style1"><strong>Private Sub ChkUnder_CheckedChanged(sender As Object, 
+	e As EventArgs) Handles ChkUnder.CheckedChanged<br />
+	If ChkUnder.Checked Then<br />
+	LblDisplay.Font = New Font(LblDisplay.Font, LblDisplay.Font.Style Or 
+	FontStyle.Underline)<br />
+	Else<br />
+	LblDisplay.Font = New Font(LblDisplay.Font, LblDisplay.Font.Style And Not 
+	FontStyle.Underline)</strong></p>
+	<p class="auto-style1"><strong>End If<br />
+	End Sub<br />
+	End Class</strong></p>
+	<p class="auto-style1">* The above program uses the CheckedChanged event to 
+	respond to the user selection by checking a particular check box, it is 
+	similar to the click event. The statement</p>
+	<p class="auto-style1">LblDisplay.Font = New Font(LblDisplay.Font, 
+	LblDisplay.Font.Style Or FontStyle.Italic)</p>
+	<p class="auto-style1">will retain the original font type but change it to 
+	italic font style.</p>
+	<p class="auto-style1">LblDisplay.Font = New Font(LblDisplay.Font, 
+	LblDisplay.Font.Style And Not FontStyle.Italic)</p>
+	<p class="auto-style1">will also retain the original font type but change it 
+	to regular font style. (The other statements employ the same logic)</p>
+	<p class="auto-style1">The Output</p>
+	<div id="mycontent0" class="auto-style1">
+		<div class="auto-style1">
+			<a class="auto-style1" href="Images/vb2013_figure20.2.jpg">
+			<img alt="vb2013_figure20.2" class="auto-style1" height="300" src="Images/vb2013_figure20.2.jpg" width="300" /></a><p class="auto-style1">
+			</p>
+			<p class="auto-style2"><strong class="auto-style1">Figure 20.2</strong></p>
+		</div>
+		
+	<h2 class="auto-style2">
+	<a class="auto-style1" href="lesson19-formatting-functions.html"><strong>[Lesson 19]&nbsp;</strong></a><strong>&lt;&lt;&nbsp;</strong><a class="auto-style1href=" href="index.html" Index.html"=""><strong>[Contents]</strong></a><strong>&nbsp;&gt;&gt;
+	</strong><a class="auto-style1" href="lesson21-using-radio-button.html">
+	<strong>[Lesson 21]</strong></a></h2>
+</div>
+
+</body>
+
+</html>

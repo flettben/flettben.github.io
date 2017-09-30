@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.auto-style1 {
+	font-size: large;
+}
+.auto-style2 {
+	font-family: "trebuchet ms", arial, sans-serif;
+	font-size: large;
+	color: rgb(85, 85, 85);
+}
+.auto-style4 {
+	color: rgb(0, 198, 240);
+	text-decoration: underline;
+}
+.auto-style5 {
+	font-size: x-large;
+	color: black;
+}
+.auto-style6 {
+	color: rgb(26, 169, 90);
+}
+.auto-style7 {
+	color: rgb(26, 37, 169);
+}
+</style>
+</head>
+
+<body>
+
+<ARTICLE class="post-4048 page type-page status-publish hentry" id="post-4048"><HEADER class="entry-header">
+<h1 class="auto-style1"><strong>Visual Studio 2013 Lesson : Import TXT file</strong></h1>
+</HEADER>
+<div class="auto-style1">
+	<h2 class="auto-style2"><strong class="auto-style1">
+	<a class="auto-style1" href="Lesson%2040-Implicit%20Explicit%20Declarations.html">[Lesson 
+	40]&nbsp;</a><span class="auto-style4">&lt;&lt;</span><a class="auto-style1" href="index.html">[Contents]</a>&nbsp;<a class="auto-style1" href="Lesson%2043-Import%20CSV%20File.html">&gt;&gt;[Lesson 
+	42]</a></strong></h2>
+	<div>
+		<span class="rdf-meta element-hidden" content="The System Life Cycle" property="dc:title">
+		</span>
+		<span class="rdf-meta element-hidden" content="0" datatype="xsd:integer" property="sioc:num_replies">
+		</span>
+		<div class="content">
+			<div class="field field-name-body field-type-text-with-summary field-label-hidden">
+				<div class="field-items">
+					<div class="field-item even" property="content:encoded">
+						<h2 style="font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;" class="auto-style5">
+						<strong>Import TXT file</strong></h2>
+						<p style="margin: 1em 0px 5px; font-size: 0.9em; line-height: 1.25em; color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+						Visual Studio features a command line that allows data to 
+						be imported from various file types. <br />
+						Streamreader reads the files and adds the data to 
+						assigned objcets, strings or arrays. </p>
+						<p style="margin: 1em 0px 5px; font-size: 0.9em; line-height: 1.25em; color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+						The coding shown imports a TXt (text file). Note the 
+						data in the text file is separated to smaller strings 
+						using the (,) comma. <br />
+						The following coding imports a TXT file,assigns each </p>
+						<p style="margin: 1em 0px 5px; font-size: 0.9em; line-height: 1.25em; color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+						<span class="auto-style6">&#39;importing this allows us to 
+						use streamwriter without typing import System.io before 
+						each instance of StreamWriter</span><br />
+						<span class="auto-style7">Imports System.IO</span><br />
+						<span class="auto-style6">&#39;public class form</span><br />
+						<span class="auto-style7">Public Class Form1</span><br />
+						<span class="auto-style6">‘Declare variables for use in 
+						whole program Universal variables”</span><br />
+						<span class="auto-style7">Dim</span> Array1() As String<br />
+						<span class="auto-style7">Dim</span> Array2() As String<br />
+						<br />
+						<br />
+						<span class="auto-style6">&#39;Read data from external file</span><br />
+						Private Sub Button1_Click(sender As Object, e As 
+						EventArgs) Handles Button1.Click<br />
+						<span class="auto-style6">&#39;Use IO reader to open file, 
+						identify file name and path). </span><br />
+						Using ioReader As New 
+						Microsoft.VisualBasic.FileIO.TextFieldParser(&quot;G:\Folder\TXT_folder\Test.txt&quot;)<br />
+						<span class="auto-style6">&#39;Identify the file as a comma 
+						delimited file</span><br />
+						<br />
+						ioReader.TextFieldType = FileIO.FieldType.Delimited<br />
+						ioReader.SetDelimiters(&quot;,&quot;)<br />
+						<br />
+						While Not ioReader.EndOfData<br />
+						<span class="auto-style6">&#39;declare variable 
+						“arrCurrentRow as a string field for IO reader</span><br />
+						<span class="auto-style7">Dim</span> arrCurrentRow As 
+						String() = ioReader.ReadFields()<br />
+						<br />
+&nbsp;&nbsp;&nbsp; <span class="auto-style7">If</span> Array1 Is Nothing Then<br />
+						<span class="auto-style6">‘ ReDim statement to change 
+						the size of one or more dimensions of an array that has 
+						already been declared.</span><br />
+&nbsp;&nbsp;&nbsp; ReDim Preserve Array1(0)<br />
+&nbsp;&nbsp;&nbsp; ReDim Preserve Array2(0)<br />
+						<br />
+						<span class="auto-style6">‘ assign strings form array to 
+						different rows</span><br />
+&nbsp;&nbsp;&nbsp; Array1(0) = arrCurrentRow(0)<br />
+&nbsp;&nbsp;&nbsp; Array2(0) = arrCurrentRow(1)<br />
+						<br />
+&nbsp;&nbsp;&nbsp; <span class="auto-style7">Else</span><br />
+						<span class="auto-style6">‘assign size to the length of 
+						the string</span><br />
+&nbsp;&nbsp;&nbsp; ReDim Preserve Array1(Array1.Length)<br />
+&nbsp;&nbsp;&nbsp; ReDim Preserve Array2(Array2.Length)<br />
+						<br />
+						<span class="auto-style6">‘assign the length of the 
+						string to the length – 1, to allow for fact that array 
+						numbering starts at 0</span><br />
+&nbsp;&nbsp;&nbsp; Array1((Array1.Length - 1)) = arrCurrentRow(0)<br />
+&nbsp;&nbsp;&nbsp; Array2((Array2.Length - 1)) = arrCurrentRow(1)<br />
+						<br />
+						<span class="auto-style7">End If</span><br />
+						<br />
+						End While<br />
+						End Using<br />
+						<br />
+						<span class="auto-style6">‘ read the string according to 
+						assigned rows and add to listBoxes identified. This 
+						shows each column of the data file in a different list 
+						box</span><br />
+						ListBox1.Items.Clear()<br />
+&nbsp;&nbsp;&nbsp; For Each obj As Object In Array1<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ListBox1.Items.Add(obj)<br />
+&nbsp;&nbsp;&nbsp; Next<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ListBox2.Items.Clear()<br />
+&nbsp;&nbsp;&nbsp; For Each obj2 As Object In Array2<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ListBox2.Items.Add(obj2)<br />
+&nbsp;&nbsp;&nbsp; Next<br />
+						<br />
+						End Sub</p>
+						<br />
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<h2 class="auto-style2"><strong class="auto-style1">
+		<a class="auto-style1" href="Lesson%2040-Implicit%20Explicit%20Declarations.html">[Lesson 
+		40]&nbsp;</a><span class="auto-style4">&lt;&lt;</span><a class="auto-style1" href="index.html">[Contents]</a>&nbsp;<a class="auto-style1" href="Lesson%2043-Import%20CSV%20File.html">&gt;&gt;[Lesson 
+		42]</a></strong></h2>
+</div>
+
+
+

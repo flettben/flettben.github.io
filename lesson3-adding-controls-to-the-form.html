@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Start learning Visual Studio 2013
+
+
+</title>
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<ARTICLE class="post-4078 page type-page status-publish hentry" id="post-4078"><HEADER class="entry-header">
+<h1 class="auto-style1"><strong>Visual Studio 2013
+
+
+ Lesson 3: Building the Interface 2- 
+Adding Controls to the Form</strong></h1>
+</HEADER>
+<div class="auto-style1">
+	<h2 class="auto-style2">
+	<a class="auto-style1" href="lesson2-building-a-graphical-user-interface.html">
+	<strong>[Lesson 2] </strong></a><strong>&lt;&lt; 
+	</strong> 
+	<a class="auto-style1" href="index.html"><strong>[Contents]
+	</strong>
+	</a><strong>&gt;&gt;
+	</strong><strong>
+	<a class="auto-style1" href="lesson4-writing-the-code.html">[Lesson 4]</a></strong></h2>
+	<div id="mycontent" class="auto-style1">
+		<div class="auto-style1">
+			In previous lesson, we have learned how to build an initial 
+			interface in Visual Studio 2013
+
+
+ by customizing the default form. In 
+			this lesson, we shall continue to build the interface by adding 
+			controls to the form. There are numerous controls that we can add to 
+			the form. Among the controls, the most common ones are button, 
+			label, text box, list box, combo box, picture box, check box, radio 
+			and more. The controls can be made visible or invisible at runtime. 
+			However, some controls will only run in the background and cannot be 
+			seen at runtime, one such control is the timer.<p class="auto-style1">
+			</p>
+			<p class="auto-style1"><strong class="auto-style1">3.1 Positioning 
+			the Toolbox</strong></p>
+			<p class="auto-style1"><strong class="auto-style1"></strong>The 
+			Toolbox is usually hidden when you start Visual Studio 2013
+
+
+,you need 
+			to click View on the menu bar and then select Toolbox to reveal the 
+			tool box, as shown in Figure 3.1. You can also use shortcut keys 
+			Ctrl+w+x to bring out the tool box.</p>
+		</div>
+		<div class="auto-style1">
+			<br />
+			<!-- Visual Studio 2013
+
+
+ lesson 3 large rect --><br />
+	</div>
+	<p class="auto-style1">
+	<a class="auto-style1" href="http://www.vbtutor.net/wordpress/wp-content/uploads/2014/01/vb2013_figure3.1.jpg">
+	<img alt="vb2013_figure3.1" class="auto-style5" height="692" src="http://www.vbtutor.net/wordpress/wp-content/uploads/2014/01/vb2013_figure3.1.jpg" style="-ms-interpolation-mode: bicubic; max-width: 100%; height: auto; width: auto;" width="960" /></a></p>
+	<p class="auto-style1"><strong class="auto-style1">&nbsp;Figure 3.1</strong></p>
+	<p class="auto-style1">You can position the tool box by dragging it anywhere 
+	you like while its status is set to float. You can also dock the tool box by 
+	right-clicking on the tool box and choose dock from the pop-up menu. The 
+	docked tool box that appears side by side with the default form is as shown 
+	in Figure 3.2.</p>
+	<p class="auto-style1">
+	<a class="auto-style1" href="http://www.vbtutor.net/wordpress/wp-content/uploads/2014/01/vb2013_figure3.2.jpg">
+	<img alt="vb2013_figure3.2" class="auto-style5" height="667" src="http://www.vbtutor.net/wordpress/wp-content/uploads/2014/01/vb2013_figure3.2.jpg" style="-ms-interpolation-mode: bicubic; max-width: 100%; height: auto; width: auto;" width="911" /></a></p>
+	<p class="auto-style1"><strong class="auto-style1">&nbsp;Figure 3.2</strong></p>
+	<p class="auto-style1">You can also dock the tool box at the bottom, below 
+	the default form, as shown in Figure 3.3</p>
+	<p class="auto-style1">
+	<a class="auto-style1" href="http://www.vbtutor.net/wordpress/wp-content/uploads/2014/01/vb2013_figure3.3.jpg">
+	<img alt="vb2013_figure3.3" class="auto-style5" height="667" src="http://www.vbtutor.net/wordpress/wp-content/uploads/2014/01/vb2013_figure3.3.jpg" style="-ms-interpolation-mode: bicubic; max-width: 100%; height: auto; width: auto;" width="813" /></a></p>
+	<p class="auto-style1"><strong class="auto-style6">Figure 3.3</strong></p>
+	<p class="auto-style1">Further, you may also pin the tool box to the side 
+	bar or the bottom bar by clicking on the pin icon on the menu bar of the 
+	tool box.</p>
+	<p class="auto-style1">How and where you want to position your tool box is 
+	entirely up to you but I strongly suggest that you place the tool box along 
+	side or at the bottom of the default form so that it is easy for you to add 
+	controls from the tool box into the form. You should never cover the form 
+	with the tool box because it will be difficult to add controls to the form.</p>
+	<div id="mycontent0" class="auto-style1">
+		<div class="auto-style1">
+			<strong class="auto-style1">3.2 Adding Controls to the Form and 
+			Changing Their Properties</strong><p class="auto-style1"></p>
+			<p class="auto-style1">Adding controls to the form is an easy task, 
+			what you need to do is drag a control from the tool box and drop it 
+			onto the form or draw it on the form. You can drag the control 
+			around the form and you can also resize it easily.</p>
+			<p class="auto-style1"><span class="auto-style6">To demonstrate how 
+			to add controls and then change their properties, we shall design a 
+			picture viewer. First, change the title of the default form to 
+			Picture Viewer in its properties window. Next, insert a picture box 
+			on the form and change its background color to white. To do this, 
+			right click the picture box and select properties in the popup menu, 
+			then look for the BackColor Property as shown in the properties 
+			window below:</span></p>
+		</div>
+		<div class="auto-style1">
+			<br />
+			<!-- Visual Studio 2013
+
+
+ lesson 3 large rect --><br />
+	</div>
+	<p class="auto-style1">
+	<a class="auto-style1" href="http://www.vbtutor.net/wordpress/wp-content/uploads/2014/01/vb2013_figure3.3.2.jpg">
+	<img alt="vb2013_figure3.3.2" class="auto-style5" height="692" src="http://www.vbtutor.net/wordpress/wp-content/uploads/2014/01/vb2013_figure3.3.2.jpg" style="-ms-interpolation-mode: bicubic; max-width: 100%; height: auto; width: auto;" width="960" /></a></p>
+	<p class="auto-style1">Finally , add two buttons to the form and change the 
+	text to View and Close in their respective properties windows. Now, we have 
+	designed a basic picture viewer. We shall add more features later.</p>
+	<p class="auto-style1">The picture viewer is not functional until we write 
+	code to response to events triggered by user. We will deal with the 
+	programming part in the coming lessons.</p>
+	<p class="auto-style1">&nbsp;</p>
+	<h2 class="auto-style2">
+	<a class="auto-style1" href="lesson2-building-a-graphical-user-interface.html">
+	<strong>[Lesson 2]&nbsp;</strong></a><strong>&lt;&lt;</strong><a class="auto-style1" href="index.html"><strong> [Contents]&nbsp;</strong></a><strong>&gt;&gt;&nbsp;</strong><strong><a class="auto-style1" href="lesson4-writing-the-code.html">[Lesson 
+	4]</a></strong></h2>
+</div>
+
+</body>
+
+</html>

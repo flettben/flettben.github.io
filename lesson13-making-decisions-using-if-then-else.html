@@ -1,0 +1,282 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Start learning Visual Studio 2013
+
+
+</title>
+
+
+
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<ARTICLE class="post-4541 page type-page status-publish hentry" id="post-4541"><HEADER class="entry-header">
+<h1 class="auto-style1"><strong>Visual Studio 2013
+
+
+ Lesson 13: Making Decisions Using 
+If…Then…Else</strong></h1>
+</HEADER>
+<div class="auto-style1">
+	<h2 class="auto-style2">
+	<a class="auto-style1" href="lesson12-string-manipulation.html"><strong>[Lesson 12] 
+	</strong></a><strong>&lt;&lt;
+	<a class="auto-style1href=" href="index.html" Index.html"="">[Contents] </a>&gt;&gt;
+	</strong>
+	<a class="auto-style1" href="lesson14-making-decisions-using-select-case.html">
+	<strong>[Lesson 14]</strong></a></h2>
+	<div id="mycontent" class="auto-style1">
+		<div class="auto-style1">
+			In the previous lessons, we have learned how to write code that 
+			accepts input from the user and displays the output without 
+			controlling the program flow. In this lesson, we shall learn how to 
+			write Visual Studio 2013
+
+
+ code that can make decisions and control the 
+			program flow in the process.<p class="auto-style1"></p>
+			<p class="auto-style1">Decision making process is an important part 
+			of programming in Visual Studio 2013
+
+
+ because it can solve practical 
+			problems intelligently and provide useful output or feedback to the 
+			user. For example, we can write a Visual Studio 2013
+
+
+ program that can 
+			ask the computer to perform certain task until a certain condition 
+			is met, or a program that will reject non-numeric data. In order to 
+			control the program flow and to make decisions, we need to use the 
+			conditional operators and the logical operators together with the 
+			If..Then…Else control structure.</p>
+		</div>
+		<div class="auto-style1">
+			<br />
+	<h2 class="auto-style1">13.1 Conditional Operators</h2>
+	<p class="auto-style1">The conditional operators are powerful tools that 
+	resembles mathematical operators . These operators allow a Visual Studio 2013
+
+
+ 
+	program to compare data values and then decides what actions to take, 
+	whether to execute a program or terminate the program and more. They are 
+	also known as numerical comparison operators which are used to compare two 
+	values to see whether they are equal or one value is greater or less than 
+	the other value. The comparison will return a true or false result. These 
+	operators are shown in following table:</p>
+	<div id="mycontent0" class="auto-style1">
+		<div class="auto-style1">
+			<table class="auto-style1">
+				<tbody class="auto-style1">
+					<tr class="auto-style1">
+						<th class="auto-style1">Operator</th>
+						<th class="auto-style1">Description</th>
+					</tr>
+					<tr class="auto-style1">
+						<td class="auto-style1">&nbsp;=</td>
+						<td class="auto-style1">&nbsp;Equal to</td>
+					</tr>
+					<tr class="auto-style1">
+						<td class="auto-style1">&nbsp;&gt;</td>
+						<td class="auto-style1">&nbsp;Greater than</td>
+					</tr>
+					<tr class="auto-style1">
+						<td class="auto-style1">&nbsp;&lt;</td>
+						<td class="auto-style1">&nbsp;Less than</td>
+					</tr>
+					<tr class="auto-style1">
+						<td class="auto-style1">&nbsp;&gt;=</td>
+						<td class="auto-style1">&nbsp;Equal to or Greater than</td>
+					</tr>
+					<tr class="auto-style1">
+						<td class="auto-style1">&lt;=</td>
+						<td class="auto-style1">&nbsp;Less than or Equal to</td>
+					</tr>
+					<tr class="auto-style1">
+						<td class="auto-style1">&nbsp;&lt;&gt;</td>
+						<td class="auto-style1">&nbsp;Not equal to</td>
+					</tr>
+			</table>
+		</div>
+		<div class="auto-style1">
+			<br />  	<h2 class="auto-style1">13.2 Logical Operators</h2>
+	<p class="auto-style1">Sometimes we might need to make more than one 
+	comparisons before a decision can be made and an action taken. In this case, 
+	using numerical comparison operators alone is not sufficient, we need to use 
+	additional operators, and they are the logical operators.</p>
+	<p class="auto-style1">The logical operators are shown in the following 
+	table:</p>
+	<table class="auto-style1">
+		<tbody class="auto-style1">
+			<tr class="auto-style1">
+				<th class="auto-style1">Operator</th>
+				<th class="auto-style1">Description</th>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style1">And</td>
+				<td class="auto-style1">Both sides must be true</td>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style1">Or</td>
+				<td class="auto-style1">One side or other must be true</td>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style1">Xor</td>
+				<td class="auto-style1">One side or other must be true but not 
+				both</td>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style1">Not</td>
+				<td class="auto-style1">Negates true</td>
+			</tr>
+	</table>
+	<p class="auto-style1">the above operators can be used to compare numerical 
+	data as well as non-numeric data such as text(string). &nbsp;In making strings 
+	comparison, there are certain rules to follows: Upper case letters are less 
+	than lowercase letters, “A”&lt;”B”&lt;”C”&lt;”D”…….&lt;”Z” and number are less than 
+	letters.</p>
+	<h2 class="auto-style1">13.3 Using the If control structure with the 
+	Comparison Operators</h2>
+	<p class="auto-style1">To effectively control the Visual Studio 2013
+
+
+ program 
+	flow, we shall use the If control structure together with the conditional 
+	operators and logical operators. There are basically three types of If 
+	control structures, namely If….Then statement, If….Then… Else statement and 
+	If….Then….ElseIf statement.</p>
+	<p class="auto-style1"><strong class="auto-style1">13.3(a) If….Then 
+	Statement</strong><br />
+	This is the simplest control structure which instructs the computer to 
+	perform a certain action specified by the Visual Studio 2013
+
+
+ expression if 
+	the condition is true. However, when the condition is false, no action will 
+	be performed. The syntax for the if…then.. statement is</p>
+	<p class="auto-style1">If condition Then</p>
+	<p class="auto-style1">Visual Studio 2013
+
+
+ expressions</p>
+	<p class="auto-style1">End If</p>
+	<p class="auto-style1"><strong class="auto-style1">Example 13.1</strong></p>
+	<p class="auto-style1"><strong>Private Sub Button1_Click(ByVal sender As 
+	System.Object, ByVal e As System.EventArgs) Handles Button1.Click<br />
+	Dim myNumber As Integer<br />
+	myNumber = TextBox1.Text<br />
+	If myNumber &gt; 100 Then<br />
+	Label2.Text = ” You win a lucky prize”<br />
+	End If<br />
+	End Sub</strong></p>
+	<p class="auto-style1">* When you run the program and enter a number that is 
+	greater than 100, you will see the “You win a lucky prize” statement. On the 
+	other hand, if the number entered is less than or equal to 100, you don’t 
+	see any display.</p>
+	<p class="auto-style1"><strong class="auto-style1">13.3(b) If….Then…Else 
+	Statement</strong></p>
+	<p class="auto-style1">Using just If….Then statement is not very useful in 
+	programming and it does not provide choices for the users. In order to 
+	provide a choice, we can use the If….Then…Else Statement. This control 
+	structure will ask the computer to perform a certain action specified by the 
+	Visual Studio 2013
+
+
+ expression if the condition is met. And when the condition 
+	is false ,an alternative action will be executed. The syntax for the 
+	if…then.. Else statement is</p>
+	<p class="auto-style1"><strong class="auto-style1">Example 13.2</strong></p>
+	<p class="auto-style1"><strong>Private Sub Button1_Click(ByVal sender As 
+	System.Object, ByVal e As System.EventArgs) Handles Button1.Click<br />
+	Dim myNumber As Integer<br />
+	myNumber = TextBox1.Text<br />
+	If myNumber &gt; 100 Then<br />
+	Label2.Text = ” Congratulation! You win a lucky prize”<br />
+	Else<br />
+	Label2.Text = ” Sorry, You dif not win any prize”<br />
+	End If<br />
+	End Sub</strong></p>
+	<p class="auto-style1">* When you run the program and enter a number that is 
+	greater than 100, the statement “Congratulation! You win a lucky prize” will 
+	be shown. On the other hand, if the number entered is less than or equal to 
+	100, you will see the “Sorry, You dif not win any prize” statement</p>
+	<p class="auto-style1"><strong class="auto-style1">Example 13.3</strong></p>
+	<p class="auto-style1"><strong>Private Sub Button1_Click(ByVal sender As 
+	System.Object, ByVal e As System.EventArgs) Handles Button1.Click<br />
+	Dim myNumber, MyAge As Integer<br />
+	myNumber = TextBox1.Text<br />
+	MyAge = TextBox2.Text</strong></p>
+	<p class="auto-style1"><strong>If myNumber &gt; 100 And myAge &gt; 60 Then<br />
+	Label2.Text = ” Congratulation! You win a lucky prize”<br />
+	Else<br />
+	Label2.Text = ” Sorry, You did not win any prize”<br />
+	End If</strong></p>
+	<p class="auto-style1"><strong>End Sub</strong></p>
+	<p class="auto-style1">* This program use the logical operator And beside 
+	the conditional operators. This means that both the conditions must be 
+	fulfilled in order for the conditions to be true, otherwise the second block 
+	of code will be executed. In this example, the number entered must be more 
+	than 100 and the age must be more than 60 in order to win a lucky prize, any 
+	one of the above conditions not fulfilled will disqualify the user from 
+	winning a prize.</p>
+	<p class="auto-style1"><strong class="auto-style1">13.3(c) If….Then…ElseIf 
+	Statement</strong></p>
+	<p class="auto-style1">If there are more than two alternative choices, using 
+	just If….Then….Else statement will not be enough. In order to provide more 
+	choices, we can use the If….Then…ElseIf Statement.The general structure for 
+	the if…then.. Else statement is</p>
+	<p class="auto-style1">If condition Then</p>
+	<p class="auto-style1">Visual Studio 2013
+
+
+ expression</p>
+	<p class="auto-style1">ElseIf condition Then</p>
+	<p class="auto-style1">Visual Studio 2013
+
+
+ expression</p>
+	<p class="auto-style1">ElseIf condition Then</p>
+	<p class="auto-style1">Visual Studio 2013
+
+
+ expression</p>
+	<p class="auto-style1">.</p>
+	<p class="auto-style1">.</p>
+	<p class="auto-style1">Else</p>
+	<p class="auto-style1">Visual Studio 2013
+
+
+ expression</p>
+	<p class="auto-style1">End If</p>
+	<p class="auto-style1"><strong class="auto-style1">Example 13.4</strong></p>
+	<p class="auto-style1"><strong>Private Sub Button1_Click(ByVal sender As 
+	System.Object, ByVal e As System.EventArgs) Handles Button1.Click<br />
+	Dim Mark As Integer</strong></p>
+	<p class="auto-style1"><strong>Dim Grade as String</strong></p>
+	<p class="auto-style1"><strong>Mark = TextBox1.Text<br />
+	If myNumber &gt;=80 Then<br />
+	Grade=”A”</strong></p>
+	<p class="auto-style1"><strong>ElseIf Mark&gt;=60 And Mark &lt;80</strong></p>
+	<p class="auto-style1"><strong>Grade=”B”</strong></p>
+	<p class="auto-style1"><strong>ElseIf&nbsp;Mark&gt;=40 And Mark &lt;60</strong></p>
+	<p class="auto-style1"><strong>Grade=”C”</strong></p>
+	<p class="auto-style1"><strong>Else</strong></p>
+	<p class="auto-style1"><strong>Grade=”D”</strong></p>
+	<p class="auto-style1"><strong>End If<br />
+	End Sub</strong></p>
+	<p class="auto-style1">&nbsp;</p>
+	<h2 class="auto-style2">
+	<a class="auto-style1" href="lesson12-string-manipulation.html"><strong>[Lesson 12]&nbsp;</strong></a><strong>&lt;&lt;<a class="auto-style1href=" href="index.html" Index.html"="">&nbsp;</a></strong><a class="auto-style1href=" href="index.html" Index.html"=""><strong>[Contents]&nbsp;</a>&gt;&gt;
+	</strong>
+	<a class="auto-style1" href="lesson14-making-decisions-using-select-case.html">
+	<strong>[Lesson 14]</strong></a></h2>
+</div>
+
+</body>
+
+</html>

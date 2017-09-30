@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Start learning Visual Studio 2013
+
+
+</title>
+
+
+
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<ARTICLE class="post-4809 page type-page status-publish hentry" id="post-4809"><HEADER class="entry-header">
+<h1 class="auto-style1"><strong>Visual Studio 2013
+
+
+ Lesson 22: Errors Handling</strong></h1>
+</HEADER>
+<div class="auto-style1">
+	<h2 class="auto-style2">
+	<a class="auto-style1" href="lesson21-using-radio-button.html"><strong>[Lesson 21]</strong></a><strong> &lt;&lt;
+	</strong><a class="auto-style1href=" href="index.html" Index.html"="">
+	<strong>[Contents]</strong></a><strong> &gt;&gt;
+	</strong><a class="auto-style1" href="lesson23-creating-web-browser.html">
+	<strong>[Lesson 23]</strong></a></h2>
+	<h2 class="auto-style1">22.1 Introduction to Errors Handling in Visual basic 
+	2013</h2>
+	<div id="mycontent" class="auto-style1">
+		<div class="auto-style1">
+			Errors handling is an essential procedure in Visual Studio 2013
+
+
+ 
+			programming because it helps make a program error-free. Error-free 
+			code not only enables the program to run smoothly and efficiently, 
+			it can also prevent all sorts of problems from happening like 
+			program crashes or system hangs.<p class="auto-style1"></p>
+			<p class="auto-style1">Errors often occur due to incorrect input 
+			from the user. For example, the user might make the mistake of 
+			attempting to enter text (string) to a box that is designed to 
+			handle only numeric values such as the weight of a person, the 
+			computer will not be able to perform arithmetic calculation for text 
+			therefore will create an error. These errors are known as 
+			synchronous errors.</p>
+		</div>
+		<div class="auto-style1">
+			<br />
+   	<p class="auto-style1">Therefore a good programmer should be more alert to 
+	the parts of program that could trigger errors and should write errors 
+	handling code to help the user in managing the errors. Writing errors 
+	handling code is a good practice for Visual Studio 2013
+
+
+ programmers, so do 
+	not try to finish a program fast by omitting the errors handling code. 
+	However, there should not be too many errors handling code in the program as 
+	it create problems for the programmer to maintain and troubleshoot the 
+	program later.Visual Studio 2013
+
+
+ has improved a lot in its built-in errors 
+	handling capabilities compared to Visual Basic 6. For example, when the user 
+	attempts to divide a number by zero, Visual Studio 2013
+
+
+ will not return an 
+	error message but gives the ‘infinity’ as the answer (although this is 
+	mathematically incorrect, because it should be undefined)</p>
+	<h2 class="auto-style1">22.2 Using On Error GoTo Syntax</h2>
+	<p class="auto-style1">Visual Studio 2013
+
+
+ still supports the VB6 errors 
+	handling syntax, that is the On Error GoTo program_label structure. Although 
+	it has a more advanced error handling method, we shall deal with that 
+	later.We shall now learn how to write errors handling code in Visual Basic 
+	2013. The syntax for errors handling is</p>
+	<p class="auto-style1"><strong class="auto-style1">On Error GoTo 
+	program_label</strong></p>
+	<p class="auto-style1">where program_label is the section of code that is 
+	designed by the programmer to handle the error committed by the user. Once 
+	an error is detected, the program will jump to the program_label section for 
+	error handling.</p>
+	<p class="auto-style1"><strong class="auto-style1">Example 22.1: Division 
+	Errors</strong></p>
+	<p class="auto-style1">In this example, we will deal with the error of 
+	entering non-numeric data into the text boxes that suppose to hold numeric 
+	values. The program_label here is error_handler. when the user enter a 
+	non-numeric values into the text boxes, the error message will display the 
+	text”One or both of the entries is/are non-numeric!”. If no error occurs, it 
+	will display the correct answer. Try it out yourself.</p>
+	<p class="auto-style1"><strong class="auto-style1">The Code</strong></p>
+	<p class="auto-style1"><strong>Private Sub BtnCal_Click(sender As Object, e As 
+	EventArgs) Handles BtnCal.Click<br />
+	Lbl_ErrMsg.Visible = False</strong></p>
+	<p class="auto-style1"><strong>Dim firstNum, secondNum As Double</strong></p>
+	<p class="auto-style1"><strong>On Error GoTo error_handler</strong></p>
+	<p class="auto-style1"><strong>firstNum = TxtNum1.Text<br />
+	secondNum = TxtNum2.Text<br />
+	Lbl_Answer.Text = firstNum / secondNum</strong></p>
+	<p class="auto-style1"><strong>Exit Sub&nbsp;</strong><span class="auto-style5"><strong> ‘To prevent error 
+	handling even the inputs are valid</strong></span></p>
+	<p class="auto-style1"><strong>error_handler:</strong></p>
+	<p class="auto-style1"><strong>Lbl_Answer.Text = “Error”<br />
+	Lbl_ErrMsg.Visible = True<br />
+	Lbl_ErrMsg.Text = ” One or both of the entries is/are non-numeric! Try 
+	again!”</strong></p>
+	<p class="auto-style1"><strong>End Sub</strong></p>
+	<p class="auto-style1">The runtime interface</p>
+	<div id="mycontent0" class="auto-style1">
+		<div class="auto-style1">
+			<a class="auto-style1" href="Images/vb2013_figure22.1.jpg">
+			<img alt="vb2013_figure22.1" class="auto-style1" height="309" src="Images/vb2013_figure22.1.jpg" width="358" /></a><p class="auto-style1">
+			</p>
+			<p class="auto-style2">&nbsp;<strong class="auto-style1">Figure 22.1</strong></p>
+		</div>
+		<div class="auto-style1">
+			<br />
+    	<p class="auto-style6">*Please note that division by zero in Visual Basic 
+	2013 no longer gives an error message, but it displays the answer as 
+	Infinity.</p>
+	<h2 class="auto-style1">22.3 Errors Handling using Try…..Catch….End Try 
+	Structure</h2>
+	<p class="auto-style1">Visual Studio 2013
+
+
+ has adopted a new approach in 
+	handling errors, or rather exceptions handling. It is supposed to be more 
+	efficient than the old On Error Goto method, where it can handles various 
+	types of errors within the Try…Catch…End Try structure.</p>
+	<p class="auto-style1">The structure looks like this</p>
+	<p class="auto-style1"><strong class="auto-style1">Try</strong></p>
+	<p class="auto-style1">statements</p>
+	<p class="auto-style1"><strong class="auto-style1">Catch</strong> 
+	exception_variable as Exception</p>
+	<p class="auto-style1">statements to deal with exceptions</p>
+	<p class="auto-style1"><strong class="auto-style1">End Try</strong></p>
+	<p class="auto-style1"><strong class="auto-style1">The Code</strong></p>
+	<p class="auto-style1"><strong>Private Sub BtnCal_Click(sender As Object, e As 
+	EventArgs) Handles BtnCal.Click<br />
+	Lbl_ErrMsg.Visible = False</strong></p>
+	<p class="auto-style1"><strong>Dim firstNum, secondNum, answer As Double</strong></p>
+	<p class="auto-style1"><strong>Try</strong></p>
+	<p class="auto-style1"><strong>firstNum = TxtNum1.Text<br />
+	secondNum = TxtNum2.Text<br />
+	answer = firstNum / secondNum<br />
+	Lbl_Answer.Text = answer</strong></p>
+	<p class="auto-style1"><strong>Catch ex As Exception</strong></p>
+	<p class="auto-style1"><strong>Lbl_Answer.Text = “Error”<br />
+	Lbl_ErrMsg.Visible = True<br />
+	Lbl_ErrMsg.Text = ” One of the entries is not a number! Try again!”</strong></p>
+	<p class="auto-style1"><strong>End Try</strong></p>
+	<p class="auto-style1"><strong>End Sub</strong></p>
+	<p class="auto-style1">The runtime interface</p>
+	<p class="auto-style2">
+	<a class="auto-style1" href="Images/vb2013_figure22.2.jpg">
+	<img alt="vb2013_figure22.2" class="auto-style1" height="309" src="Images/vb2013_figure22.2.jpg" width="358" /></a><strong class="auto-style1">Figure 
+	22.2</strong></p>
+	<h2 class="auto-style2">
+	<a class="auto-style1" href="lesson21-using-radio-button.html"><strong>[Lesson 21]</strong></a><strong>&nbsp;&lt;&lt;&nbsp;</strong><a class="auto-style1href=" href="index.html" Index.html"=""><strong>[Contents]</strong></a><strong>&nbsp;&gt;&gt;
+	</strong><a class="auto-style1" href="lesson23-creating-web-browser.html">
+	<strong>[Lesson 23]</strong></a></h2>
+</div>
+
+</body>
+
+</html>

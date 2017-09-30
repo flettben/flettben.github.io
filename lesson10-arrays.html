@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Start learning Visual Studio 2013
+
+
+</title>
+
+
+
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<ARTICLE class="post-4356 page type-page status-publish hentry" id="post-4356"><HEADER class="entry-header">
+<h1 class="auto-style1"><strong>Visual Studio 2013
+
+
+ Lesson 10 : Arrays</strong></h1>
+</HEADER>
+<div class="auto-style1">
+	<h2 class="auto-style2">
+	<a class="auto-style1" href="lesson9-variable-and-constants.html"><strong>[Lesson 9] 
+	</strong></a><strong>&lt;&lt;<a class="auto-style1" href="index.html"> </a>
+	</strong><strong><a class="auto-style1" href="index.html">[Contents] </a>&gt;&gt;<a class="auto-style1" href="lesson11-performing-mathematical-operations.html">
+	</a></strong><strong>
+	<a class="auto-style1" href="lesson11-performing-mathematical-operations.html">[Lesson 11]</a></strong></h2>
+	<h2 class="auto-style1">10.1 Introduction to Arrays</h2>
+	<div id="mycontent" class="auto-style1">
+		<div class="auto-style1">
+			In Visual Studio 2013
+
+
+, an array is a group of variables(elements) 
+			&nbsp;with the same data type . When we work with a single item, we only 
+			need to use one variable. However, if we have a list of items which 
+			are of similar type to deal with, we need to declare an array of 
+			variables instead of using a variable for each item<p class="auto-style1">
+			</p>
+			<p class="auto-style1">For example, if we need to enter one hundred 
+			names, it is very tedious to declare one hundred&nbsp;different names, 
+			this is a waste of time and efforts. So, instead of declaring one 
+			hundred different variables, we need to declare only one array. We 
+			differentiate each item in the array by using subscript, the index 
+			value of each item, for example name(1), name(2),name(3) …….etc. , 
+			which will make declaring variables streamline and much more 
+			systematic. </p>
+		</div>
+		<div class="auto-style1">
+ 			<br />
+	<div id="mycontent0" class="auto-style1">
+		<div class="auto-style1">
+			<h2 class="auto-style1">10.2 Dimension of an Array</h2>
+			<p class="auto-style1">An array can be one dimensional or 
+			multidimensional. One dimensional array is like a list of items or a 
+			table that consists of one row of items or one column of items.<br />
+			A two dimensional array is a table of items that is made up of rows 
+			and columns. The way to reference an element in a one dimensional 
+			array is ArrayName(x), where x is the index or position number of 
+			the element. The way to reference an element in a&nbsp;two dimensional 
+			array is ArrayName(x,y) , where (x,y) is the index or position 
+			number of the&nbsp;element. Usually it is sufficient to use one 
+			dimensional and two dimensional array ,you only need to use higher 
+			dimensional arrays if you need to deal with more complex problems. 
+			Let me illustrate the the arrays with tables.</p>
+		</div>
+		<div class="auto-style1">
+			<br />
+	<h3 class="auto-style1">Table 10.1: One Dimensional Array</h3>
+	<table class="auto-style1">
+		<tbody class="auto-style1">
+			<tr class="auto-style1">
+				<td class="auto-style1">Student Name</td>
+				<td class="auto-style1">Name(0)</td>
+				<td class="auto-style1">Name(1)</td>
+				<td class="auto-style1">Name(2)</td>
+				<td class="auto-style1">Name(3)</td>
+				<td class="auto-style1">Name(4)</td>
+				<td class="auto-style1">Name(5)</td>
+				<td class="auto-style1">Name(6)</td>
+			</tr>
+	</table>
+	<h3 class="auto-style1">Table 10.2: Two Dimensional Array</h3>
+	<table class="auto-style1">
+		<tbody class="auto-style1">
+			<tr class="auto-style1">
+				<td class="auto-style1">Name(0,0)</td>
+				<td class="auto-style1">Name(0,1)</td>
+				<td class="auto-style1">Name(0,2)</td>
+				<td class="auto-style1">Name(0,3)</td>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style1">Name(1,0)</td>
+				<td class="auto-style1">Name(1,1)</td>
+				<td class="auto-style1">Name(1,2)</td>
+				<td class="auto-style1">Name(1,3)</td>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style1">Name(2,0)</td>
+				<td class="auto-style1">Name(2,1)</td>
+				<td class="auto-style1">Name(2,2)</td>
+				<td class="auto-style1">Name(2,3)</td>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style1">Name(3,0)</td>
+				<td class="auto-style1">Name(3,1)</td>
+				<td class="auto-style1">Name(3,2)</td>
+				<td class="auto-style1">Name(3,3)</td>
+			</tr>
+	</table>
+	<h2 class="auto-style1">10.2 Declaring Arrays</h2>
+	<p class="auto-style1">We can use Public or Dim statement to declare an 
+	array just as the way we declare a single variable. The Public statement 
+	declares an array that can be used throughout an application while the Dim 
+	statement declare an array that could be used only in a local procedure or 
+	module.</p>
+	<p class="auto-style1">The statement to declare a one dimensional array is 
+	as follows:</p>
+	<p class="auto-style1"><strong class="auto-style1">Dim arrayName(n) as 
+	dataType</strong></p>
+	<p class="auto-style1">where n indicates the last index in the array. Please 
+	note that n does not indicate the number of elements in the array, it is one 
+	less than the number of elements (n-1) because the first element is always 
+	the zeroth element. The first element is arrayName(0), the second element is 
+	arrayName(1), the third element is&nbsp;arrayName(2) and so on. The number of 
+	elements in an array is also known as length, we can retrieve the length of 
+	an array using the syntax&nbsp;<strong class="auto-style1">arrayName.length&nbsp;</strong></p>
+	<p class="auto-style1">For example,</p>
+	<p class="auto-style1">Dim CusName(10) as String</p>
+	<p class="auto-style1">will declare an array that consists of &nbsp;11 elements 
+	starting from CusName(0) through to CusName(10)</p>
+	<p class="auto-style1">To find out the length of the array, you can write 
+	the following code:</p>
+	<p class="auto-style1"><strong class="auto-style1">Example 10.1</strong></p>
+	<p class="auto-style1"><strong>Private Sub Form1_Load(sender As Object, e As 
+	EventArgs) Handles MyBase.Load</strong></p>
+	<p class="auto-style1"><strong>Dim CusName(10) As String<br />
+	MsgBox(CusName.Length)</strong></p>
+	<p class="auto-style1"><strong>End Sub</strong></p>
+	<p class="auto-style1">Running the program will produce a message box that 
+	displays the length of the array i.e 11, as shown in Figure 10.1</p>
+	<p class="auto-style1">
+	<a class="auto-style1" href="Images/vb2013_figure10.1.jpg">
+	<img alt="vb2013_figure10.1" class="auto-style1" height="155" src="Images/vb2013_figure10.1.jpg" width="154" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<strong class="auto-style1">Figure 10.1</strong></p>
+	<p class="auto-style1">You might also declare an array with a non-zero 
+	starting index buy initialize an index vale other than zero, as follows:</p>
+	<p class="auto-style1">Dim arrayname As DataType()</p>
+	<p class="auto-style1">arrayName=New String(){1,2,3,….,n)</p>
+	<p class="auto-style1">This array will consists of n elements, starting with 
+	arrayName(1)</p>
+	<p class="auto-style1"><strong class="auto-style1">&nbsp;Example 10.2</strong></p>
+	<p class="auto-style1"><strong>Private Sub Form1_Load(sender As Object, e As 
+	EventArgs) Handles MyBase.Load</strong></p>
+	<p class="auto-style1"><strong>Dim CusName As String()<br />
+	CusName = New String() {1, 2, 3}<br />
+	MsgBox(CusName.Length)</strong></p>
+	<p class="auto-style1"><strong>End Sub</strong></p>
+	<p class="auto-style1">The message box will display the length as 3</p>
+	<p class="auto-style1">&nbsp;</p>
+	<p class="auto-style1">The statement to declare a two dimensional array is 
+	as follow:</p>
+	<p class="auto-style1">Dim ArrayName(m,n) as dataType</p>
+	<p class="auto-style1">where m and n indicate the last indices in the array. 
+	The number of elements or the length of the array is (m+1)x(n+1)</p>
+	<p class="auto-style1"><strong class="auto-style1">Example 10.3</strong></p>
+	<p class="auto-style1"><strong>Private Sub Form1_Load(sender As Object, e As 
+	EventArgs) Handles MyBase.Load</strong></p>
+	<p class="auto-style1"><strong>Dim CusName(5,6) As String<br />
+	MsgBox(CusName.Length)</strong></p>
+	<p class="auto-style1"><strong>End Sub</strong></p>
+	<p class="auto-style1">Running the program and the message box will display 
+	a length of 42, as shown in Figure 10.2</p>
+	<p class="auto-style1">
+	<a class="auto-style1" href="Images/vb2013_figure10.2.jpg">
+	<img alt="vb2013_figure10.2" class="auto-style1" height="155" src="Images/vb2013_figure10.2.jpg" width="154" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<strong class="auto-style1">&nbsp; Figure 10.2</strong></p>
+	<p class="auto-style1"><strong class="auto-style1">Example 10.4</strong></p>
+	<p class="auto-style1"><strong>Private Sub Form1_Load(sender As Object, e As 
+	EventArgs) Handles MyBase.Load<br />
+	Dim num As Integer<br />
+	Dim CusName(5) As String</strong></p>
+	<p class="auto-style1"><strong>For num = 0 To 5<br />
+	CusName(num) = InputBox(“Enter the customer name”, “Enter Name”)<br />
+	ListBox1.Items.Add(CusName(num))</strong></p>
+	<p class="auto-style1"><strong>Next<br />
+	End Sub</strong></p>
+	<p class="auto-style1">This program will prompt the user to enter names in 
+	an input box for a total of 6 times and the names will be entered into a 
+	list box, as shown in Figure 10.3 and Figure 10.4</p>
+	<p class="auto-style1">
+	<a class="auto-style1" href="Images/vb2013_figure10.3.jpg">
+	<img alt="vb2013_figure10.3" class="auto-style1" height="159" src="Images/vb2013_figure10.3.jpg" width="369" /></a></p>
+	<p class="auto-style2"><strong class="auto-style1">&nbsp;Figure 10.3&nbsp;</strong></p>
+	<p class="auto-style1">
+	<a class="auto-style1" href="Images/vb2013_figure10.4.jpg">
+	<img alt="vb2013_figure10.4" class="auto-style1" height="300" src="Images/vb2013_figure10.4.jpg" width="300" /></a></p>
+	<p class="auto-style1"><strong class="auto-style1">&nbsp;&nbsp;&nbsp; 
+	&nbsp;Figure 10.4&nbsp;</strong></p>
+	<h2 class="auto-style2">
+	<a class="auto-style1" href="lesson9-variable-and-constants.html"><strong>[Lesson 9] 
+	</strong></a><strong>&lt;&lt;
+     </strong><a class="auto-style1" href="index.html"><strong>[Contents] 
+	</strong></a><strong>&gt;&gt;
+	</strong>
+	<a class="auto-style1" href="lesson11-performing-mathematical-operations.html">
+	<strong>[Lesson 11]</strong></a></h2>
+</div>
+
+</body>
+
+</html>

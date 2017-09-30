@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Start learning Visual Studio 2013
+
+
+</title>
+
+
+
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<style type="text/css">
+.auto-style1 {
+	font-weight: bold;
+}
+.auto-style2 {
+	font-weight: normal;
+}
+</style>
+</head>
+
+<body>
+
+<ARTICLE class="post-4314 page type-page status-publish hentry" id="post-4314"><HEADER class="entry-header">
+<h1 class="auto-style1"><strong>Visual Studio 2013
+
+
+ Lesson 8: Understanding Data</strong></h1>
+</HEADER>
+<div class="auto-style1">
+	<h2 class="auto-style2">
+	<a class="auto-style1" href="lesson7-displaying-images-with-the-picture-box.html">
+	<strong>[Lesson 7]</strong></a><strong> &lt;&lt;
+	<a class="auto-style1href=" href="index.html" Index.html"="">[Contents]</a> &gt;&gt;
+	</strong>
+	<strong>
+	<a class="auto-style1" href="lesson9-variable-and-constants.html">[Lesson 9]</a></strong></h2>
+	<div id="mycontent" class="auto-style1">
+		<div class="auto-style1">
+			We deal with many kinds of data in our daily life. For example, we 
+			need to handle data like names, phone number, addresses, money, 
+			date, stock quotes, statistics and other data every day. Similarly 
+			in Visual Studio 2013
+
+
+, we have to deal with all sorts of of data, 
+			some of them can be mathematically calculated while some are in the 
+			form of text or other non-numeric forms. In Visual Studio 2013
+
+
+, data 
+			can be stored as variables, constants or arrays. The values of data 
+			stored as variables always change, just like the contents of a mail 
+			box or the storage bin while the value of a constant remains the 
+			same throughout.&nbsp;(We shall deal with variables, constants and arrays 
+			in coming lessons)</div>
+		
+	</div>
+	<h2 class="auto-style1">8.1 Visual Studio 2013
+
+
+ Data Types</h2>
+	<p class="auto-style1">Visual Studio 2013
+
+
+ classifies information into two 
+	major data types, &nbsp;the numeric data types and the non-numeric data type</p>
+	<p class="auto-style1"><strong class="auto-style1">8.1.1 Numeric Data Types</strong></p>
+	<p class="auto-style1">Numeric data types are types of data comprises 
+	numbers that can be calculated mathematically using various standard 
+	operators such as addition, subtraction, multiplication, division and more. 
+	Examples of numeric data types are &nbsp;examination marks, height, body weight, 
+	number of students in a class, share values, price of goods, monthly bills, 
+	fees , bus fares and more. In Visual Studio 2013
+
+
+, numeric data are divided 
+	into seven types based on the range of values they can store. Calculations 
+	that only involve round figures or data that do not need high precision can 
+	use Integer or Long integer . Programs that require high precision 
+	calculation need to use Single and Double precision data types, they are 
+	also called floating point numbers. For currency calculation , you can use 
+	the currency data types. Lastly, if even more precision is required to 
+	perform calculations that involve many decimal points, we can use the 
+	decimal data types. These data types are summarized in Table 8.1</p>
+	<h3 align="center" class="auto-style1">Table 8.1: Numeric Data Types</h3>
+	<table class="auto-style1">
+		<tbody class="auto-style1">
+			<tr class="auto-style1">
+				<th class="auto-style1">Type</th>
+				<th class="auto-style1">Storage</th>
+				<th class="auto-style1">Range</th>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style1">&nbsp;Byte</td>
+				<td class="auto-style1">&nbsp;1 byte</td>
+				<td class="auto-style1">&nbsp; 0 to 255</td>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style1">&nbsp;Integer</td>
+				<td class="auto-style1">&nbsp;2&nbsp;bytes</td>
+				<td class="auto-style1">&nbsp; -32,768 to 32,767</td>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style1">&nbsp;Long</td>
+				<td class="auto-style1">&nbsp;4&nbsp;bytes</td>
+				<td class="auto-style1">&nbsp;-2,147,483,648 to&nbsp;2,147,483,648</td>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style1">&nbsp;Single</td>
+				<td class="auto-style1">&nbsp;4&nbsp;bytes</td>
+				<td class="auto-style1">-3.402823E+38 to -1.401298E-45 for 
+				negative values<br />
+				1.401298E-45 to 3.402823E+38 for positive values.</td>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style1">&nbsp;Double</td>
+				<td class="auto-style1">&nbsp;8&nbsp;bytes</td>
+				<td class="auto-style1">-1.79769313486232e+308 to 
+				-4.94065645841247E-324 for negative values<br />
+				4.94065645841247E-324 to 1.79769313486232e+308 for positive 
+				values.</td>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style1">&nbsp;Currency</td>
+				<td class="auto-style1">&nbsp;8&nbsp;bytes</td>
+				<td class="auto-style1">-922,337,203,685,477.5808 to 
+				922,337,203,685,477.5807</td>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style1">&nbsp;Decimal</td>
+				<td class="auto-style1">&nbsp;12&nbsp;bytes</td>
+				<td class="auto-style1">+/- 
+				79,228,162,514,264,337,593,543,950,335 if no decimal is use<br />
+				+/- 7.9228162514264337593543950335 (28 decimal places).</td>
+			</tr>
+	</table>
+	<p class="auto-style1"><strong class="auto-style1">8.1.2 Non-numeric Data 
+	Types</strong></p>
+	<p class="auto-style1">Non-numeric data types are data that cannot be 
+	manipulated mathematically using standard arithmetic operators. The 
+	non-numeric data comprises text or string data types, the Date data types, 
+	the Boolean data types that store only two values (true or false), Object 
+	data type and Variant data type .They are summarized in Table 8.2</p>
+	<h3 align="center" class="auto-style1">Table 8.2: Non-numeric Data Types</h3>
+	<table class="auto-style1">
+		<tbody class="auto-style1">
+			<tr class="auto-style1">
+				<th class="auto-style2"><strong>Type</strong></th>
+				<th class="auto-style2"><strong>Storage</strong></th>
+				<th class="auto-style2"><strong>Range</strong></th>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style2"><strong>String(fixed length)</strong></td>
+				<td class="auto-style2"><strong>Length of string</strong></td>
+				<td class="auto-style2"><strong>1 to 65,400 characters</strong></td>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style2"><strong>String(variable length)</strong></td>
+				<td class="auto-style2"><strong>Length + 10 bytes</strong></td>
+				<td class="auto-style2"><strong>0 to 2 billion characters</strong></td>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style2"><strong>Date</strong></td>
+				<td class="auto-style2"><strong>&nbsp;8&nbsp;bytes</strong></td>
+				<td class="auto-style2"><strong>January 1, 100 to December 31, 9999</strong></td>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style2"><strong>Boolean</strong></td>
+				<td class="auto-style2"><strong>&nbsp;2&nbsp;bytes</strong></td>
+				<td class="auto-style2"><strong>True or False</strong></td>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style2"><strong>Object</strong></td>
+				<td class="auto-style2"><strong>&nbsp;4 bytes</strong></td>
+				<td class="auto-style2"><strong>Any embedded object</strong></td>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style2"><strong>Variant(numeric)</strong></td>
+				<td class="auto-style2"><strong>&nbsp;16&nbsp;bytes</strong></td>
+				<td class="auto-style2"><strong>Any value as large as Double</strong></td>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style2"><strong>Variant(text)</strong></td>
+				<td class="auto-style2"><strong>Length+22 bytes</strong></td>
+				<td class="auto-style2"><strong>Same as variable-length string</strong></td>
+			</tr>
+	</table>
+	<p class="auto-style1"><strong class="auto-style1">8.1.3 Suffixes for 
+	Literals</strong></p>
+	<p class="auto-style1">Literals are values that you assign to data. In some 
+	cases, we need to add a suffix behind a literal so that VB can handle the 
+	calculation more accurately. For example, we can use num=1.3089# for a 
+	Double type data. The suffixes are summarized in Table 8.3.</p>
+	<h3 align="center" class="auto-style1">Table 5.3</h3>
+	<table class="auto-style1">
+		<tbody class="auto-style1">
+			<tr class="auto-style1">
+				<th class="auto-style1">Suffix</th>
+				<th class="auto-style1">Data Type</th>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style1">&amp;</td>
+				<td class="auto-style1">Long</td>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style1">!</td>
+				<td class="auto-style1">Single</td>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style1">#</td>
+				<td class="auto-style1">Double</td>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style1">@</td>
+				<td class="auto-style1">Currency</td>
+			</tr>
+	</table>
+	<p class="auto-style1">In addition, we need to enclose string literals 
+	within two quotations and date and time literals within two # sign. Strings 
+	can contain any characters, including numbers. The following are few 
+	examples:</p>
+	<p class="auto-style1"><strong>memberName=”Turban, John.”<br />
+	TelNumber=”1800-900-888-777″<br />
+	LastDay=#31-Dec-00#<br />
+	ExpTime=#12:00 am#</strong></p>
+	<p class="auto-style1">
+ &nbsp;<br />
+	<h2 class="auto-style2">
+	<a class="auto-style1" href="lesson7-displaying-images-with-the-picture-box.html">
+	<strong>[Lesson 7]</strong></a><strong>&nbsp;&lt;&lt;<a class="auto-style1href=" href="index.html" Index.html"="">&nbsp;</a></strong><a class="auto-style1href=" href="index.html" Index.html"=""><strong>[Contents]&nbsp;</a>&gt;&gt;
+	</strong><a class="auto-style1" href="lesson9-variable-and-constants.html">
+	<strong>[Lesson 9]</strong></a></h2>
+
+
+</body>
+
+</html>

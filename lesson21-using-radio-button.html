@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Start learning Visual Studio 2013
+
+
+</title>
+
+
+
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<ARTICLE class="post-4786 page type-page status-publish hentry" id="post-4786"><HEADER class="entry-header">
+<h1 class="auto-style1"><strong>Visual Studio 2013
+
+
+ Lesson 21: Using Radio Button</strong></h1>
+</HEADER>
+<div class="auto-style1">
+	<h2 class="auto-style2">
+	<a class="auto-style1" href="lesson20-using-check-box.html"><strong>[Lesson 20] 
+	</strong></a><strong>&lt;&lt;
+	</strong><a class="auto-style1href=" href="index.html" Index.html"="">
+	<strong>[Contents]</strong></a><strong> &gt;&gt;
+	</strong><a class="auto-style1" href="lesson22-errors-handling.html">
+	<strong>[Lesson 22]</strong></a></h2>
+	<div id="mycontent" class="auto-style1">
+		<div class="auto-style1">
+			We have learned how to use the check box control in previous lesson. 
+			In this lesson, we shall leaned another control in Visual Studio 2013
+
+
+ 
+			&nbsp;that is closely related to the check box control, the radio 
+			button.&nbsp;Radio buttons operate differently from the check boxes. 
+			While the check boxes work independently and &nbsp;allow the user to 
+			select one or more items , radio buttons are mutually exclusive, 
+			which means the user can only choose one item only out of a number 
+			of choices.<br />
+			<strong class="auto-style1">Example 21.1</strong><p class="auto-style1">
+			</p>
+			<p class="auto-style1">In this example, &nbsp;the user can only choose 
+			one T-shirt color. To design the interface, add three radio buttons 
+			and name them as RadioRed, RadioGreen and RadioYellow respectively. 
+			Besides that, add a button to confirm the chosen color and a label 
+			control to display the chosen color. Name the button as BtnConfirm 
+			and the label as LblDisplay. We use the If…Then…Else decisions 
+			making structure to construct the program. The state of the radio 
+			button is indicated by its checked property.</p>
+		</div>
+		
+	<p class="auto-style1">The code:</p>
+	<p class="auto-style1"><strong>Private Sub BtnConfirm_Click(sender As Object, e As 
+	EventArgs) Handles BtnConfirm.Click<br />
+	Dim Tcolor As String<br />
+	If RadioRed.Checked &nbsp;Then<br />
+	Tcolor = “Red Color”<br />
+	LblDisplay.ForeColor = Color.Red<br />
+	ElseIf RadioGreen.Checked &nbsp;Then<br />
+	Tcolor = “Green Color”<br />
+	LblDisplay.ForeColor = Color.Green<br />
+	Else<br />
+	Tcolor = “Yellow Color”<br />
+	LblDisplay.ForeColor = Color.Yellow</strong></p>
+	<p class="auto-style1"><strong>End If</strong></p>
+	<p class="auto-style1"><strong>LblDisplay.Text = Tcolor</strong></p>
+	<p class="auto-style1"><strong>End Sub</strong></p>
+	<p class="auto-style1">The Runtime Interface</p>
+	<div id="mycontent0" class="auto-style1">
+		<div class="auto-style1">
+			<a class="auto-style1" href="Images/vb2013_figure21.1.jpg">
+			<img alt="vb2013_figure21.1" class="auto-style1" height="300" src="Images/vb2013_figure21.1.jpg" width="300" /></a><p class="auto-style1">
+			</p>
+			<p class="auto-style2">&nbsp;<strong class="auto-style1">Figure 21.1</strong></p>
+		</div>
+		<div class="auto-style1">
+			<br />  	<p class="auto-style5"><strong class="auto-style1">Example 21.2</strong></p>
+	<p class="auto-style1">Although the user may only select one item at a time, 
+	he may make more than one selection if those items belong to different 
+	categories. For example, the user wishes to choose T-shirt size and color, 
+	he needs to select one color and one size, which means one selection in each 
+	category. In this case, we need to group the radio buttons together 
+	according to the categories. This is easily achieved in Visual Studio 2013
+
+
+ 
+	using the Groupbox control under the containers categories.</p>
+	<p class="auto-style1">In the Visual Studio 2013
+
+
+ IDE, after inserting the 
+	Groupbox from the tool box into the form, you can proceed to insert the 
+	radio buttons into the Groupbox. Only the radio buttons inside the Groupbox 
+	are mutually exclusive, they are not mutually exclusive with the radio 
+	buttons outside the Groupbox. In this example, the user can select one color 
+	and one size of the T-shirt. To design the interface, insert two group 
+	boxes. In the first group box, add four radio buttons and name them as 
+	RadioXL, RadioL, RadioM and Radio S respectively. In the second group box, 
+	add three radio buttons and name them RadioRed, RadioBlue and RadioBeige 
+	respectively. Besides that, insert two label control to display the chosen 
+	size and color, name them LblSize and LblColor respectively. Finally, add a 
+	button and name it as BtnConfirm. In the code, we shall declare two 
+	variables, TSize to indicate the T-shirt size and TColor ro indicate the 
+	T-shirt color.</p>
+	<p class="auto-style1"><strong class="auto-style1">The Code</strong></p>
+	<p class="auto-style1"><strong>Private Sub BtnConfirm_Click(sender As Object, e As 
+	EventArgs) Handles BtnConfirm.Click<br />
+	Dim TSize, TColor As String</strong></p>
+	<p class="auto-style1"><strong>If RadioXL.Checked Then<br />
+	TSize = “XL”<br />
+	ElseIf RadioL.Checked Then<br />
+	TSize = “L”<br />
+	ElseIf RadioM.Checked Then<br />
+	TSize = “M”<br />
+	Else : TSize = “S”</strong></p>
+	<p class="auto-style1"><strong>End If<br />
+	If RadioRed.Checked Then<br />
+	TColor = “Red”<br />
+	ElseIf RadioBlue.Checked Then<br />
+	TColor = “Blue”<br />
+	Else : TColor = “Beige”<br />
+	End If<br />
+	LblSize.Text = TSize<br />
+	Lblcolor.Text = TColor<br />
+	End Sub</strong></p>
+	<p class="auto-style1">The Runtime Interface</p>
+	<p class="auto-style2">
+	<a class="auto-style1" href="Images/vb2013_figure21.2.jpg">
+	<img alt="vb2013_figure21.2" class="auto-style1" height="341" src="Images/vb2013_figure21.2.jpg" width="313" /></a><strong class="auto-style1">Figure 
+	21.2</strong></p>
+	<h2 class="auto-style2">
+	<a class="auto-style1" href="lesson20-using-check-box.html"><strong>[Lesson 20]&nbsp;</strong></a><strong>&lt;&lt;&nbsp;</strong><a class="auto-style1href=" href="index.html" Index.html"=""><strong>[Contents]</strong></a><strong>&nbsp;&gt;&gt;
+	</strong><a class="auto-style1" href="lesson22-errors-handling.html">
+	<strong>[Lesson 22]</strong></a></h2>
+</div>
+
+</body>
+
+</html>

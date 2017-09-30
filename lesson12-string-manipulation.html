@@ -1,0 +1,319 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Start learning Visual Studio 2013
+
+
+</title>
+
+
+
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<ARTICLE class="post-4467 page type-page status-publish hentry" id="post-4467"><HEADER class="entry-header">
+<h1 class="auto-style1"><strong>Visual Studio 2013
+
+
+ Lesson 12: Strings Manipulation</strong></h1>
+</HEADER>
+<div class="auto-style1">
+	<h2 class="auto-style2">
+	<a class="auto-style1" href="lesson11-performing-mathematical-operations.html">
+	<strong>[Lesson 11] </strong></a><strong>&lt;&lt;
+	</strong><a class="auto-style1href=" href="index.html" Index.html"="">
+	<strong>[Contents]</strong></a><strong> &gt;&gt;
+	</strong>
+	<a class="auto-style1" href="lesson13-making-decisions-using-if-then-else.html">
+	<strong>[Lesson 13]</strong></a></h2>
+	<div id="mycontent" class="auto-style1">
+		<div class="auto-style1">
+			In this lesson, we shall learn how to manipulate string. String 
+			manipulation means writing code to process characters like&nbsp;names, 
+			addresses, gender, cities, book titles, sentences, words, text 
+			alphanumeric characters (@,#,$,%,^,&amp;,*, etc) and more. String 
+			manipulation is best demonstrated in the area of word processing 
+			which deals with text editing.<p class="auto-style1"></p>
+			<p class="auto-style1">In Visual Studio 2013
+
+
+, a string is a single 
+			unit of data that made up of a series of characters that includes 
+			letters, digits, alphanumeric symbols and more. It is treated as the 
+			String data type and therefore it is non-numeric in nature which 
+			means it cannot be manipulated mathematically though it might 
+			consists of numbers.</p>
+		</div>
+		<div class="auto-style1">
+     			<br />
+   	<p class="auto-style1"><strong class="auto-style1">12.1 String Manipulation 
+	Using + and &amp; signs.</strong></p>
+	<p class="auto-style1">In Visual Studio 2013
+
+
+, strings can be manipulated 
+	using the &amp; sign and the + sign, both perform the string concatenation which 
+	means combining two or more smaller strings into larger strings. For 
+	example, we can join “Visual” ,”Basic” and “2013″ into “Visual Studio 2013
+
+
+″ 
+	using “Visual”&amp;”Basic” or “Visual “+”Basic”, as shown in the Examples below:</p>
+	<p class="auto-style1"><strong class="auto-style1">Example 12.1</strong></p>
+	<div id="mycontent0" class="auto-style1">
+		<div class="auto-style1">
+			<strong>Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As 
+			System.EventArgs) Handles Button1.Click</strong><p class="auto-style1"></p>
+			<p class="auto-style1"><strong>Dim text1, text2, text3, text4 As String<br />
+			text1 = “Visual”<br />
+			text2 = “Basic”<br />
+			text3=”2013″<br />
+			text4 = text1 + text2+text3<br />
+			MsgBox (text4)</strong></p>
+			<p class="auto-style1"><strong>End Sub </strong> </p>
+		</div>
+		<div class="auto-style1">
+     			<br />
+    	<p class="auto-style1">The line text4=text1+ text2 + text3 can be replaced 
+	by text4=text1 &amp; text2 &amp;text3 and produces the same output. However, if one 
+	of the variables is declared as numeric data type, you cannot use the + 
+	sign, you can only use the &amp; sign.</p>
+	<p class="auto-style1">The output is shown in Figure 12.1:</p>
+	<p class="auto-style2">
+	<a class="auto-style1" href="Images/vb2013_figure12.1.jpg">
+	<img alt="vb2013_figure12.1" class="auto-style1" height="155" src="Images/vb2013_figure12.1.jpg" width="154" /></a><strong class="auto-style1">Figure 
+	12.1</strong></p>
+	<p class="auto-style1"><strong class="auto-style1">Example 12.2</strong></p>
+	<p class="auto-style1"><strong>Private Sub Button1_Click(ByVal sender As 
+	System.Object, ByVal e As System.EventArgs) Handles Button1.Click</strong></p>
+	<p class="auto-style1"><strong>Dim text1, text3 as string<br />
+	Dim Text2 As Integer<br />
+	text1 = “Visual”<br />
+	text2=22<br />
+	text3=text1+text2<br />
+	MsgBox(text3)</strong></p>
+	<p class="auto-style1"><strong>End Sub</strong></p>
+	<p class="auto-style1">This code will produce an error because of data 
+	mismatch. The error message appears as follows:</p>
+	<p class="auto-style2">
+	<a class="auto-style1" href="Images/vb2013_figure12.2.jpg">
+	<img alt="vb2013_figure12.2" class="auto-style1" height="318" src="Images/vb2013_figure12.2.jpg" width="559" /></a><strong class="auto-style1">Figure 
+	12.2</strong></p>
+	<p class="auto-style1">However, using &amp; instead of + will be all right.</p>
+	<p class="auto-style1"><strong>Dim text1, text3 as string<br />
+	Dim Text2 As Integer<br />
+	text1 = “Visual”<br />
+	text2=22<br />
+	text3=text1 &amp; text2<br />
+	MsgBox(text3)</strong></p>
+	<p class="auto-style1">
+	<a class="auto-style1" href="Images/vb2013_figure12.3.jpg">
+	<img alt="vb2013_figure12.3" class="auto-style1" height="155" src="Images/vb2013_figure12.3.jpg" width="154" /></a></p>
+	<p class="auto-style2"><span class="auto-style5">
+	<strong class="auto-style1">Figure 12.3</strong></span></p>
+	<p class="auto-style1">&nbsp;</p>
+	<p class="auto-style1"><strong class="auto-style1">12.2 String Manipulation 
+	Using VB2013 Built-in Functions</strong></p>
+	<p class="auto-style1">A function is similar to a normal procedure but the 
+	main purpose of the function is to accept a certain input and return a value 
+	which is passed on to the main program to finish the execution.There are 
+	numerous string manipulation functions that are built into Visual Basic 
+	2013.</p>
+	<p class="auto-style1"><strong class="auto-style1">12.2 (a) The Len Function</strong></p>
+	<p class="auto-style1">The Len function returns an integer value which is 
+	the length of a phrase or a sentence, including the empty spaces. The syntax 
+	is<br />
+	<strong class="auto-style1">Len (“Phrase”)</strong></p>
+	<p class="auto-style1">For example,<br />
+	Len (Visual Basic) = 12 and Len (“welcome to VB tutorial”) = 22</p>
+	<p class="auto-style1"><strong class="auto-style1">Example 12.3</strong></p>
+	<p class="auto-style1"><span class="auto-style5"><strong>Private Sub 
+	Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) 
+	Handles Button1.Click</strong></span><strong class="auto-style1"></strong></p>
+	<p class="auto-style1"><strong>Dim MyText as String</strong></p>
+	<p class="auto-style1"><strong>MyText=”Visual Studio 2013
+
+
+″</strong></p>
+	<p class="auto-style1"><strong>MsgBox(Len(MyText))</strong></p>
+	<p class="auto-style1"><strong>End Sub</strong></p>
+	<p class="auto-style1"><strong>The output:</strong></p>
+	<p class="auto-style1">
+	<a class="auto-style1" href="Images/vb2013_figure12.4.jpg">
+	<img alt="vb2013_figure12.4" class="auto-style1" height="155" src="Images/vb2013_figure12.4.jpg" width="154" /></a></p>
+	<p class="auto-style2"><strong class="auto-style1">&nbsp;Figure 12.4</strong></p>
+	<p class="auto-style1"><strong class="auto-style1">12.2(b) The Right 
+	Function</strong></p>
+	<p class="auto-style1">The Right function extracts the right portion of a 
+	phrase. The syntax for Visual Basic 6 is</p>
+	<p class="auto-style1"><strong class="auto-style1">Right (“Phrase”, n)</strong></p>
+	<p class="auto-style1">Where n is the starting position from the right of 
+	the phase where the portion of the phrase is going to be extracted. For 
+	example,</p>
+	<p class="auto-style1">Right(“Visual Basic”, 4) = asic</p>
+	<p class="auto-style1">However, this syntax is not applicable in Visual 
+	Basic 2013. In VB2013, we need to use the following syntax</p>
+	<p class="auto-style1"><strong class="auto-style1">
+	Microsoft.VisualBasic.Right(“Phrase”,n)</strong></p>
+	<p class="auto-style1">The reason of using the full reference is because 
+	many objects have the Right properties so using Right on its own will make 
+	it ambiguous to Visual Studio 2013
+
+
+.</p>
+	<p class="auto-style1"><strong class="auto-style1">Example 12.4</strong></p>
+	<p class="auto-style1"><strong>Private Sub Button1_Click(ByVal sender As 
+	System.Object, ByVal e As System.EventArgs) Handles Button1.Click<br />
+	Dim MyText As String</strong></p>
+	<p class="auto-style1"><strong>MyText=”Visual Basic”</strong></p>
+	<p class="auto-style1"><strong>MsgBox(Microsoft.VisualBasic.Right(MyText, 4))</strong></p>
+	<p class="auto-style1"><strong>End Sub</strong></p>
+	<p class="auto-style1">The above program returns four right most characters 
+	of the phrase entered into the textbox.</p>
+	<p class="auto-style1">The Output:</p>
+	<p class="auto-style2">
+	<a class="auto-style1" href="Images/vb2013_figure12.5.jpg">
+	<img alt="vb2013_figure12.5" class="auto-style1" height="155" src="Images/vb2013_figure12.5.jpg" width="154" /></a><strong class="auto-style1">Figure 
+	12.5</strong></p>
+	<p class="auto-style1">&nbsp;</p>
+	<p class="auto-style1"><strong class="auto-style1">12.2(c)The Left Function</strong></p>
+	<p class="auto-style1">The Left function extract the left portion of a 
+	phrase. The syntax &nbsp;is</p>
+	<p class="auto-style1"><strong class="auto-style1">
+	Microsoft.VisualBasic.Left(“Phrase”,n)</strong></p>
+	<p class="auto-style1">Where n is the starting position from the left of the 
+	phase where the portion of the phrase is will be extracted. For example,</p>
+	<p class="auto-style1">Microsoft.VisualBasic.Left (“Visual Basic”, 4) = Visu 
+	.</p>
+	<p class="auto-style1"><strong class="auto-style1">12.2 (d) The Mid Function</strong></p>
+	<p class="auto-style1">The Mid function is used to retrieve a part of text 
+	form a given phrase. The syntax of the Mid Function is</p>
+	<p class="auto-style1"><strong class="auto-style1">Mid(phrase, position,n)</strong></p>
+	<p class="auto-style1">where</p>
+	<p class="auto-style1">phrase is the string from which a part of text is to 
+	be retrieved.</p>
+	<p class="auto-style1">position is the starting position of the phrase from 
+	which the retrieving process begins.</p>
+	<p class="auto-style1">n is the number of characters to retrieve.</p>
+	<p class="auto-style1"><strong class="auto-style1">Example 12.5:</strong></p>
+	<p class="auto-style1"><strong>Private Sub Button1_Click(sender As Object, e As 
+	EventArgs) Handles Button1.Click<br />
+	Dim myPhrase As String<br />
+	myPhrase = InputBox(“Enter your phrase”)<br />
+	LblPhrase.Text = myPhrase<br />
+	LblExtract.Text = Mid(myPhrase, 2, 6)<br />
+	End Sub</strong></p>
+	<p class="auto-style1">* In this example, when the user clicks the button, 
+	an input box will pop up prompting the user to enter a phrase. After a 
+	phrase is entered and the OK button is pressed, the label will show the 
+	extracted text starting from position 2 of the phrase and the number of 
+	characters extracted is 6.</p>
+	<p class="auto-style1">
+	<a class="auto-style1" href="Images/vb2013_figure12.6.jpg">
+	<img alt="vb2013_figure12.6" class="auto-style1" height="300" src="Images/vb2013_figure12.6.jpg" width="321" /></a></p>
+	<p class="auto-style2">&nbsp;<strong class="auto-style1">Figure 12.6</strong></p>
+	<p class="auto-style1"><strong class="auto-style1">12.2(e) The Trim Function</strong></p>
+	<p class="auto-style1">The Trim function trims the empty spaces on both side 
+	of the phrase. The syntax is</p>
+	<p class="auto-style1"><strong class="auto-style1">Trim(“Phrase”)</strong></p>
+	<p class="auto-style1">.For example, Trim (” Visual Basic “) = Visual basic</p>
+	<p class="auto-style1">Example 13.4</p>
+	<p class="auto-style1"><strong>Private Sub Button1_Click(ByVal sender As 
+	System.Object, ByVal e As System.EventArgs) Handles Button1.Click<br />
+	Dim myPhrase As String<br />
+	myPhrase = InputBox(“Enter your phrase”)<br />
+	Label1.Text = Trim(myPhrase)<br />
+	End Sub</strong></p>
+	<p class="auto-style1"><strong class="auto-style1">12.2(f) The Ltrim 
+	Function</strong></p>
+	<p class="auto-style1">The Ltrim function trims the empty spaces of the left 
+	portion of the phrase. The syntax is</p>
+	<p class="auto-style1"><strong class="auto-style1">Ltrim(“Phrase”)</strong></p>
+	<p class="auto-style1">.For example,</p>
+	<p class="auto-style1">Ltrim (”&nbsp;&nbsp;&nbsp;&nbsp; Visual Studio 2013
+
+
+″)= 
+	Visual Studio 2013
+
+
+</p>
+	<p class="auto-style1"><strong class="auto-style1">12.2(g)The Rtrim Function</strong></p>
+	<p class="auto-style1">The Rtrim function trims the empty spaces of the 
+	right portion of the phrase. The syntax is</p>
+	<p class="auto-style1"><strong class="auto-style1">Rtrim(“Phrase”)</strong></p>
+	<p class="auto-style1">.For example,</p>
+	<p class="auto-style1">Rtrim (“Visual Studio 2013
+
+
+&nbsp;&nbsp;&nbsp;&nbsp; “) 
+	= Visual Studio 2013
+
+
+</p>
+	<p class="auto-style1"><strong class="auto-style1">12.2(h) The InStr 
+	function</strong></p>
+	<p class="auto-style1">The InStr function looks for a phrase that is 
+	embedded within the original phrase and returns the starting position of the 
+	embedded phrase. The syntax &nbsp;is</p>
+	<p class="auto-style1"><strong class="auto-style1">Instr (n, original phase, 
+	embedded phrase)</strong></p>
+	<p class="auto-style1">Where n is the position where the Instr function will 
+	begin to look for the embedded phrase. For example</p>
+	<p class="auto-style1">Instr(1, “Visual Studio 2013
+
+
+ “,”Basic”)=8</p>
+	<p class="auto-style1">*The function returns a numeric value.</p>
+	<p class="auto-style1">You can write a program code as shown below:</p>
+	<p class="auto-style1">Private Sub Button1_Click(ByVal sender As 
+	System.Object, ByVal e As System.EventArgs) Handles Button1.Click</p>
+	<p class="auto-style1">Label1.Text = InStr(1, “Visual Basic”, “Basic”)<br />
+	End Sub</p>
+	<p class="auto-style1"><strong class="auto-style1">12.2(i) The Ucase and the 
+	Lcase Functions</strong></p>
+	<p class="auto-style1">The Ucase function converts all the characters of a 
+	string to capital letters. On the other hand, the Lcase function converts 
+	all the characters of a string to small letters.</p>
+	<p class="auto-style1">The syntaxes &nbsp;are</p>
+	<p class="auto-style1"><strong class="auto-style1">
+	Microsoft.VisualBasic.UCase(Phrase)</strong></p>
+	<p class="auto-style1"><strong class="auto-style1">
+	Microsoft.VisualBasic.LCase(Phrase)</strong></p>
+	<p class="auto-style1">For example,</p>
+	<p class="auto-style1">Microsoft.VisualBasic.Ucase(“Visual Basic”) =VISUAL 
+	BASIC</p>
+	<p class="auto-style1">Microsoft.VisualBasic.Lcase(“Visual Basic”) =visual 
+	basic</p>
+	<p class="auto-style1"><strong class="auto-style1">12.2(j)The Chr and the 
+	Asc functions</strong></p>
+	<p class="auto-style1"><strong class="auto-style1"></strong><br />
+	The Chr function returns the string that corresponds to an ASCII code while 
+	the Asc function converts an ASCII character or symbol to the corresponding 
+	ASCII code. ASCII stands for “American Standard Code for Information 
+	Interchange”. Altogether there are 255 ASCII codes and as many ASCII 
+	characters. Some of the characters may not be displayed as they may 
+	represent some actions such as the pressing of a key or produce a beep 
+	sound. The syntax of the Chr function is</p>
+	<p class="auto-style1">Chr(charcode)</p>
+	<p class="auto-style1">and the format of the Asc function is</p>
+	<p class="auto-style1">Asc(Character)</p>
+	<p class="auto-style1">The following are some examples:</p>
+	<p class="auto-style1">Chr(65)=A, Chr(122)=z, Chr(37)=% ,</p>
+	<p class="auto-style1">Asc(“B”)=66, Asc(“&amp;”)=38</p>
+	<p class="auto-style1">* We shall learn more about functions in later 
+	lessons</p>
+	<h2 class="auto-style2">
+	<a class="auto-style1" href="lesson11-performing-mathematical-operations.html">
+	<strong>[Lesson 11]&nbsp;</strong></a><strong>&lt;&lt;&nbsp;</strong><a class="auto-style1href=" href="index.html" Index.html"=""><strong>[Contents]</strong></a><strong>&nbsp;&gt;&gt;
+	</strong>
+	<a class="auto-style1" href="lesson13-making-decisions-using-if-then-else.html">
+	<strong>[Lesson 13]</strong></a></h2>
+</div>
+
+</body>
+
+</html>

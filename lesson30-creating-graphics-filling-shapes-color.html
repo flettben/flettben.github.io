@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Start learning Visual Studio 2013
+
+
+</title>
+
+
+
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<ARTICLE class="post-4967 page type-page status-publish hentry" id="post-4967"><HEADER class="entry-header">
+<h1 class="auto-style1"><strong>Visual Studio 2013
+
+
+ Lesson 30: Creating Graphics-Filling 
+Shapes with Color</strong></h1>
+</HEADER>
+<div class="auto-style1">
+	<h2 class="auto-style2">
+	<a class="auto-style1" href="lesson29-creating-graphics-polygon-pie/">
+	<strong>[Lesson 29] </strong> </a><strong>&lt;&lt;
+	</strong><a class="auto-style1href=" href="index.html" Index.html"="">
+	<strong>[Contents] </strong></a><strong>&gt;&gt;
+	</strong><a class="auto-style1" href="lesson31-using-timer.html"><strong>[Lesson 31]</strong></a></h2>
+	<div id="mycontent" class="auto-style1">
+		<div class="auto-style1">
+			In preceding lessons, we have learned how to draw rectangle, ellipse 
+			,circle ,polygon and pie with outlines only. In this lesson, we will 
+			show you how to fill the shapes with color, or simply solid shapes 
+			in Visual Basic 2103. Three methods that are used to fill shapes are
+			<strong class="auto-style1">FillRectangle, FillEllipse , FillPolygon</strong> 
+			and <strong class="auto-style1">FillPie</strong>.<p class="auto-style1">
+			</p>
+			<p class="auto-style1">In order to fill the above shapes with color, 
+			we need to create the Brush object using the following syntax:</p>
+			<p class="auto-style1"><strong class="auto-style1">myBrush = New 
+			SolidBrush(Color.myColor)</strong></p>
+		</div>
+		<div class="auto-style1">
+			<br />
+   	<p class="auto-style1">Where myColor can be any color such as red,blue, 
+	yellow and more. You don’t have to worry about the names of the colors 
+	because the intellisense will display the colors and enter the period after 
+	the Color key word.</p>
+	<h2 class="auto-style1">30.1 Drawing and Filling a Rectangle with Color</h2>
+	<p class="auto-style1">In Visual Studio 2013
+
+
+, the syntax to fill a rectangle 
+	with the color defined by the brush object is:</p>
+	<p class="auto-style1"><strong class="auto-style1">myGraphics.FillRectangle 
+	(myBrush, 0, 0, 150, 150)</strong></p>
+	<p class="auto-style1"><strong class="auto-style1">Example 30.1</strong></p>
+	<div id="mycontent0" class="auto-style1">
+		<div class="auto-style1">
+			<strong>Private Sub BtnDraw_Click(sender As Object, e As EventArgs) Handles 
+			BtnDraw.ClickDim myPen As Pen<br />
+			Dim myBrush As Brush<br />
+			Dim myGraphics As Graphics = Me.CreateGraphicsmyPen = New 
+			Pen(Drawing.Color.Blue, 5)<br />
+			myBrush = New SolidBrush(Color.Coral)<br />
+			myGraphics.DrawRectangle(myPen, 65, 50, 150, 150)<br />
+			myGraphics.FillRectangle(myBrush, 65, 50, 150, 150)</strong><p class="auto-style1">
+			<strong>End Sub</strong></p>
+		</div>
+		<div class="auto-style1">
+			<br />
+    	<p class="auto-style1">The output is as shown in Figure 30.1</p>
+	<p class="auto-style2">
+	<a class="auto-style1" href="Images/vb2013_figure30.1.jpg">
+	<img alt="vb2013_figure30.1" class="auto-style1" height="300" src="Images/vb2013_figure30.1.jpg" width="300" /></a><strong class="auto-style1">Figure 
+	30.1</strong></p>
+	<p class="auto-style5">*Note that if you omit the 
+	line&nbsp;myGraphics.DrawRectangle(myPen, 65, 50, 150, 150), you will get a solid 
+	rectangle without outline, as shown in in Figure 30.2</p>
+	<p class="auto-style2">
+	<a class="auto-style1" href="Images/vb2013_figure30.2.jpg">
+	<img alt="vb2013_figure30.2" class="auto-style1" height="300" src="Images/vb2013_figure30.2.jpg" width="300" /></a><strong class="auto-style1">Figure 
+	30.2</strong></p>
+	<h2 class="auto-style1"><strong class="auto-style1">30.2 Drawing and Filling 
+	an Ellipse with Color</strong></h2>
+	<p class="auto-style1">The syntax to fill a ellipse with the color defined 
+	by the brush object is:</p>
+	<p class="auto-style1">myGraphics.FillEllipse (myBrush, 0, 0, 150, 150)</p>
+	<p class="auto-style1"><strong class="auto-style1">Example 30.2</strong></p>
+	<p class="auto-style1"><strong>Private Sub BtnDraw_Click(sender As Object, e As 
+	EventArgs) Handles BtnDraw.ClickDim myPen As Pen<br />
+	Dim myBrush As Brush<br />
+	Dim myGraphics As Graphics = Me.CreateGraphicsmyPen = New 
+	Pen(Drawing.Color.Blue, 5)<br />
+	myBrush = New SolidBrush(Color.Coral)<br />
+	myGraphics.DrawEllipse(myPen, 50, 50, 180, 100)<br />
+	myGraphics.FillEllipse(myBrush, 50, 50, 180, 100)</strong></p>
+	<p class="auto-style1"><strong>End Sub</strong></p>
+	<p class="auto-style1">The output interface is as shown in Figure 30.3</p>
+	<p class="auto-style1">
+	<a class="auto-style1" href="Images/vb2013_figure30.3.jpg">
+	<img alt="vb2013_figure30.3" class="auto-style1" height="300" src="Images/vb2013_figure30.3.jpg" width="300" /></a></p>
+	<p class="auto-style2"><strong class="auto-style1">&nbsp;Figure 30.3</strong></p>
+	<p class="auto-style5">*If you omit the line&nbsp;myGraphics.DrawEllipse(myPen, 
+	50, 50, 180, 100), you will get a solid ellipse without outline.</p>
+	<h2 class="auto-style1"><strong class="auto-style1">30.3 Drawing and Filling 
+	a Polygon with Color</strong></h2>
+	<p class="auto-style1">The syntax to fill a polygon with the color defined 
+	by the brush object is:</p>
+	<p class="auto-style1">myGraphics.FillPolygon(myBrush, myPoints)</p>
+	<p class="auto-style1"><strong class="auto-style1">Example 30.3</strong></p>
+	<p class="auto-style1">Private Sub BtnDraw_Click(sender As Object, e As 
+	EventArgs) Handles BtnDraw.Click</p>
+	<p class="auto-style1"><strong>Dim myPen As Pen<br />
+	Dim myBrush As Brush<br />
+	Dim A As New Point(70, 10)<br />
+	Dim B As New Point(170, 50)<br />
+	Dim C As New Point(200, 150)<br />
+	Dim D As New Point(140, 200)<br />
+	Dim myPoints As Point() = {A, B, C, D}</strong></p>
+	<p class="auto-style1"><strong>myPen = New Pen(Drawing.Color.Blue, 5)<br />
+	myBrush = New SolidBrush(Color.Coral)<br />
+	Dim myGraphics As Graphics = Me.CreateGraphics<br />
+	myGraphics.DrawPolygon(myPen, myPoints)<br />
+	myGraphics.FillPolygon(myBrush, myPoints)</strong></p>
+	<p class="auto-style1"><strong>End Sub</strong></p>
+	<p class="auto-style1">The output interface is as shown in Figure 30.4</p>
+	<p class="auto-style2">
+	<a class="auto-style1" href="Images/vb2013_figure30.4.jpg">
+	<img alt="vb2013_figure30.4" class="auto-style1" height="300" src="Images/vb2013_figure30.4.jpg" width="300" /></a><strong class="auto-style1">Figure 
+	30.4</strong></p>
+	<p class="auto-style5">* if you omit&nbsp;myGraphics the line DrawPolygon(myPen, 
+	myPoints), &nbsp;you will get a polygon without outline</p>
+	<p class="auto-style1">&nbsp;</p>
+	<h2 class="auto-style1"><strong class="auto-style1">30.4 Drawing and Filling 
+	a Pie</strong></h2>
+	<p class="auto-style1">The syntax to fill a pie with the color defined by 
+	the brush object is:</p>
+	<p class="auto-style1">myGraphics.FillPie(myBrush, X, Y, width, height, 
+	StartAngle, SweepAngle)</p>
+	<p class="auto-style1"><strong class="auto-style1">Example 30.4</strong></p>
+	<p class="auto-style1"><strong>Private Sub BtnDraw_Click(sender As Object, e As 
+	EventArgs) Handles BtnDraw.Click</strong></p>
+	<p class="auto-style1"><strong>Dim myPen As Pen<br />
+	Dim myBrush As Brush<br />
+	Dim myGraphics As Graphics = Me.CreateGraphics</strong></p>
+	<p class="auto-style1"><strong>myPen = New Pen(Drawing.Color.Blue, 5)<br />
+	myBrush = New SolidBrush(Color.Coral)<br />
+	myGraphics.DrawPie(myPen, 30, 40, 150, 150, 0, 60)<br />
+	myGraphics.FillPie(myBrush, 30, 40, 150, 150, 0, 60)</strong></p>
+	<p class="auto-style1"><strong>End Sub</strong></p>
+	<p class="auto-style1">The output is as shown in Figure 30.5</p>
+	<p class="auto-style1">
+	<a class="auto-style1" href="Images/vb2013_figure30.5.jpg">
+	<img alt="vb2013_figure30.5" class="auto-style1" height="300" src="Images/vb2013_figure30.5.jpg" width="300" /></a></p>
+	<p class="auto-style2">&nbsp;<strong class="auto-style1">Figure 30.5</strong></p>
+	<h2 class="auto-style2">
+	<a class="auto-style1" href="lesson29-creating-graphics-polygon-pie.html">
+	<strong>[Lesson 29]&nbsp;</strong></a><strong>&lt;&lt;&nbsp;</strong><a class="auto-style1href=" href="index.html" Index.html"=""><strong>[Contents]&nbsp;</strong></a><strong>&gt;&gt;
+	</strong><a class="auto-style1" href="lesson31-using-timer.html"><strong>[Lesson 31]</strong></a></h2>
+</div>
+
+</body>
+
+</html>

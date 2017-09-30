@@ -1,0 +1,330 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Start learning Visual Studio 2013
+
+
+</title>
+
+
+
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<ARTICLE class="post-4725 page type-page status-publish hentry" id="post-4725"><HEADER class="entry-header">
+<h1 class="auto-style1"><strong>Visual Studio 2013
+
+
+ Lesson 19: The Format Function</strong></h1>
+</HEADER>
+<div class="auto-style1">
+	<h2 class="auto-style2">
+	<a class="auto-style1" href="lesson18-the-math-functions.html"><strong>[Lesson 18]</strong></a><strong> &lt;&lt;</strong><a class="auto-style1href=" href="index.html" Index.html"=""><strong>[Contents]</strong></a><strong> 
+	&gt;&gt;
+	</strong><a class="auto-style1" href="lesson20-using-check-box.html">
+	<strong>[Lesson 20]</strong></a></h2>
+	<p class="auto-style1">The Format function in Visual Studio 2013
+
+
+ is a very 
+	useful formatting function. It is used to display numbers as well as date 
+	and time in various formats.</p>
+	<h2 class="auto-style1">19.1 Format function for Numbers</h2>
+	<p class="auto-style1">There are two types of Format functions for numbers, 
+	one of them is the built-in or predefined format while another one can be 
+	defined by the user.</p>
+	<p class="auto-style1"><strong class="auto-style1">19.1(a) Built-in Format 
+	function for Numbers</strong></p>
+	<p class="auto-style1">The syntax of the built-in Format function is</p>
+	<p class="auto-style1"><strong class="auto-style1">Format (n, “style 
+	argument”)</strong></p>
+	<p class="auto-style1">where n is a number.</p>
+	<p class="auto-style1">The list of style arguments in Visual Studio 2013
+
+
+ is 
+	given in Table 19.1.</p>
+	<h3 align="center" class="auto-style1">Table 19.1</h3>
+	<table class="auto-style1">
+		<tbody class="auto-style1">
+			<tr class="auto-style1">
+				<th class="auto-style1">Style argument</th>
+				<th class="auto-style1">Explanation</th>
+				<th class="auto-style1">Example</th>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style1">General Number</td>
+				<td class="auto-style1">To display the number without having 
+				separators between thousands.</td>
+				<td class="auto-style1">Format(8972.234, “General 
+				Number”)=8972.234</td>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style1">Fixed</td>
+				<td class="auto-style1">To display the number without having 
+				separators between thousands and rounds it up to two decimal 
+				places.</td>
+				<td class="auto-style1">Format(8972.2, “Fixed”)=8972.23</td>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style1">Standard</td>
+				<td class="auto-style1">To display the number with separators or 
+				separators between thousands and rounds it up to two decimal 
+				places.</td>
+				<td class="auto-style1">Format(6648972.265, “Standard”)= 
+				6,648,972.27</td>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style1">Currency</td>
+				<td class="auto-style1">To display the number with the dollar 
+				sign in front, has separators between thousands as well as 
+				rounding it up to two decimal places.</td>
+				<td class="auto-style1">Format(6648972.265, “Currency”)= 
+				$6,648,972.27</td>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style1">Percent</td>
+				<td class="auto-style1">Converts the number to the percentage 
+				form and displays a % sign and rounds it up to two decimal 
+				places.</td>
+				<td class="auto-style1">Format(0.56324, “Percent”)=56.32 %</td>
+			</tr>
+	</table>
+	<p class="auto-style1"><strong class="auto-style1">Example 19.1</strong></p>
+	<p class="auto-style1">Private Sub BtnFormat_Click(sender As Object, e As 
+	EventArgs) Handles BtnFormat.Click</p>
+	<p class="auto-style1">Label1.Text = Format(8972.234, “General Number”)<br />
+	Label2.Text = Format(8972.2, “Fixed”)<br />
+	Label3.Text = Format(6648972.265, “Standard”)<br />
+	Label4.Text = Format(6648972.265, “Currency”)<br />
+	Label5.Text = Format(0.56324, “Percent”)</p>
+	<p class="auto-style1">End Sub</p>
+	<p class="auto-style1"><strong class="auto-style1">The Output</strong></p>
+	<div id="mycontent" class="auto-style1">
+		<div class="auto-style1">
+			<p class="auto-style2">
+			<a class="auto-style1" href="Images/vb2013_figre19.1.jpg">
+			<img alt="vb2013_figre19.1" class="auto-style1" height="320" src="Images/vb2013_figre19.1.jpg" width="310" /></a><strong class="auto-style1">Figure 
+			19.1</strong></p>
+		</div>
+	<p class="auto-style1"><strong class="auto-style1">19.1(b) User-Defined 
+	Format</strong></p>
+	<p class="auto-style1">The syntax of the user-defined Format function is</p>
+	<p class="auto-style1"><strong class="auto-style1">Format (n, “user’s 
+	format”)</strong></p>
+	<p class="auto-style1">Although it is known as user-defined format, we still 
+	need to follows certain formatting styles. Examples of user-defined 
+	formatting style are listed in Table 19.2</p>
+	<h3 align="center" class="auto-style1">Table 19.2</h3>
+	<table class="auto-style1">
+		<tbody class="auto-style1">
+			<tr class="auto-style1">
+				<th class="auto-style1">Format</th>
+				<th class="auto-style1">Description</th>
+				<th class="auto-style1">Output</th>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style1">Format(781234.576,”0″)</td>
+				<td class="auto-style1">Rounds to whole number without 
+				separators between thousands</td>
+				<td class="auto-style1">&nbsp;781235</td>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style1">&nbsp;Format(781234.576,”0.0″)</td>
+				<td class="auto-style1">Rounds to 1 decimal place without 
+				separators between thousands</td>
+				<td class="auto-style1">&nbsp;781234.6</td>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style1">&nbsp;Format(781234.576,”0.00″)</td>
+				<td class="auto-style1">Rounds to 2 decimal place without 
+				separators between thousands</td>
+				<td class="auto-style1">&nbsp;781234.58</td>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style1">&nbsp;&nbsp;Format(781234.576,”#,##0.00″)</td>
+				<td class="auto-style1">Rounds to 2 decimal place with 
+				separators between thousands</td>
+				<td class="auto-style1">&nbsp;781,234.58</td>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style1">&nbsp;Format(781234.576,”$#,##0.00″)</td>
+				<td class="auto-style1">Displays dollar sign and&nbsp;Rounds to 2 
+				decimal place with separators between thousands</td>
+				<td class="auto-style1">&nbsp;$781,234.58</td>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style1">&nbsp;Format(0.576,”0%”)</td>
+				<td class="auto-style1">Converts to percentage form without 
+				decimal place</td>
+				<td class="auto-style1">&nbsp;58%</td>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style1">&nbsp;Format(0.5768,”0%”)</td>
+				<td class="auto-style1">Converts to percentage form with two 
+				decimal places</td>
+				<td class="auto-style1">&nbsp;57.68%</td>
+			</tr>
+	</table>
+	<p class="auto-style1"><strong class="auto-style1">Example 19.2</strong></p>
+	<p class="auto-style1">Private Sub BtnFormat_Click(sender As Object, e As 
+	EventArgs) Handles BtnFormat.Click</p>
+	<p class="auto-style1">Label1.Text = Format(8972.234, “0.0”)<br />
+	Label2.Text = Format(8972.2345, “0.00”)<br />
+	Label3.Text = Format(6648972.265, “#,##0.00”)<br />
+	Label4.Text = Format(6648972.265, “$#,##0.00”)<br />
+	Label5.Text = Format(0.56324, “0%”)</p>
+	<p class="auto-style1">End Sub</p>
+	<p class="auto-style1">The Output</p>
+	<div id="mycontent0" class="auto-style1">
+		<div class="auto-style1">
+			<p class="auto-style2">
+			<a class="auto-style1" href="Images/vb2013_figure19.2.jpg">
+			<img alt="vb2013_figure19.2" class="auto-style1" height="300" src="Images/vb2013_figure19.2.jpg" width="300" /></a><strong class="auto-style1">Figure 
+			19.2</strong></p>
+		</div>
+	<h2 class="auto-style5">19.2 Formatting Date and Time</h2>
+	<p class="auto-style1">There are two types of Format functions for Date and 
+	time one of them is the built-in or predefined format while another one can 
+	be defined by the user.</p>
+	<p class="auto-style1"><strong class="auto-style1">19.2(a) Formatting Date 
+	and time using predefined formats&nbsp;</strong></p>
+	<p class="auto-style1">In Visual Studio 2013
+
+
+ , we can format date and time 
+	using predefined formats or user-defined formats. The predefined formats of 
+	date and time are shown in Table 19.3</p>
+	<h3 align="center" class="auto-style1">Table 19.3</h3>
+	<table class="auto-style1">
+		<tbody class="auto-style1">
+			<tr class="auto-style1">
+				<th class="auto-style1">&nbsp;Format</th>
+				<th class="auto-style1">&nbsp;description</th>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style1">Format(Now, “General Date”)</td>
+				<td class="auto-style1">Displays current date and time</td>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style1">Format(Now, “Long Date”)</td>
+				<td class="auto-style1">Displays current date in long format</td>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style1">Format (Now, “Short date”)</td>
+				<td class="auto-style1">Displays current date in short format</td>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style1">Format (Now, “Long Time”)</td>
+				<td class="auto-style1">Displays current time in long format.</td>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style1">Format (Now, “Short Time”)</td>
+				<td class="auto-style1">Displays current time in short format.</td>
+			</tr>
+	</table>
+	<p class="auto-style1"><strong class="auto-style1">&nbsp;Example 19.3</strong></p>
+	<p class="auto-style1">Private Sub BtnDisplay_Click(sender As Object, e As 
+	EventArgs) Handles BtnDisplay.Click</p>
+	<p class="auto-style1">Label1.Text = Format(Now, “General Date”)<br />
+	Label2.Text = Format(Now, “Long Date”)<br />
+	Label3.Text = Format(Now, “short Date”)<br />
+	Label4.Text = Format(Now, “Long Time”) Label5.Text = Format(Now, “Short 
+	Time”)</p>
+	<p class="auto-style1">End Sub</p>
+	<p class="auto-style1">The output</p>
+	<p class="auto-style2">
+	<a class="auto-style1" href="Images/vb2013_figure19.3.jpg">
+	<img alt="vb2013_figure19.3" class="auto-style1" height="300" src="Images/vb2013_figure19.3.jpg" width="300" /></a><strong class="auto-style1">Figure 
+	19.3</strong></p>
+	<p class="auto-style1">You can display dates and time in real-time using a 
+	timer and set its property Enabled to true and interval 100. The code is as 
+	follows:</p>
+	<p class="auto-style1">Private Sub Timer1_Tick(sender As Object, e As 
+	EventArgs) Handles Timer1.Tick</p>
+	<p class="auto-style1">Label1.Text = Format(Now, “General Date”)<br />
+	Label2.Text = Format(Now, “Long Date”)<br />
+	Label3.Text = Format(Now, “short Date”)<br />
+	Label4.Text = Format(Now, “Long Time”)<br />
+	Label5.Text = Format(Now, “Short Time”)</p>
+	<p class="auto-style1">End Sub</p>
+	<p class="auto-style1"><b class="auto-style1">19.2(b) Formatting Date and 
+	time using user-defined formats</b></p>
+	<p class="auto-style1">Beside using the predefined&nbsp; formats, you can 
+	also use the user-defined formatting functions. The syntax of a user-defined 
+	format &nbsp;for date and time is <strong class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></p>
+	<p class="auto-style1"><strong class="auto-style1">&nbsp; Format 
+	(expression,style)</strong></p>
+	<h3 align="center" class="auto-style1">Table 19.4</h3>
+	<table class="auto-style1">
+		<tbody class="auto-style1">
+			<tr class="auto-style1">
+				<th class="auto-style1">Format</th>
+				<th class="auto-style1">Description</th>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style1">Format (Now, “m”)</td>
+				<td class="auto-style1">Displays current month and date</td>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style1">Format (Now, “mm”)</td>
+				<td class="auto-style1">Displays current month in double digits.</td>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style1">Format (Now, “mmm”)</td>
+				<td class="auto-style1">Displays abbreviated name of the current 
+				month</td>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style1">Format (Now, “mmmm”)</td>
+				<td class="auto-style1">Displays full name of the current month.</td>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style1">Format (Now, “dd/mm/yyyy”)</td>
+				<td class="auto-style1">Displays current date in the 
+				day/month/year format.</td>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style1">Format (Now, “mmm,d,yyyy”)</td>
+				<td class="auto-style1">Displays current date in the Month, Day, 
+				Year Format</td>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style1">Format (Now, “h:mm:ss tt”)</td>
+				<td class="auto-style1">Dispalys current time in 
+				hour:minute:second format and show am/pm</td>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style1">Format (Now, “MM/dd/yyyy h:mm:ss)</td>
+				<td class="auto-style1">Dispalys current date and time in 
+				hour:minute:second format</td>
+			</tr>
+	</table>
+	<p class="auto-style1">Example 19.4</p>
+	<p class="auto-style1">Private Sub Timer1_Tick(sender As Object, e As 
+	EventArgs) Handles Timer1.Tick</p>
+	<p class="auto-style1">Label1.Text = Format(Now, “m”)<br />
+	Label2.Text = Format(Now, “mm”)<br />
+	Label3.Text = Format(Now, “mmm”)<br />
+	Label4.Text = Format(Now, “mmmm”)<br />
+	Label5.Text = Format(Now, “dd/mm/yyyy”)<br />
+	Label6.Text = Format(Now, “mmm,d,yyyy”)<br />
+	Label7.Text = Format(Now, “h:mm:ss tt”)<br />
+	Label8.Text = Format(Now, “MM/dd/yyyy h:mm:ss tt”)</p>
+	<p class="auto-style1">End Sub</p>
+	<p class="auto-style1">The output
+	<a class="auto-style1" href="Images/vb2013_figure19.4.jpg">
+	<img alt="vb2013_figure19.4" class="auto-style1" height="300" src="Images/vb2013_figure19.4.jpg" width="317" /></a></p>
+	<p class="auto-style2">&nbsp;<strong class="auto-style1">Figure 19.4</strong></p>
+	<h2 class="auto-style2">
+	<a class="auto-style1" href="lesson18-the-math-functions.html"><strong>[Lesson 18]</strong></a><strong>&nbsp;&lt;&lt;</strong><a class="auto-style1href=" href="index.html" Index.html"=""><strong>[Contents]</strong></a><strong>&nbsp;&gt;&gt;
+	</strong><a class="auto-style1" href="lesson20-using-check-box.html">
+	<strong>[Lesson 20]</strong></a></h2>
+</div>
+
+</body>
+
+</html>

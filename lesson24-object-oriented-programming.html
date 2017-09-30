@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Start learning Visual Studio 2013
+
+
+</title>
+
+
+
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<ARTICLE class="post-4864 page type-page status-publish hentry" id="post-4864"><HEADER class="entry-header">
+<h1 class="auto-style1"><strong>Visual Studio 2013
+
+
+ Lesson 24: Object Oriented Programming</strong></h1>
+</HEADER>
+<div class="auto-style1">
+	<h2 class="auto-style2">
+	<a class="auto-style1" href="lesson23-creating-web-browser.html"><strong>[Lesson 23] 
+	</strong></a><strong>&lt;&lt;
+	</strong><a class="auto-style1href=" href="index.html" Index.html"="">
+	<strong>[Contents]</strong></a><strong> &gt;&gt;
+	</strong><a class="auto-style1" href="lesson25-working-graphics.html">
+	<strong>[Lesson 25]</strong></a></h2>
+	<div id="mycontent" class="auto-style1">
+		<div class="auto-style1">
+			In all the preceding lessons, you have learned how to write the 
+			program code in Visual Studio 2013
+
+
+ but we have not discuss the 
+			concepts of object oriented programming that forms the foundation of 
+			Visual Studio 2013
+
+
+. Now, let’s get down to learning the basic 
+			concepts of object oriented programming.<p class="auto-style1"></p>
+			<p class="auto-style1">In order for a programming language to 
+			qualify as an object oriented programming language, it must have 
+			three core technologies namely encapsulation, inheritance and 
+			polymorphism. These three terms are explained below:</p>
+		</div>
+		<div class="auto-style1">
+			<br />
+   	<p class="auto-style1"><strong class="auto-style1">Encapsulation</strong><br />
+	Encapsulation refers to the creation of self-contained modules that bind 
+	processing functions to the data. These user-defined data types are called 
+	classes. Each class contains data as well as a set of methods which 
+	manipulate the data. The data components of a class are called instance 
+	variables and one instance of a class is an object. For example, in a 
+	library system, a class could be member, and John and Sharon could be two 
+	instances (two objects) of the library class.</p>
+	<p class="auto-style1"><strong class="auto-style1">Inheritance</strong><br />
+	Classes are created according to hierarchies, and inheritance allows the 
+	structure and methods in one class to be passed down the hierarchy. That 
+	means less programming is required when adding functions to complex systems. 
+	If a step is added at the bottom of a hierarchy, then only the processing 
+	and data associated with that unique step needs to be added. Everything else 
+	about that step is inherited.</p>
+	<p class="auto-style1"><strong class="auto-style1">Polymorphism</strong></p>
+	<div id="mycontent0" class="auto-style1">
+		<div class="auto-style1">
+			Object-oriented programming allows procedures about objects to be 
+			created whose exact type is not known until runtime. For example, a 
+			screen cursor may change its shape from an arrow to a line depending 
+			on the program mode. The routine to move the cursor on screen in 
+			response to mouse movement would be written for “cursor,” and 
+			polymorphism allows that cursor to take on whatever shape is 
+			required at runtime. It also allows new shapes to be easily 
+			integrated.Visual Studio 2013
+
+
+ allows users to write programs that 
+			break down into modules. These modules represents the real-world 
+			objects and are knows as classes or types. An object can be created 
+			out of a class and it is known as an instance of the class. A class 
+			can also comprise subclass. For example, apple tree is a subclass of 
+			the plant class and the apple in your backyard is an instance of the 
+			apple tree class. Another example is student class is a subclass of 
+			the human class while your son John is an instance of the student 
+			class.</div>
+		<div class="auto-style1">
+			<br />
+    	<p class="auto-style1">A class consists of data members as well as methods. 
+	In Visual Studio 2013
+
+
+, the program structure to define a Human class can be 
+	written as follows:</p>
+	<p class="auto-style1"><strong>Public Class Human<br />
+	‘Data Members<br />
+	Private Name As String<br />
+	Private Birthdate As String<br />
+	Private Gender As String<br />
+	Private Age As Integer<br />
+	‘Methods</strong></p>
+	<p class="auto-style1"><strong>Overridable Sub ShowInfo( )</strong></p>
+	<p class="auto-style1"><strong>MessageBox.Show(Name)<br />
+	MessageBox.Show(Birthdate)<br />
+	MessageBox.Show(Gender)<br />
+	MessageBox.Show(Age)</strong></p>
+	<p class="auto-style1"><strong>End Sub<br />
+	End Class</strong></p>
+	<p class="auto-style1"><strong>Another Example:</strong></p>
+	<p class="auto-style1"><strong>Public Class Car<br />
+	‘Data Members<br />
+	Private Brand As String<br />
+	Private Model As String<br />
+	Private Year Made As String<br />
+	Private Capacity As Integer</strong></p>
+	<p class="auto-style1"><strong>‘Methods</strong></p>
+	<p class="auto-style1"><strong>Overridable Sub ShowInfo( )</strong></p>
+	<p class="auto-style1"><strong>MessageBox.Show(Brand)<br />
+	MessageBox.Show(Model)<br />
+	MessageBox.Show(Year Made)<br />
+	MessageBox.Show(Capacity)</strong></p>
+	<p class="auto-style1"><strong>End Sub<br />
+	End Class</strong></p>
+	<p class="auto-style1">Let’s look at one example on how to create a class. 
+	The following example shows you how to create a class that can calculate 
+	your BMI (Body Mass Index).</p>
+	<p class="auto-style2">To create class, start Visual Studio 2013
+
+
+ as usual and 
+	choose Windows Applications. In the Visual Studio 2013
+
+
+ IDE, click on Project 
+	on the menu bar and select Add Class, the Add New Item dialog appears, as 
+	shown in Figure 24.1<a class="auto-style1" href="Images/vb2013_figure24.1.jpg"><img alt="vb2013_figure24.1" class="auto-style1" height="614" src="Images/vb2013_figure24.1.jpg" width="955" /></a><strong class="auto-style1">Figure 
+	24.1</strong></p>
+	<p class="auto-style1">The default class Class1.vb will appear as a new tab 
+	with a code window. Rename the class as MyClass.vb. Rename the form as 
+	MyFirstClass.vb.</p>
+	<p class="auto-style1">Now, in the MyClass.vb window, create a new class 
+	MyClass1 and enter the following code</p>
+	<p class="auto-style1"><strong>Public Class MyClass1<br />
+	Public Function BMI(ByVal height As Single, ByVal weight As Single)</strong></p>
+	<p class="auto-style1"><strong>BMI = Format((weight) / (height ^ 2), “0.00”)</strong></p>
+	<p class="auto-style1"><strong>End Function<br />
+	End Class</strong></p>
+	<p class="auto-style1">Now you have created a class (an object) called 
+	MyClass1 with a method known as BMI.</p>
+	<p class="auto-style1">In order to use the BMI class, &nbsp;insert a button into 
+	the form and click on the button to enter the following code:</p>
+	<p class="auto-style1"><strong>Private Sub BtnBMI_Click(sender As Object, e As 
+	EventArgs) Handles BtnBMI.Click<br />
+	Dim MyObject As Object<br />
+	Dim h, w As Single<br />
+	MyObject = New MyClass1()<br />
+	h = InputBox(“What is your height in meter”)<br />
+	w = InputBox(“What is your weight in kg”)<br />
+	MessageBox.Show(MyObject.BMI(h, w))<br />
+	End Sub</strong></p>
+	<p class="auto-style1">When you run this program and click the button, the 
+	user will be presented with two input boxes to enter his or her height and 
+	weight&nbsp;subsequently and the value of BMI will be shown in a pop-up message 
+	box, as shown in the figures below:</p>
+	<p class="auto-style1">
+	<a class="auto-style1" href="Images/vb2013_figure24.2.jpg">
+	<img alt="vb2013_figure24.2" class="auto-style1" height="159" src="Images/vb2013_figure24.2.jpg" width="369" /></a></p>
+	<p class="auto-style2"><strong class="auto-style1">Figure 24.2&nbsp;</strong></p>
+	<p class="auto-style2">
+	<a class="auto-style1" href="Images/vb2013_figure24.3.jpg">
+	<img alt="vb2013_figure24.3" class="auto-style1" height="159" src="Images/vb2013_figure24.3.jpg" width="369" /></a><strong class="auto-style1">Figure 
+	24.3</strong></p>
+	<p class="auto-style2">
+	<a class="auto-style1" href="Images/vb2013_figure24.4.jpg">
+	<img alt="vb2013_figure24.4" class="auto-style1" height="155" src="Images/vb2013_figure24.4.jpg" width="160" /></a><strong class="auto-style1">Figure 
+	24.4</strong></p>
+	<p class="auto-style1">
+	<br />
+	</p>
+	<h2 class="auto-style2">
+	<a class="auto-style1" href="lesson23-creating-web-browser.html"><strong>[Lesson 23]&nbsp;</strong></a><strong>&lt;&lt;&nbsp;</strong><a class="auto-style1href=" href="index.html" Index.html"=""><strong>[Contents]</strong></a><strong>&nbsp;&gt;&gt;
+	</strong><a class="auto-style1" href="lesson25-working-graphics.html">
+	<strong>[Lesson 25]</strong></a></h2>
+</div>
+
+</body>
+
+</html>

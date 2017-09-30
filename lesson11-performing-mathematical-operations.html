@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Start learning Visual Studio 2013
+
+
+</title>
+
+
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Visual Studio 2013
+
+
+ Lesson 11</title>
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<ARTICLE class="post-4447 page type-page status-publish hentry" id="post-4447"><HEADER class="entry-header">
+<h1 class="auto-style1"><strong>Visual Studio 2013
+
+
+ Lesson 11: Performing Mathematical 
+Operations</strong></h1>
+</HEADER>
+<div class="auto-style1">
+	<h2 class="auto-style2">
+	<a class="auto-style1" href="lesson10-arrays.html"><strong>[Lesson 10] 
+	</strong></a><strong>&lt;&lt;
+     </strong><a class="auto-style1" href="index.html"><strong>[Contents] 
+	</strong></a><strong>&gt;&gt;
+	</strong><a class="auto-style1" href="lesson12-string-manipulation.html">
+	<strong>[Lesson 12]</strong></a></h2>
+	<div id="mycontent" class="auto-style1">
+		<div class="auto-style1">
+			Computer can perform mathematical calculations much faster than 
+			human beings do. However, computer itself will not be able to 
+			perform any mathematical calculations without receiving instructions 
+			from the user. In Visual Studio 2013
+
+
+, we can write code to instruct 
+			the computer to perform mathematical calculations such as addition, 
+			subtraction, multiplication, division and other kinds of 
+			mathematical operations. In order for Visual Studio 2013
+
+
+ to carry out 
+			arithmetic calculations, we need to write code that involve the use 
+			of various mathematical operators. The Visual Studio 2013
+
+
+ 
+			mathematical&nbsp;operators are very similar to the normal arithmetic 
+			operators, only with slight variations. The plus and minus operators 
+			are the same while the multiplication operator use the * symbol and 
+			the division operator use the / symbol. The list of Visual Basic 
+			2013 mathematical&nbsp;operators are shown in table 11.1 below:</div>
+		<div class="auto-style1">
+	<h3 align="center" class="auto-style1">Table 11.1: Mathematical Operators</h3>
+	<table class="auto-style1">
+		<tbody class="auto-style1">
+			<tr class="auto-style1">
+				<th class="auto-style1">Operator</th>
+				<th class="auto-style1">Mathematical Function</th>
+				<th class="auto-style1">Example</th>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style1">+</td>
+				<td class="auto-style1">Addition</td>
+				<td class="auto-style1">&nbsp;1+2=3</td>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style1">–</td>
+				<td class="auto-style1">&nbsp;Subtraction</td>
+				<td class="auto-style1">&nbsp;10-4=6</td>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style1">^</td>
+				<td class="auto-style1">&nbsp;Exponential</td>
+				<td class="auto-style1">&nbsp;3^2=9</td>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style1">*</td>
+				<td class="auto-style1">&nbsp;Multiplication</td>
+				<td class="auto-style1">&nbsp;5*6=30</td>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style1">/</td>
+				<td class="auto-style1">&nbsp;Division</td>
+				<td class="auto-style1">&nbsp;21/7=3</td>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style1">Mod</td>
+				<td class="auto-style1">&nbsp;Modulus(returns the remainder of an 
+				integer division)</td>
+				<td class="auto-style1">&nbsp;15 Mod 4=3</td>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style1">\</td>
+				<td class="auto-style1">&nbsp;Integer Division(discards the decimal 
+				places)</td>
+				<td class="auto-style1">&nbsp;19/4=4</td>
+			</tr>
+	</table>
+	<p class="auto-style1"><strong class="auto-style1">Example 11.1</strong></p>
+	<p class="auto-style1">In this program, you need to insert two text boxes, 
+	four labels and one button. Click the button and enter the code as shown 
+	below. When you run the program, it will perform the four basic arithmetic 
+	operations and displays the results on the four labels.</p>
+	<div id="mycontent0" class="auto-style1">
+		<div class="auto-style1">
+			<strong>Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As 
+			System.EventArgs) Handles Button1.Click</strong><p class="auto-style1"></p>
+			<p class="auto-style1"><strong>Dim num1, num2, difference, product, quotient 
+			As Single<br />
+			num1 = TextBox1.Text<br />
+			num2 = TextBox2.Text<br />
+			sum=num1+num2<br />
+			difference=num1-num2<br />
+			product = num1 * num2<br />
+			quotient=num1/num2<br />
+			Label1.Text=sum<br />
+			Label2.Text=difference<br />
+			Label3.Text = product<br />
+			Label4.Text = quotient</strong></p>
+			<p class="auto-style1"><strong>End Sub</strong></p>
+		</div>
+		<div class="auto-style1">
+			<br />  	<p class="auto-style1"><strong class="auto-style5">Example 11.2</strong></p>
+	<p class="auto-style1">This Visual Studio 2013
+
+
+ &nbsp;program can use Pythagoras 
+	Theorem to calculate the length of hypotenuse c given the length of the 
+	adjacent side a and the opposite side b. In case you have forgotten the 
+	formula for the Pythagoras Theorem, it is written as<br />
+	c^2=a^2+b^2<br />
+	<strong>Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As 
+	System.EventArgs) Handles Button1.Click</strong></p>
+	<p class="auto-style1"><strong>Dim a, b, c As Single<br />
+	a = TextBox1.Text<br />
+	b = TextBox2.Text<br />
+	c=(a^2+b^2)^(1/2)<br />
+	Label3.Text=c</strong></p>
+	<p class="auto-style1"><strong>End Sub</strong></p>
+	<p class="auto-style1"><strong class="auto-style1">Example 11.3: BMI 
+	Calculator</strong></p>
+	<p class="auto-style1">A lot of people are obese now and it could affect 
+	their health seriously . Obesity has proven by the medical experts to be a 
+	one of the main factors that brings many adverse medical problems, including 
+	the the cardiovascular disease. If your BMI is more than 30, you are 
+	considered obese. You can refer to the following range of BMI values for 
+	your weight status.</p>
+	<p class="auto-style1">Underweight = &lt;18.5<br />
+	Normal weight = 18.5-24.9<br />
+	Overweight = 25-29.9<br />
+	Obesity = BMI of 30 or greater</p>
+	<p class="auto-style1">In order to calculate your BMI, you do not have to 
+	consult your doctor, you can just use a calculator or a home made computer 
+	program, this is exactly what I am showing you here. The BMI calculator is a 
+	Visual Basic program that can calculate the body mass index, or BMI of a 
+	person based on the body weight in kilogram and the body height in meter. 
+	BMI can be calculated using the formula weight/( height )^2, where weight is 
+	measured in kg and height in meter. If you only know your weight and height 
+	in lb and feet, then you need to convert them to the metric system .</p>
+	<p class="auto-style1"><strong>Private Sub Button1_Click(ByVal sender As 
+	System.Object, ByVal e As System.EventArsgs) Handles Button1.Click</strong></p>
+	<p class="auto-style1">D<strong>im height, weight, bmi As Single<br />
+	height = TextBox1.Text<br />
+	weight = TextBox2.Text<br />
+	bmi = (weight) / (height ^ 2)<br />
+	Label4.Text = bmi</strong></p>
+	<p class="auto-style1"><strong>End Sub</strong></p>
+	<p class="auto-style1">The output is shown in the Figure 11.1 below. In this 
+	example, your height is 1.80m( about 5 foot 11),your weight is 75 kg( about 
+	168Ib), and your BMI is about 23.14815. The reading suggests that you are 
+	healthy. (Note; 1 foot=0.3048, 1 lb=.45359237 kilogram)</p>
+	<p class="auto-style1">
+	<img alt="" class="auto-style1" height="300" src="Images/vb2010_7.1.gif" width="300" /></p>
+	<p class="auto-style1">&nbsp;</p>
+	<p class="auto-style1">From the above examples, you can see that writing 
+	Visual Studio 2013
+
+
+ code that involve arithmetic operations is relatively 
+	easy. Here are more arithmetic projects you work on:</p>
+	<p class="auto-style1">Area of a triangle<br />
+	Area of a rectangle<br />
+	Area of a circle<br />
+	Volume of a cylinder<br />
+	Volume of a cone<br />
+	Volume of a sphere<br />
+	Compound interest<br />
+	Future value<br />
+	Mean<br />
+	Variance<br />
+	Sum of angles in polygons<br />
+	Conversion of lb to kg<br />
+	Conversion of Fahrenheit to Celsius</p>
+	<h2 class="auto-style2">
+	<a class="auto-style1" href="lesson10-arrays.html"><strong>[Lesson 10] 
+	</strong></a><strong>&lt;&lt;
+     </strong><a class="auto-style1" href="index.html"><strong>[Contents] 
+	</strong></a><strong>&gt;&gt;
+	</strong><strong>
+	<a class="auto-style1" href="lesson12-string-manipulation.html">[Lesson 12]</a></strong></h2>
+</div>
+
+</body>
+
+</html>

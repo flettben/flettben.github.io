@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Start learning Visual Studio 2013
+
+
+</title>
+
+
+
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<ARTICLE class="post-5084 page type-page status-publish hentry" id="post-5084"><HEADER class="entry-header">
+<h1 class="auto-style1"><strong>Visual Studio 2013
+
+
+ Lesson 33: Working with Databases- 
+Introduction</strong></h1>
+</HEADER>
+<div class="auto-style1">
+	<h2 class="auto-style2">
+	<a class="auto-style1" href="lesson32-creating-animation.html"><strong>[Lesson 32] 
+	</strong></a><strong>&lt;&lt;
+	</strong><a class="auto-style1href=" href="index.html" Index.html"="">
+	<strong>[Contents]</strong></a><strong> &gt;&gt;
+	</strong>
+	<a class="auto-style1" href="lesson34-working-databases-creating-connection.html">
+	<strong>[Lesson 34]</strong></a></h2>
+	<h2 class="auto-style1">33.1 Introduction to Database in Visual Studio 2013
+
+
+</h2>
+	<p class="auto-style1">In our daily life, we deal with many types of 
+	information or data such as names, addresses, money, date, stock quotes, 
+	statistics and more. If you are in business or working as a professional, 
+	you have to handle even more data. For example, a doctor need to keep track 
+	of patients’ personal and medical information such as names, addresses, 
+	phone numbers as well as blood pressure readings, blood sugar 
+	readings,surgical history, medicines prescribed in the past and more. On the 
+	other hand, businesses usually have to manage large amount of data 
+	pertaining to products and customers. All these data need to be organized 
+	into a database for the ease of data management.</p>
+	<div id="mycontent" class="auto-style1">
+		<div class="auto-style1">
+			In the past , people usually deal with data manually like using 
+			cards and folders. However, in present day fast pace global 
+			environment and Information age, it is no longer feasible to manage 
+			data manually. Most data are now managed using computer-based 
+			database management systems. Computer-based Database management 
+			systems can handle data much faster and more efficient than human 
+			beings do. With the advent of the network and the Internet 
+			technologies, data can now be managed locally and remotely.Companies 
+			usually invest heavily in database management systems in order to 
+			run the organizations efficiently and effectively. </div>
+		
+	<p class="auto-style1">Database management systems are usually used in 
+	running payroll system, inventory system, accounting system, payment system, 
+	order handling system, customer relationship management system(CRM) and 
+	more. Some of the commercial database management system(DBMS) are Oracle, 
+	Microsoft SQL server and Microsoft Access </p>
+	<h2 class="auto-style1">33.2 Creating a Database Application in Visual Basic 
+	2012</h2>
+	<p class="auto-style1">A database management system typically deals with 
+	storing, modifying, and extracting information from a database. It can also 
+	add, edit and delete records from the database. However, a DBMS can be very 
+	difficult to handle by ordinary people or business men who have no 
+	technological backgrounds. Fortunately, we can create user friendly database 
+	applications to handle the aforementioned jobs with the DBMS running in the 
+	background. One of the best programs that can create such database 
+	application is none other than Visual Studio 2013
+
+
+.</p>
+	<p class="auto-style1">Visual Studio 2013
+
+
+ uses ADO.NET to handle databases. 
+	ADO.NET is Microsoft’s latest database technology which can works with many 
+	other advanced database management system such as Microsoft SQL server. In 
+	this lesson, we will develop codes that make use of Microsoft SQL Server 
+	2012, therefore you need to have Microsoft SQL Server 2012 installed in your 
+	PC, &nbsp;you can download&nbsp;Microsoft SQL Server 2012 Express &nbsp;for free&nbsp;&nbsp;from&nbsp;<a class="auto-style1" href="http://www.microsoft.com/en-us/download/details.aspx?id=29062" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.microsoft.com/en-us/download/details.aspx?id=29062', 'http://www.microsoft.com/en-us/download/details.aspx?id=29062']);">http://www.microsoft.com/en-us/download/details.aspx?id=29062</a>.</p>
+	<div id="mycontent0" class="auto-style1">
+		<div class="auto-style1">
+			To begin building the database project in Visual Basic 2012, launch 
+			Visual Basic 2012. You can name your project as Database Project 1 
+			or what ever name you wish to call it. Next, change the default 
+			form’s Text property to Contacts as we will be building a database 
+			of contact list. There are a few objects in ADO.NET that are 
+			required to build the database. There are:<p class="auto-style1">
+			</p>
+			<ul class="auto-style1">
+				<li class="auto-style1"><strong class="auto-style1">
+				SqlConnection</strong>– to connect to a data source in SQL 
+				Server</li>
+				<li class="auto-style1"><strong class="auto-style1">DataTable</strong> 
+				-to store data for navigation and manipulation</li>
+				<li class="auto-style1"><strong class="auto-style1">DataAdapter</strong>– 
+				to populate a DataReader</li>
+			</ul>
+		</div>
+		<div class="auto-style1">
+			<br />  	<p class="auto-style1">The aforementioned objects belongs to the System.Data 
+	and the System.Xml namespace. Therefore, we need to reference them in the 
+	beginning before we can work with them. To reference the ADO.NET object, 
+	choose project from the menu then select Database Project 1 properties to 
+	display the project properties. Next click the References tab to show the 
+	active references for the project, as shown in Figure 33.1</p>
+	<p class="auto-style2">
+	<a class="auto-style1" href="Images/vb2013_figure33.1.jpg">
+	<img alt="vb2013_figure33.1" class="auto-style1" height="658" src="Images/vb2013_figure33.1.jpg" width="998" /></a><strong class="auto-style1">Figure 
+	33.1</strong></p>
+	<p class="auto-style1">Under imported namespaces, make sure system.data, 
+	System.Data.Sqlclient are selected, otherwise check them. Having done that 
+	you need to click the Save All button on the toolbar and then return to the 
+	Visual Studio 2013
+
+
+ IDE.</p>
+	<p class="auto-style1">We shall proceed to create connection to the database 
+	source file in the next lesson.</p>
+	<h2 class="auto-style2">
+	<a class="auto-style1" href="lesson32-creating-animation.html"><strong>[Lesson 32] 
+	</strong></a><strong>&lt;&lt;
+	</strong><a class="auto-style1href=" href="index.html" Index.html"="">
+	<strong>[Contents]</strong></a><strong> &gt;&gt;
+	</strong>
+	<a class="auto-style1" href="lesson34-working-databases-creating-connection.html">
+	<strong>[Lesson 34]</strong></a></h2>
+</div>
+
+</body>
+
+</html>

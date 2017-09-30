@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Start learning Visual Studio 2013
+
+
+</title>
+
+
+
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<ARTICLE class="post-4963 page type-page status-publish hentry" id="post-4963"><HEADER class="entry-header">
+<h1 class="auto-style1"><strong>Visual Studio 2013
+
+
+ Lesson 29 : Creating Graphics- Polygon 
+and Pie</strong></h1>
+</HEADER>
+<div class="auto-style1">
+	<h2 class="auto-style2">
+	<a class="auto-style1" href="lesson28-creating-graphics-drawing-text.html">
+	<strong>[Lesson 28] </strong></a><strong>&lt;&lt;
+	</strong><a class="auto-style1href=" href="index.html" Index.html"="">
+	<strong>[Contents]</strong></a><strong> &gt;&gt;
+	</strong>
+	<a class="auto-style1" href="lesson30-creating-graphics-filling-shapes-color.html">
+	<strong>[Lesson 30]</strong></a></h2>
+	<p class="auto-style1">We have learned how to create the Graphics and the 
+	Pen objects to draw rectangle, ellipse ,circle and text in the preceding 
+	lessons, now we shall learn how to draw polygons and pie in Visual basic 
+	2013 IDE.</p>
+	<h2 class="auto-style1">29.1: Drawing Polygons</h2>
+	<p class="auto-style1">Polygon is a closed plane figure bounded by three or 
+	more straight sides. In order to draw a polygon on the screen, we need to 
+	define the coordinates of all the points (also known as vertices) that 
+	joined up to form the pollygon. The syntax to defines the points of a 
+	polygon with vertices A1,A2,A3,A4…….An is as follows;</p>
+	<div id="mycontent" class="auto-style1">
+		<div class="auto-style1">
+			<strong>Dim A1 As New Point(X1,Y1)</strong><p class="auto-style1"></p>
+			<p class="auto-style1"><strong>Dim A2 As New Point(X2,Y2)</strong></p>
+			<p class="auto-style1"><strong>Dim A3 As New Point(X3,Y3)</strong></p>
+			<p class="auto-style1"><strong>Dim A4 As New Point(X4,Y4)</strong></p>
+			<p class="auto-style1"><strong>Dim An as New Point(Xn,Yn)</strong></p>
+		</div>
+		
+	</div>
+	<p class="auto-style1">After declaring the points, we need to define a point 
+	structure that group all the points together using the following syntax: Dim 
+	myPoints As Point() = {A1, A2, A3,….,An} .Finally, create the graphics 
+	object and use the DrawPolygon method to draw the polygon using the 
+	following syntax:<br />
+	<strong>Dim myGraphics As Graphics = Me.CreateGraphics<br />
+	myGraphics.DrawPolygon(myPen, myPoints)</strong></p>
+	<p class="auto-style1">where myPen is the Pen object created using the 
+	following syntax:<br />
+	<strong>myPen = New Pen(Drawing.Color.Blue, 5)</strong></p>
+	<p class="auto-style1"><strong class="auto-style1">Example 29.1 :Drawing a 
+	Triangle</strong><br />
+	A triangle is a polygon with three vertices. Here is the code:</p>
+	<p class="auto-style1"><strong>Private Sub BtnDraw_Click(sender As Object, e As 
+	EventArgs) Handles BtnDraw.Click</strong></p>
+	<p class="auto-style1"><strong>Dim myPen As Pen<br />
+	Dim A As New Point(10, 10)<br />
+	Dim B As New Point(100, 50)<br />
+	Dim C As New Point(60, 150)<br />
+	Dim myPoints As Point() = {A, B, C}<br />
+	myPen = New Pen(Drawing.Color.Blue, 5)<br />
+	Dim myGraphics As Graphics = Me.CreateGraphics<br />
+	myGraphics.DrawPolygon(myPen, myPoints)</strong></p>
+	<p class="auto-style1"><strong>End Sub</strong></p>
+	<p class="auto-style1">Running the program produces the image as shown in 
+	Figure 29.1</p>
+	<div id="mycontent0" class="auto-style1">
+		<div class="auto-style1">
+			<img alt="" class="auto-style1" height="300" src="Images/lesson25_1.jpg" width="300" /><strong class="auto-style1">Figure 
+			29.1</strong></div>
+		<div class="auto-style1">
+  	<p class="auto-style1"><strong class="auto-style1">Example 29.2: Drawing a 
+	Quadrilateral</strong><br />
+	A quadrilateral is a polygon consists of four sides,so you need to define 
+	four vertices. The code is as follows:</p>
+	<p class="auto-style1"><strong>Private Sub BtnDraw_Click(sender As Object, e As 
+	EventArgs) Handles BtnDraw.Click</strong></p>
+	<p class="auto-style1"><strong>Dim myPen As Pen Dim A As New Point(10, 10)<br />
+	Dim B As New Point(100, 50)<br />
+	Dim C As New Point(120, 150)<br />
+	Dim D As New Point(60, 200)<br />
+	Dim myPoints As Point() = {A, B, C, D}<br />
+	myPen = New Pen(Drawing.Color.Blue, 5)<br />
+	Dim myGraphics As Graphics = Me.CreateGraphics<br />
+	myGraphics.DrawPolygon(myPen, myPoints)</strong></p>
+	<p class="auto-style1"><strong>End Sub</strong></p>
+	<p class="auto-style1">The output image is as shown in Figure 29.2<br />
+	</p>
+	<center class="auto-style1">
+	<img alt="" class="auto-style1" height="300" src="Images/lesson25_2.jpg" width="300" /><br />
+	<strong class="auto-style1">Figure 29.2</strong></center>
+	<p class="auto-style1"></p>
+	<h2 class="auto-style1"><strong class="auto-style1">29.2: Drawing a Pie</strong></h2>
+	<p class="auto-style1">In order to draw a pie, you can use the DrawPie 
+	method of the graphics object. As usual, you need to create the Graphics and 
+	the Pen objects. The syntax for drawing a pie is: </p>
+	<p class="auto-style1"><strong>myGraphics.DrawPie(myPen, X, Y, width,height, 
+	StartAngle, SweepAngle)</strong></p>
+	<p class="auto-style1">Where X and Y are the coordinates the bounding 
+	rectangle, other arguments are self-explanatory. Both StartAngle and 
+	SweepAngle are measured in degree. SweepAngle can take possible or negative 
+	values. If the value is positive, it sweep through clockwise direction while 
+	negative means it sweep through anticlockwise direction.</p>
+	<p class="auto-style1"><strong class="auto-style1">Example 29.3: Drawing a 
+	pie that starts with 0 degree and sweep clockwise through 60 degree.</strong>
+	</p>
+	<p class="auto-style1"><strong>Private Sub BtnDraw_Click(sender As Object, e As 
+	EventArgs) Handles BtnDraw.Click</strong></p>
+	<p class="auto-style1"><strong>Dim myPen As Pen myPen = New Pen(Drawing.Color.Blue, 
+	5)<br />
+	Dim myGraphics As Graphics = Me.CreateGraphics<br />
+	myGraphics.DrawPie(myPen, 50,50, 150,150,0,60)</strong></p>
+	<p class="auto-style1"><strong>End Sub</strong></p>
+	<p class="auto-style1">The output image is as shown in Figure 29.3</p>
+	<p class="auto-style1">
+	<img alt="" class="auto-style1" height="300" src="Images/lesson25_3.jpg" width="300" /></p>
+	<p class="auto-style1"><strong class="auto-style1">Figure 29.3</strong></p>
+	<h2 class="auto-style1">
+	<a class="auto-style1" href="lesson28-creating-graphics-drawing-text.html">[<strong>Lesson 28]&nbsp;</strong></a><strong>&lt;&lt;&nbsp;</strong><a class="auto-style1href=" href="index.html" Index.html"=""><strong>[Contents]</strong></a><strong>&nbsp;&gt;&gt;&nbsp;</strong><a class="auto-style1" href="lesson30-creating-graphics-filling-shapes-color.html"><strong>[Lesson 
+	30]</strong></a></h2>
+</div>
+
+</body>
+
+</html>

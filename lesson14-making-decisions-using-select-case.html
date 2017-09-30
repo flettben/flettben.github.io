@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Start learning Visual Studio 2013
+
+
+</title>
+
+
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Visual Studio 2013
+
+
+ Lesson 14</title>
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<ARTICLE class="post-4560 page type-page status-publish hentry" id="post-4560"><HEADER class="entry-header">
+<h1 class="auto-style1"><strong>Visual Studio 2013
+
+
+ Lesson 14: Making Decisions using 
+Select Case</strong></h1>
+</HEADER>
+<div class="auto-style1">
+	<h2 class="auto-style2">
+	<a class="auto-style1" href="lesson13-making-decisions-using-if-then-else.html">
+	<strong>[Lesson 13]</strong></a><strong> &lt;&lt;
+	</strong><strong>
+	<a class="auto-style1href=" href="index.html">[Contents]</a> &gt;&gt;
+	</strong><a class="auto-style1" href="lesson15-looping.html"><strong>[Lesson 15]</strong></a></h2>
+	<div id="mycontent" class="auto-style1">
+		<div class="auto-style1">
+			In the previous lesson, we have learned how to control the program 
+			flow using the If…ElseIf control structure. In this lesson, you will 
+			learn how to use the&nbsp;<strong class="auto-style1">Select Case</strong>&nbsp;control 
+			structure in&nbsp;Visual Studio 2013
+
+
+ &nbsp;to control the program flow&nbsp;. The 
+			Select Case control structure is slightly different from the 
+			If….ElseIf control structure . The difference is that the Select 
+			Case control structure basically only make decision on one 
+			expression or dimension (for example the examination grade) while 
+			the If …ElseIf statement control structure may evaluate only one 
+			expression, each If….ElseIf statement may also compute entirely 
+			different dimensions. Select Case is preferred when there exist 
+			multiple conditions as using If…Then..ElseIf statements will become 
+			too messy.</div>
+		
+	<p class="auto-style1"><strong class="auto-style1">14.1 The Select Case…End 
+	Select Structure</strong></p>
+	<p class="auto-style1">The structure of the Select Case control structure in 
+	Visual Studio 2013
+
+
+ is as follows:</p>
+	<div id="mycontent0" class="auto-style1">
+		<div class="auto-style1">
+			Select Case test expressionCase expression list 1<br />
+			Block of one or more Visual Studio 2013
+
+
+ statements<br />
+			Case expression list 2<br />
+			Block of one or more Visual Studio 2013
+
+
+ Statements<br />
+			Case expression list 3<br />
+			.<br />
+			.<br />
+			Case Else<br />
+			Block of one or more Visual Studio 2013
+
+
+ StatementsEnd Select</div>
+		<div class="auto-style1">
+ 		   <br />
+			<p class="auto-style1"><strong class="auto-style1">14.2 The usage of Select 
+	Case is shown in the following examples</strong></p>
+			<p class="auto-style1"><strong class="auto-style1">Example 14.1:</strong>&nbsp;Examination 
+	Grades<br /><strong>Dim grade As String<br />Private Sub Compute_Click( )<br />grade=txtgrade.Text<br />Select Case grade<br />Case “A”<br />Label1.Text=”High Distinction”<br />Case “A-”<br />Label1.Text=”Distinction”<br />Case “B”<br />Label1.Text=”Credit”<br />Case “C”<br />Label1.Text=”Pass”<br />Case Else<br />Label1.Text=”Fail”<br />End Select</strong></p>
+			<p class="auto-style1"><strong class="auto-style1">Example 14.2</strong><br />In this example, you can use the keyword Is together with the comparison 
+	operators.Private Sub Button1_Click(ByVal sender As System.Object, ByVal e 
+	As System.EventArgs) Handles Button1.Click’Examination Marks</p>
+			<p class="auto-style1"><strong>Dim mark As Single<br />mark = mrk.Text<br />Select Case mark<br />Case Is &gt;= 85<br />Label1.Text= “Excellence”<br />Case Is &gt;= 70<br />Label2.Text= “Good”<br />Case Is &gt;= 60<br />Label3.Text = “Above Average”<br />Case Is &gt;= 50<br />Label4.Text= “Average”<br />Case Else<br />Label5.Text = “Need to work harder”<br />End Select</strong></p>
+			<p class="auto-style1"><strong>End Sub</strong></p>
+			<p class="auto-style1"><strong class="auto-style1">Example 14.3</strong></p>
+			<p class="auto-style1">Example 14.2 can be rewritten as follows:</p>
+			<p class="auto-style1">Private Sub Button1_Click(ByVal sender As 
+	System.Object, ByVal e As System.EventArgs) Handles Button1.Click</p>
+			<p class="auto-style1">‘Examination Marks</p>
+			<p class="auto-style1"><strong>Dim mark As Single<br />mark = Textbox1.Text<br />Select Case mark</strong></p>
+			<p class="auto-style1"><strong>Case 0 to 49<br />Label1.Text = “Need to work harder”</strong></p>
+			<p class="auto-style1"><strong>Case 50 to 59<br />Label1.Text = “Average” s</strong></p>
+			<p class="auto-style1"><strong>Case 60 to 69<br />Label1.Text= “Above Average”</strong></p>
+			<p class="auto-style1"><strong>Case 70 to 84<br />Label1.Text = “Good”</strong></p>
+			<p class="auto-style1"><strong>Case 85 to 100<br />Label1.Text= “Excellence”</strong></p>
+			<p class="auto-style1"><strong>Case Else<br />Label1.Text= “Wrong entry, please reenter the mark”</strong></p>
+			<p class="auto-style1"><strong>End Select</strong></p>
+			<p class="auto-style1"><strong>End Sub</strong></p>
+			<p class="auto-style1"><strong class="auto-style1">Example 14.4</strong></p>
+			<p class="auto-style1">Grades in high school are usually presented with a 
+	single capital letter such as A, B, C, D or E. The grades can be computed as 
+	follow:</p>
+			<p class="auto-style1">&nbsp;</p>
+			<p class="auto-style1"><strong>Private Sub Button1_Click(ByVal sender As 
+	System.Object, ByVal e As System.EventArgs) Handles Button1.Click</strong></p>
+			<p class="auto-style1"><strong>‘Examination Marks</strong></p>
+			<p class="auto-style1"><strong>Dim mark As Single</strong></p>
+			<p class="auto-style1"><strong>mark = TextBox1.Text</strong></p>
+			<p class="auto-style1"><strong>Select Case mark</strong></p>
+			<p class="auto-style1"><strong>Case 0 To 49<br />Label1.Text = “E”</strong></p>
+			<p class="auto-style1"><strong>Case 50 To 59</strong></p>
+			<p class="auto-style1"><strong>Label1.Text = “D”<br />Case 60 To 69</strong></p>
+			<p class="auto-style1"><strong>Label1.Text = “C”<br />Case 70 To 79</strong></p>
+			<p class="auto-style1"><strong>Label1.Text = “B”</strong></p>
+			<p class="auto-style1"><strong>Case 80 To 100<br />Label1.Text = “A”</strong></p>
+			<p class="auto-style1"><strong>Case Else<br />Label1.Text = “Error, please reenter the mark”</strong></p>
+			<p class="auto-style1"><strong>End Select</strong></p>
+			<p class="auto-style1"><strong>End Sub</strong></p>
+			<p class="auto-style1">The output:</p>
+			<p class="auto-style1">
+			<img alt="" class="auto-style1" height="300" src="Images/vb2010_10.1.gif" width="315" /></p>
+			<p class="auto-style1"><strong class="auto-style1">Figure 14.1</strong></p>
+			<h2 class="auto-style2">
+			<a class="auto-style1" href="lesson13-making-decisions-using-if-then-else.html">
+			<strong>[Lesson 13]</strong></a><strong>&nbsp;&lt;&lt;&nbsp;</strong><strong><a class="auto-style1href=" href="index.html" Index.html"="">[Contents]&nbsp;</a>&gt;&gt;
+			</strong><a class="auto-style1" href="lesson15-looping.html">
+			<strong>[Lesson 15]</strong></a></h2>
+</div>
+
+</body>
+
+</html>

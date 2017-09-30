@@ -1,0 +1,284 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.auto-style1 {
+	font-size: large;
+}
+.auto-style2 {
+	font-family: "trebuchet ms", arial, sans-serif;
+	font-size: large;
+	color: rgb(85, 85, 85);
+}
+.auto-style4 {
+	color: rgb(0, 198, 240);
+	text-decoration: underline;
+}
+.auto-style5 {
+	font-size: x-large;
+	color: black;
+}
+.auto-style7 {
+	font-size: x-large;
+}
+</style>
+</head>
+
+<body>
+
+<ARTICLE class="post-4048 page type-page status-publish hentry" id="post-4048"><HEADER class="entry-header">
+<h1 class="auto-style1"><strong>Visual Studio 2013 Lesson :
+<span class="auto-style7">Case Select</span></strong></h1>
+</HEADER>
+<div class="auto-style1">
+	<h2 class="auto-style2"><strong class="auto-style1">
+	<a class="auto-style1" href="Lesson%2047-Repeat_Until.html">[Lesson 
+	47]&nbsp;</a><span class="auto-style4">&lt;&lt;</span><a class="auto-style1" href="index.html">[Contents]</a>&nbsp;</strong></h2>
+	<div>
+		<span class="rdf-meta element-hidden" content="The System Life Cycle" property="dc:title">
+		</span>
+		<span class="rdf-meta element-hidden" content="0" datatype="xsd:integer" property="sioc:num_replies">
+		</span>
+		<div class="content">
+			<div class="field field-name-body field-type-text-with-summary field-label-hidden">
+				<div class="field-items">
+					<div class="field-item even" property="content:encoded">
+						<h2 style="font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;" class="auto-style5">
+						<strong>Case select</strong></h2>
+						<b style="color: rgb(0, 0, 0); font-family: verdana; font-size: 18px; font-style: normal; font-variant: normal; letter-spacing: normal; line-height: 28px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+						Select Case.</b><span style="color: rgb(0, 0, 0); font-family: verdana; font-size: 18px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 28px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none;"><span class="Apple-converted-space">&nbsp;</span>In 
+						branches, in selection statements, programs change 
+						course. Select Case rapidly matches values. In it, we 
+						specify a set of constants (Integers, Chars, Strings).</span><br style="clear: both; color: rgb(0, 0, 0); font-family: verdana; font-size: 18px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 28px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;" />
+						<b style="color: rgb(0, 0, 0); font-family: verdana; font-size: 18px; font-style: normal; font-variant: normal; letter-spacing: normal; line-height: 28px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+						Matching.</b><span style="color: rgb(0, 0, 0); font-family: verdana; font-size: 18px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 28px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none;"><span class="Apple-converted-space">&nbsp;</span>Select 
+						Case evaluates an expression and goes to the matching 
+						clause. Cases do not fall through, and no &quot;exit&quot; 
+						statement is required. But we can stack cases that share 
+						statements.</span><br style="clear: both; color: rgb(0, 0, 0); font-family: verdana; font-size: 18px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 28px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;" />
+						<b style="color: rgb(0, 0, 0); font-family: verdana; font-size: 18px; font-style: normal; font-variant: normal; letter-spacing: normal; line-height: 28px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+						First example.</b><span style="color: rgb(0, 0, 0); font-family: verdana; font-size: 18px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 28px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none;"><span class="Apple-converted-space">&nbsp;</span>To 
+						create a Select Case statement, type Select and press 
+						tab. Then, edit the variable name. We read a line from 
+						the Console, call Integer.Parse on it, and then use 
+						Select.</span><p id="q" style="margin: 12px 310px 0px 30px; color: rgb(0, 0, 0); font-family: verdana; font-size: 18px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 28px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+						<b style="display: block;">Else:</b>Case Else is the 
+						default case. When no other values match, this case is 
+						reached.</p>
+						<pre style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 16px; line-height: 19px; font-family: monospace; padding: 2px 0px; color: rgb(0, 0, 0); letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;"><b style="padding: 2px 30px; background: rgb(215, 244, 164);">Based on:</b> .NET 4.5
+
+<b style="padding: 2px 30px; background: rgb(215, 244, 164);">VB.NET program that uses Select Case</b>
+
+Module Module1
+    Sub Main()
+	Dim value As Integer = Integer.Parse(Console.ReadLine())
+	<u style="font-weight: 700;">Select Case</u> value
+	    Case <i id="d" style="font-style: normal; color: rgb(0, 0, 0); background: rgb(204, 255, 255);">1</i>
+		Console.WriteLine(&quot;You typed one&quot;)
+	    Case <i id="d0" style="font-style: normal; color: rgb(0, 0, 0); background: rgb(204, 255, 255);">2</i>
+		Console.WriteLine(&quot;You typed two&quot;)
+	    Case <i id="d1" style="font-style: normal; color: rgb(0, 0, 0); background: rgb(204, 255, 255);">5</i>
+		Console.WriteLine(&quot;You typed five&quot;)
+	    Case <i id="d2" style="font-style: normal; color: rgb(0, 0, 0); background: rgb(204, 255, 255);">Else</i>
+		Console.WriteLine(&quot;You typed something else&quot;)
+	End Select
+    End Sub
+End Module
+
+<b style="padding: 2px 30px; background: rgb(215, 244, 164);">Output</b>
+
+2
+You typed two</pre>
+						<br style="clear: both; color: rgb(0, 0, 0); font-family: verdana; font-size: 18px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 28px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;" />
+						<b style="color: rgb(0, 0, 0); font-family: verdana; font-size: 18px; font-style: normal; font-variant: normal; letter-spacing: normal; line-height: 28px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+						Nested.</b><span style="color: rgb(0, 0, 0); font-family: verdana; font-size: 18px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 28px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none;"><span class="Apple-converted-space">&nbsp;</span>Sometimes 
+						a nested Select Case statement is useful. For example, 
+						we can test characters in a String, one after another, 
+						with nested Selects.</span><p id="S" style="margin: 12px 310px 0px 30px; color: rgb(0, 0, 0); font-family: verdana; font-size: 18px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 28px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+						<b style="display: block; color: rgb(136, 136, 136);">
+						And:</b>We can use this style of logic to optimize 
+						StartsWith or EndsWith calls. This is only needed on 
+						performance-critical code.</p>
+						<a href="http://www.dotnetperls.com/startswith-vbnet" style="text-decoration: none; color: rgb(136, 0, 136); display: block; font-weight: 700; margin-left: 30px; font-family: verdana; font-size: 18px; font-style: normal; font-variant: normal; letter-spacing: normal; line-height: 28px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+						StartsWith, EndsWith</a><p id="q0" style="margin: 12px 310px 0px 30px; color: rgb(0, 0, 0); font-family: verdana; font-size: 18px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 28px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+						<b style="display: block;">Chars:</b>The example uses 
+						chars within a String as the Select Case expression. 
+						This is a common construct.</p>
+						<a href="http://www.dotnetperls.com/char-vbnet" style="text-decoration: none; color: rgb(136, 0, 136); display: block; font-weight: 700; margin-left: 30px; font-family: verdana; font-size: 18px; font-style: normal; font-variant: normal; letter-spacing: normal; line-height: 28px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+						Char</a><pre style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 16px; line-height: 19px; font-family: monospace; padding: 2px 0px; color: rgb(0, 0, 0); letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;"><b style="padding: 2px 30px; background: rgb(215, 244, 164);">VB.NET program that uses nested Select Case</b>
+
+Module Module1
+
+    Sub Main()
+	Dim value As String = <i id="p" style="font-style: normal; color: rgb(0, 0, 0); background: rgb(255, 255, 204);">&quot;cat&quot;</i>
+
+	<i style="font-style: normal; color: rgb(51, 153, 51);">&#39; Handle first letter.</i>
+	<u style="font-weight: 700;">Select Case</u> value(0)
+	    Case <i id="d3" style="font-style: normal; color: rgb(0, 0, 0); background: rgb(204, 255, 255);">&quot;c&quot;</i>
+		<i style="font-style: normal; color: rgb(51, 153, 51);">&#39; Handle second letter.</i>
+		<u style="font-weight: 700;">Select Case</u> value(1)
+		    Case <i id="d4" style="font-style: normal; color: rgb(0, 0, 0); background: rgb(204, 255, 255);">&quot;a&quot;</i>
+			Console.WriteLine(&quot;String starts with c, a&quot;)
+		    Case <i id="d5" style="font-style: normal; color: rgb(0, 0, 0); background: rgb(204, 255, 255);">&quot;o&quot;</i>
+			<i style="font-style: normal; color: rgb(51, 153, 51);">&#39; Not reached:</i>
+			Console.WriteLine(&quot;String starts with c, o&quot;)
+		End Select
+	End Select
+    End Sub
+
+End Module
+
+<b style="padding: 2px 30px; background: rgb(215, 244, 164);">Output</b>
+
+String starts with c, a</pre>
+						<br style="clear: both; color: rgb(0, 0, 0); font-family: verdana; font-size: 18px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 28px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;" />
+						<b style="color: rgb(0, 0, 0); font-family: verdana; font-size: 18px; font-style: normal; font-variant: normal; letter-spacing: normal; line-height: 28px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+						Strings.</b><span style="color: rgb(0, 0, 0); font-family: verdana; font-size: 18px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 28px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none;"><span class="Apple-converted-space">&nbsp;</span>Select 
+						Case may be used on a String. With this statement we 
+						match a variable against a set of values such as String 
+						literals.</span><p id="A" style="margin: 12px 310px 0px 30px; color: rgb(0, 0, 0); font-family: verdana; font-size: 18px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 28px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+						<b style="display: block; color: red;">But:</b>On 
+						Strings, Select Case offers no performance advantage as 
+						with Integers (or other values).</p>
+						<a href="http://www.dotnetperls.com/string-vbnet" style="text-decoration: none; color: rgb(136, 0, 136); display: block; font-weight: 700; margin-left: 30px; font-family: verdana; font-size: 18px; font-style: normal; font-variant: normal; letter-spacing: normal; line-height: 28px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+						Strings</a><p id="q1" style="margin: 12px 310px 0px 30px; color: rgb(0, 0, 0); font-family: verdana; font-size: 18px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 28px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+						<b style="display: block;">To start:</b>Let&#39;s evaluate a 
+						program that reads an input from the Console. Then it 
+						uses the Select Case statement on that value.</p>
+						<p id="q2" style="margin: 12px 310px 0px 30px; color: rgb(0, 0, 0); font-family: verdana; font-size: 18px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 28px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+						<b style="display: block;">Values:</b>It matches against 
+						four possible values: &quot;dot&quot;, &quot;net&quot;, and &quot;perls&quot;, and 
+						also all other values (Else).</p>
+						<pre style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 16px; line-height: 19px; font-family: monospace; padding: 2px 0px; color: rgb(0, 0, 0); letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;"><b style="padding: 2px 30px; background: rgb(215, 244, 164);">VB.NET program that uses Select Case on String</b>
+
+Module Module1
+    Sub Main()
+	While True
+	    Dim value As String = Console.ReadLine()
+	    <u style="font-weight: 700;">Select Case</u> value
+		Case <i id="d6" style="font-style: normal; color: rgb(0, 0, 0); background: rgb(204, 255, 255);">&quot;dot&quot;</i>
+		    Console.WriteLine(&quot;Word 1&quot;)
+		Case <i id="d7" style="font-style: normal; color: rgb(0, 0, 0); background: rgb(204, 255, 255);">&quot;net&quot;</i>
+		    Console.WriteLine(&quot;Word 2&quot;)
+		Case <i id="d8" style="font-style: normal; color: rgb(0, 0, 0); background: rgb(204, 255, 255);">&quot;perls&quot;</i>
+		    Console.WriteLine(&quot;Word 3&quot;)
+		Case <i id="d9" style="font-style: normal; color: rgb(0, 0, 0); background: rgb(204, 255, 255);">Else</i>
+		    Console.WriteLine(&quot;Something else&quot;)
+	    End Select
+	End While
+    End Sub
+End Module
+
+<b style="padding: 2px 30px; background: rgb(215, 244, 164);">Output</b>
+
+dot
+Word 1
+perls
+Word 3
+test
+Something else</pre>
+						<br style="clear: both; color: rgb(0, 0, 0); font-family: verdana; font-size: 18px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 28px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;" />
+						<b style="color: rgb(0, 0, 0); font-family: verdana; font-size: 18px; font-style: normal; font-variant: normal; letter-spacing: normal; line-height: 28px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+						Internals.</b><span style="color: rgb(0, 0, 0); font-family: verdana; font-size: 18px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 28px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none;"><span class="Apple-converted-space">&nbsp;</span>On 
+						Strings, does Select Case ever compile into anything 
+						other than a series of comparisons? I changed the above 
+						program to have nine String literals.</span><p id="S0" style="margin: 12px 310px 0px 30px; color: rgb(0, 0, 0); font-family: verdana; font-size: 18px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 28px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+						<b style="display: block; color: rgb(136, 136, 136);">
+						Result:</b>No Dictionary was used by the compiler. 
+						VB.NET lacks the String Dictionary optimization for C# 
+						String Switch constructs.</p>
+						<p id="u" style="margin: 12px 310px 0px 60px; color: rgb(0, 0, 0); font-family: verdana; font-size: 18px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 28px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+						<b style="display: block; color: rgb(51, 153, 51);">
+						Therefore:</b>If you have to match a lot of string 
+						literals, building a Dictionary might be faster.</p>
+						<a id="k" href="http://www.dotnetperls.com/dictionary-vbnet" style="text-decoration: none; color: rgb(136, 0, 136); display: block; font-weight: 700; margin-left: 60px; font-family: verdana; font-size: 18px; font-style: normal; font-variant: normal; letter-spacing: normal; line-height: 28px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+						Dictionary</a><br style="clear: both; color: rgb(0, 0, 0); font-family: verdana; font-size: 18px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 28px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;" />
+						<b style="color: rgb(0, 0, 0); font-family: verdana; font-size: 18px; font-style: normal; font-variant: normal; letter-spacing: normal; line-height: 28px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+						Variables.</b><span style="color: rgb(0, 0, 0); font-family: verdana; font-size: 18px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 28px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none;"><span class="Apple-converted-space">&nbsp;</span>VB.NET 
+						allows variable cases. But we may lose optimizations 
+						with this syntax. Each case must be evaluated and cannot 
+						be stored in a lookup table.</span><p id="T" style="margin: 12px 310px 0px 30px; color: rgb(0, 0, 0); font-family: verdana; font-size: 18px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 28px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+						<b style="display: block; color: rgb(51, 204, 255);">
+						Note:</b>The &quot;value&quot; Integer is set to 10. And we match 
+						it against the variable y, which also equals 10, in a 
+						Select Case statement.</p>
+						<a href="http://www.dotnetperls.com/integer" style="text-decoration: none; color: rgb(136, 0, 136); display: block; font-weight: 700; margin-left: 30px; font-family: verdana; font-size: 18px; font-style: normal; font-variant: normal; letter-spacing: normal; line-height: 28px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+						Integer</a><p id="T0" style="margin: 12px 310px 0px 30px; color: rgb(0, 0, 0); font-family: verdana; font-size: 18px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 28px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+						<b style="display: block; color: rgb(51, 204, 255);">
+						Note 2:</b>An advanced compiler could analyze this 
+						program before execution so that no branches are 
+						evaluated at runtime.</p>
+						<pre style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 16px; line-height: 19px; font-family: monospace; padding: 2px 0px; color: rgb(0, 0, 0); letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;"><b style="padding: 2px 30px; background: rgb(215, 244, 164);">VB.NET program that uses variable Cases</b>
+
+Module Module1
+
+    Sub Main()
+	Dim value As Integer = <i id="p0" style="font-style: normal; color: rgb(0, 0, 0); background: rgb(255, 255, 204);">10</i>
+	Dim x As Integer = <i id="p1" style="font-style: normal; color: rgb(0, 0, 0); background: rgb(255, 255, 204);">5</i>
+	Dim y As Integer = <i id="p2" style="font-style: normal; color: rgb(0, 0, 0); background: rgb(255, 255, 204);">10</i>
+
+	<i style="font-style: normal; color: rgb(51, 153, 51);">&#39; Select with cases that are variables.</i>
+	<u style="font-weight: 700;">Select Case</u> value
+	    Case <i id="d10" style="font-style: normal; color: rgb(0, 0, 0); background: rgb(204, 255, 255);">x</i>
+		<i style="font-style: normal; color: rgb(51, 153, 51);">&#39; Not reached.</i>
+		Console.WriteLine(&quot;Value equals x&quot;)
+	    Case <i id="d11" style="font-style: normal; color: rgb(0, 0, 0); background: rgb(204, 255, 255);">y</i>
+		Console.WriteLine(&quot;Value equals y&quot;)
+	End Select
+    End Sub
+
+End Module
+
+<b style="padding: 2px 30px; background: rgb(215, 244, 164);">Output</b>
+
+Value equals y</pre>
+						<br style="clear: both; color: rgb(0, 0, 0); font-family: verdana; font-size: 18px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 28px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;" />
+						<b style="color: rgb(0, 0, 0); font-family: verdana; font-size: 18px; font-style: normal; font-variant: normal; letter-spacing: normal; line-height: 28px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+						Stacked cases.</b><span style="color: rgb(0, 0, 0); font-family: verdana; font-size: 18px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 28px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none;"><span class="Apple-converted-space">&nbsp;</span>Multiple 
+						cases can be combined by specifying them one after 
+						another. In this example, both 99 and 100 will reach the 
+						same Console.WriteLine statement.</span><p id="A0" style="margin: 12px 310px 0px 30px; color: rgb(0, 0, 0); font-family: verdana; font-size: 18px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 28px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+						<b style="display: block; color: red;">Important:</b>Stacked 
+						cases must be specified on the same line. Separate 
+						&quot;case&quot; statements mean empty blocks of code, not a group 
+						of cases.</p>
+						<pre style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 16px; line-height: 19px; font-family: monospace; padding: 2px 0px; color: rgb(0, 0, 0); letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;"><b style="padding: 2px 30px; background: rgb(215, 244, 164);">VB.NET program that uses stacked cases</b>
+
+Module Module1
+
+    Sub Main()
+	Dim value As Integer = Integer.Parse(<i id="p3" style="font-style: normal; color: rgb(0, 0, 0); background: rgb(255, 255, 204);">&quot;99&quot;</i>)
+	<u style="font-weight: 700;">Select</u> Case value
+	    <u style="font-weight: 700;">Case</u> <i id="d12" style="font-style: normal; color: rgb(0, 0, 0); background: rgb(204, 255, 255);">99, 100</i>
+		<i style="font-style: normal; color: rgb(51, 153, 51);">&#39; Both 99 and 100 will end up here.</i>
+		Console.WriteLine(<i id="p4" style="font-style: normal; color: rgb(0, 0, 0); background: rgb(255, 255, 204);">&quot;99 or 100&quot;</i>)
+	    <u style="font-weight: 700;">Case</u> 101
+		Console.WriteLine(<i id="p5" style="font-style: normal; color: rgb(0, 0, 0); background: rgb(255, 255, 204);">&quot;Not reached&quot;</i>)
+	End Select
+    End Sub
+
+End Module
+
+<b style="padding: 2px 30px; background: rgb(215, 244, 164);">Output</b>
+
+99:
+99 or 100
+100:
+99 or 100</pre>
+						<br />
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<h2 class="auto-style2"><strong class="auto-style1">
+		<a class="auto-style1" href="Lesson%2047-Repeat_Until.html">[Lesson 
+	47]&nbsp;</a><span class="auto-style4">&lt;&lt;</span><a class="auto-style1" href="index.html">[Contents]</a>&nbsp;</strong></h2>
+</div>
+
+
+

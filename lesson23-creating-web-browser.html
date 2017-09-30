@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Start learning Visual Studio 2013
+
+
+</title>
+
+
+
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<ARTICLE class="post-4836 page type-page status-publish hentry" id="post-4836"><HEADER class="entry-header">
+<h1 class="auto-style1"><strong>Visual Studio 2013
+
+
+ Lesson 23: Creating a Web Browser</strong></h1>
+</HEADER>
+<div class="auto-style1">
+	<h2 class="auto-style2">
+	<a class="auto-style1" href="lesson22-errors-handling.html"><strong>[Lesson 22] 
+	</strong></a><strong>&lt;&lt;
+	</strong><a class="auto-style1href=" href="index.html" Index.html"="">
+	<strong>[Contents]</strong></a><strong> &gt;&gt;
+	</strong>
+	<a class="auto-style1" href="lesson24-object-oriented-programming.html">
+	<strong>[Lesson 24]</strong></a></h2>
+	<p class="auto-style1">Which browser do you use to surf the Internet? 
+	Basically everyone likes to navigate the Internet using Google Chrome, 
+	Internet Explorer ,FireFox, Safari, Opera and more. However, isn’t it cool 
+	if you can create your very own web browser that you can customize to your 
+	own taste ? Yes, you can do that in Visual Studio 2013
+
+
+, and pretty easy too. 
+	In this lesson, we shall learn how to create a simple web browser and get it 
+	running in a few minutes.</p>
+	<div id="mycontent" class="auto-style1">
+		<div class="auto-style1">
+			First of all, start a new project in Visual Studio 2013
+
+
+ and name it 
+			with any name you like. Here we are using the name MyWebBrowser. 
+			Change the size of Form1 to 800,600 in its properties window. Next, 
+			you need to add an engine so that your web browser can connect to 
+			the Internet, and this very engine is the WebBrowser control, 
+			located on the Toolbox on the left side, set the size property to 
+			600,400 and change its name to &nbsp;MyWebBrowser&nbsp;. Next, insert a text 
+			box and place it at the top of the WebBrowser control, this will be 
+			the address bar where the user can enter the URL. Next, place a 
+			button beside the text box and change its text as GO and change its 
+			name to BtnGo. Finally, add a few more buttons and change their 
+			texts to Home, Back, Forward, Refresh and Search respectively.</div>
+		
+	<p class="auto-style1">The WebBrowser control comprises various methods like 
+	GoHome, GoBack, GoForward, Search, Refresh, Navigate and more. They can be 
+	used to write event-driven procedures for the various navigation buttons we 
+	place on the web browser. For the Navigate method, &nbsp;we need to use the 
+	following syntax:</p>
+	<p class="auto-style1"><strong class="auto-style1">WebBrowser.Navigate(URL)</strong></p>
+	<p class="auto-style1"><strong class="auto-style1">The Code</strong></p>
+	<p class="auto-style1"><strong>Private Sub BtnGO_Click(sender As Object, e As 
+	EventArgs) Handles BtnGO.Click<br />
+	MyWebBrowser.Navigate(TxtURL.Text)<br />
+	End Sub</strong></p>
+	<p class="auto-style1"><strong>Private Sub BtnSearch_Click(sender As Object, e As 
+	EventArgs) Handles BtnSearch.Click<br />
+	MyWebBrowser.GoSearch()<br />
+	End Sub</strong></p>
+	<p class="auto-style1"><strong>Private Sub BtnHome_Click(sender As Object, e As 
+	EventArgs) Handles BtnHome.Click<br />
+	MyWebBrowser.GoHome()<br />
+	End Sub</strong></p>
+	<p class="auto-style1"><strong>Private Sub BtnBack_Click(sender As Object, e As 
+	EventArgs) Handles BtnBack.Click<br />
+	MyWebBrowser.GoBack()<br />
+	End Sub</strong></p>
+	<p class="auto-style1"><strong>Private Sub BtnForward_Click(sender As Object, e As 
+	EventArgs) Handles Button1.Click<br />
+	MyWebBrowser.GoForward()<br />
+	End Sub</strong></p>
+	<p class="auto-style1"><strong>Private Sub BtnRefresh_Click(sender As Object, e As 
+	EventArgs) Handles BtnRefresh.Click<br />
+	MyWebBrowser.Refresh()<br />
+	End Sub</strong></p>
+	<p class="auto-style1"><strong class="auto-style1">The Browser Interface</strong></p>
+	<p class="auto-style2">
+	<a class="auto-style1" href="Images/vb2013_figure23.1.jpg">
+	<img alt="vb2013_figure23.1" class="auto-style1" height="600" src="Images/vb2013_figure23.1.jpg" width="800" /></a><strong class="auto-style1">Figure 
+	23.1</strong></p>
+	<p class="auto-style1">&nbsp;<br />
+	<br />
+	</p>
+	<h2 class="auto-style2"><strong>&nbsp;</strong><a class="auto-style1" href="lesson22-errors-handling.html"><strong>[Lesson 
+	22]&nbsp;</strong></a><strong>&lt;&lt;&nbsp;</strong><a class="auto-style1href=" href="index.html" Index.html"=""><strong>[Contents]</strong></a><strong>&nbsp;&gt;&gt;
+	</strong>
+	<a class="auto-style1" href="lesson24-object-oriented-programming.html">
+	<strong>[Lesson 24]</strong></a></h2>
+</div>
+
+</body>
+
+</html>

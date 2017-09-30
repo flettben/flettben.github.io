@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Start learning Visual Studio 2013
+
+
+</title>
+
+
+
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<ARTICLE class="post-4439 page type-page status-publish hentry" id="post-4439"><HEADER class="entry-header">
+<h1 class="auto-style1"><strong>Visual Studio 2013
+
+
+ Lesson 16: Sub Procedures</strong></h1>
+</HEADER>
+<div class="auto-style1">
+	<h2 class="auto-style2">
+	<a class="auto-style1" href="lesson15-looping.html"><strong>[Lesson 15]</strong></a><strong> &lt;&lt;
+	</strong><a class="auto-style1href=" href="index.html" Index.html"="">
+	<strong>[Contents] </a>&gt;&gt;
+	</strong>
+	<a class="auto-style1" href="lesson17-function-part-1-user-defined-function.html">
+	<strong>[Lesson 17]</strong></a></h2>
+	<div id="mycontent" class="auto-style1">
+		<div class="auto-style1">
+			In Visual Studio 2013
+
+
+, sub procedure is a procedure that performs a 
+			specific task and to return values, but it does not return a value 
+			associated with its name. However, it can return a value through a 
+			variable name. Sub procedures are usually used to accept input from 
+			the user, display information, print information, manipulate 
+			properties or perform some other tasks. It is a program code by 
+			itself and it is not an event procedure because it is not associated 
+			with a runtime procedure or a control such as button. It is called 
+			by the main program whenever it is required to perform a certain 
+			task.<p class="auto-style1"></p>
+			<p class="auto-style1">Sub procedures help to make programs smaller 
+			and easier to manage. A sub procedure begins with a Sub keyword and 
+			ends with an End Sub keyword. The program structure of a sub 
+			procedure is as follows:</p>
+		</div>
+		
+	<p class="auto-style1"><strong class="auto-style5">Sub ProcedureName 
+	(arguments)</strong></p>
+	<p class="auto-style1"><strong class="auto-style5">Statements</strong></p>
+	<p class="auto-style1"><strong class="auto-style5">End Sub</strong></p>
+	<div id="mycontent0" class="auto-style1">
+		<div class="auto-style1">
+			<strong class="auto-style5">Example 16.1</strong><p class="auto-style1">
+			</p>
+			<p class="auto-style1"><strong class="auto-style5"></strong>
+			<span class="auto-style5">In this example, we create a sub procedure 
+			sum to sum up two values that are specified as the arguments. The 
+			main program can reference a procedure by using its name together 
+			with the arguments in the parentheses. </span></p>
+			<p class="auto-style1"><span class="auto-style5"><strong>Private Sub 
+			Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load</strong></span><strong><br />
+			</strong>
+			<span class="auto-style5"><strong>sum(5, 6) End Sub Sub sum(a As Single, b 
+			As Single) MsgBox(“sum=”&amp; a + b) </strong> </span><strong><br />
+			</strong>
+			<span class="auto-style5"><strong>End Sub </strong> </span></p>
+			<p class="auto-style1"><span class="auto-style5">Running the program 
+			produces a message box</span> </p>
+			<br />
+			<p class="auto-style1">
+			<a class="auto-style1" href="Images/vb2013_figure11.1.jpg">
+			<img alt="vb2013_figure11.1" class="auto-style1" height="155" src="Images/vb2013_figure11.1.jpg" width="154" /></a>
+			<strong class="auto-style1">Figure 16.1</strong></p>
+			<p class="auto-style1"><strong class="auto-style1">Example 16.2: Password 
+	Cracker</strong></p>
+			<p class="auto-style1"><span class="auto-style1">This is a passwords 
+	cracking program where it can generate possible passwords and compare each 
+	of them with the actual password; and if the generated password found to be 
+	equal to the actual password, login will be successful. In this program, a 
+	timer is inserted into the form and it is used to do a repetitive job of 
+	generating the passwords.</span></p>
+			<p class="auto-style1">We create a &nbsp;passwords generating procedure
+			<strong class="auto-style1">generate ()</strong> and it is called by the e 
+	Timer1_Tick() event so that the procedure is repeated after every interval. 
+	The interval of the timer can be set in its properties window where a value 
+	of 1 is 1 millisecond, so a value of 1000 is 1 second; the smaller the 
+	value, the shorter the interval. However, do not set the timer to zero 
+	because if you do that, the timer will not start. We shall set the Timer’s 
+	interval at 100 which is equivalent to 0.1 second. The Timer1.Enabled 
+	property is set to false so that the program will only start generating the 
+	passwords after you click on the Generate button. Rnd is a VB function that 
+	generates a random number between 0 and 1. Multiplying Rnd by 100 will 
+	obtain a number between 0 and 100. Int is a Visual Studio 2013
+
+
+ function that 
+	returns an integer by ignoring the decimal part of that number.</p>
+			<p class="auto-style1">Therefore, Int(Rnd*100) will produce a number between 
+	0 and 99, and the value of Int(Rnd*100)+100 will produce a number between 
+	100 and 199.Finally, the program uses If…Then…Else to check whether the 
+	generated password is equal the actual password or not; and if they are 
+	equal, the passwords generating process will be terminated by setting the 
+	Timer1.Enabled property to false.</p>
+			<p class="auto-style1"><strong class="auto-style1">The Code</strong></p>
+			<p class="auto-style1">P<strong>ublic Class Form1</strong></p>
+			<p class="auto-style1"><strong>Dim password As Integer Dim crackpass As Integer</strong></p>
+			<p class="auto-style1"><strong>Private Sub Button1_Click(sender As Object, e As 
+	EventArgs) Handles Button1.Click</strong></p>
+			<p class="auto-style1"><strong>Timer1.Enabled = True</strong></p>
+			<p class="auto-style1"><strong>End Sub</strong></p>
+			<p class="auto-style1"><strong>Private Sub Timer1_Tick(sender As Object, e As 
+	EventArgs) Handles Timer1.Tick</strong></p>
+			<p class="auto-style1"><strong>generate()</strong></p>
+			<p class="auto-style1"><strong>If crackpass = password Then</strong></p>
+			<p class="auto-style1"><strong>Timer1.Enabled = False</strong></p>
+			<p class="auto-style1"><strong>Label1.Text = crackpass</strong></p>
+			<p class="auto-style1"><strong>MsgBox(“Password Cracked!Login Successful!”)</strong></p>
+			<p class="auto-style1"><strong>Else Label1.Text = crackpass</strong></p>
+			<p class="auto-style1"><strong>Label2.Text = “Please wait…”</strong></p>
+			<p class="auto-style1"><strong>End If</strong></p>
+			<p class="auto-style1"><strong>End Sub</strong></p>
+			<p class="auto-style1"><strong>Sub generate()</strong></p>
+			<p class="auto-style1"><strong>crackpass = Int(Rnd() * 100) + 100</strong></p>
+			<p class="auto-style1"><strong>End Sub</strong></p>
+			<p class="auto-style1"><strong>Private Sub 
+	Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load</strong></p>
+			<p class="auto-style1"><strong>password = 123</strong></p>
+			<p class="auto-style1"><strong>End Sub </strong></p>
+			<p class="auto-style1"><strong>End Class </strong>
+			</p>
+			<p class="auto-style1"><span class="auto-style5">The output</span></p>
+			<p class="auto-style2">
+			<a class="auto-style1" href="Images/vb2013_figure16.2.jpg">
+			<img alt="vb2013_figure16.2" class="auto-style1" height="300" src="Images/vb2013_figure16.2.jpg" width="300" /></a></p>
+			<p align="center" class="auto-style1"><strong class="auto-style1">Figure 
+	16.2: Password Generating P</strong><b class="auto-style1">hase</b></p>
+			<p class="auto-style1">
+			<a class="auto-style1" href="Images/vb2013_figure16.3.jpg">
+			<img alt="vb2013_figure16.3" class="auto-style1" height="155" src="Images/vb2013_figure16.3.jpg" width="256" /></a></p>
+			<p align="center" class="auto-style1"><strong class="auto-style1">
+			<span class="auto-style1">Figure 16.3: Message Showing Successful&nbsp;Login</span></strong></p>
+			<h2 class="auto-style2">
+			<a class="auto-style1" href="lesson15-looping.html"><strong>[Lesson 15]</strong></a><strong>&nbsp;&lt;&lt;&nbsp;</strong><a class="auto-style1href=" href="index.html" Index.html"=""><strong>[Contents]</strong></a><strong>&nbsp;&gt;&gt;
+			</strong>
+			<a class="auto-style1" href="lesson17-function-part-1-user-defined-function.html">
+			<strong>[Lesson 17]</strong></a></h2>
+		</div>
+
+</body>
+
+</html>

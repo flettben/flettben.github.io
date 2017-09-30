@@ -1,0 +1,224 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Start learning Visual Studio 2013
+
+
+</title>
+
+
+
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<ARTICLE class="post-4315 page type-page status-publish hentry" id="post-4315"><HEADER class="entry-header">
+<h1 class="auto-style1"><strong>Visual Studio 2013
+
+
+ Lesson 9: Variables and Constants</strong></h1>
+</HEADER>
+<div class="auto-style1">
+	<h2 class="auto-style2">
+	<a class="auto-style1" href="lesson8-understanding-data.html"><strong>[Lesson 8] 
+	</strong></a><strong>&lt;&lt;
+	</strong><a class="auto-style1" href="index.html"><strong>[Contents] 
+	</strong></a><strong>&gt;&gt;
+	</strong><a class="auto-style1" href="lesson10-arrays.html"><strong>[Lesson 10]</strong></a></h2>
+	<div id="mycontent" class="auto-style1">
+		<div class="auto-style1">
+			In Visual Studio 2013
+
+
+, data can be stored as a variable or as a 
+			constant.&nbsp;Variables are like mail boxes in the post office. The 
+			contents of the variables changes every now and then, just like the 
+			mail boxes. In &nbsp;Visual Studio 2013
+
+
+, variables are areas allocated by 
+			the computer memory to hold data.<p class="auto-style1"></p>
+			<h2 class="auto-style1">9.1 Variable Names</h2>
+			<p class="auto-style1">In Visual Studio 2013
+
+
+ , each variable must be 
+			given a name. To name a variable in Visual Studio 2013
+
+
+, you have to 
+			follow a set of rules.The following are the rules when naming the 
+			variables in Visual Basic. It must be less than 255 characters, no 
+			spacing is allowed, it must not begin with a number and period is 
+			not permitted</p>
+		</div>
+		
+	<p class="auto-style1">Examples of valid and invalid variable names are 
+	displayed in Table 9.1</p>
+	<h3 align="center" class="auto-style1">Table 9.1:</h3>
+	<table class="auto-style1">
+		<tbody class="auto-style1">
+			<tr class="auto-style1">
+				<th class="auto-style1">Valid Names</th>
+				<th class="auto-style1">Invalid Name</th>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style1">&nbsp;My_Computer</td>
+				<td class="auto-style1">&nbsp;My.COmputer</td>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style1">&nbsp;Smartphone123</td>
+				<td class="auto-style1">&nbsp;123Smartphone</td>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style1">&nbsp;Long_Name_Can_beUSE</td>
+				<td class="auto-style1">&nbsp;LongName&amp;Canbe&amp;Use &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;*&amp; 
+				is not acceptable</td>
+			</tr>
+	</table>
+	<h2 class="auto-style1">9.2 Declaring Variables</h2>
+	<div id="mycontent0" class="auto-style1">
+		<div class="auto-style1">
+			In Visual Studio 2013
+
+
+, we have to declare the variables before using 
+			them by assigning names and data types. If you fail to do so, the 
+			program will show an error. Variables are usually declared in the 
+			general section of the code windows using the Dim statement.<br />
+			The syntax is as follows:<p class="auto-style1"></p>
+			<p class="auto-style1">Dim VariableName As Data Type</p>
+			<p class="auto-style1">If you want to declare more variables, you 
+			can declare them in separate lines or you may also combine more in 
+			one line , separating each variable with a comma, as follows:</p>
+			<p class="auto-style1">Dim VariableName1 As DataType1, VariableName2 
+			As DataType2, VariableName3 As DataType3</p>
+		</div>
+		
+	<p class="auto-style1"><strong class="auto-style1">Example 9.1</strong></p>
+	<p class="auto-style1"><strong>Private Sub Form1_Load(ByVal sender As System.Object, 
+	ByVal e As System.EventArgs) Handles MyBase.LoadDim password As String<br />
+	Dim yourName As String<br />
+	Dim firstnum As Integer<br />
+	Dim secondnum As Integer<br />
+	Dim total As Integer<br />
+	Dim doDate As DateEnd Sub</strong></p>
+	<p class="auto-style1">You may also combine the above statements in one line 
+	, separating each variable with a comma, as follows:</p>
+	<p class="auto-style1">Dim password As String, yourName As String, firstnum 
+	As Integer,………….</p>
+	<p class="auto-style1"><strong class="auto-style1">Example 9.2</strong></p>
+	<p class="auto-style1"><strong>Private Sub Button1_Click(sender As Object, e As 
+	EventArgs) Handles Button1.Click<br />
+	Dim YourMessage As String<br />
+	YourMessage =&nbsp; "Happy Birthday!"<br />
+	MsgBox(YourMessage)<br />
+	End SubWhen you run the program, a message box that shows the text “Happy 
+	Birthday!” will appear, as shown in Figure 9.1</strong></p>
+	<p class="auto-style1">&nbsp;</p>
+	<p class="auto-style1">
+	<a class="auto-style1" href="Images/vb2013_figure9.1.jpg">
+	<img alt="vb2013_figure9.1" class="auto-style1" height="155" src="Images/vb2013_figure9.1.jpg" width="154" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	&nbsp;<strong class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;Figure 9.1</strong></p>
+	<p class="auto-style1"><strong class="auto-style1">9.3 Assigning Values to 
+	Variables</strong></p>
+	<p class="auto-style1">After declaring various variables using the Dim 
+	statements, we can assign values to those variables. The syntax of an 
+	assignment in Visual Studio 2013
+
+
+ is</p>
+	<p class="auto-style1"><strong class="auto-style1">Variable=Expression</strong></p>
+	<p class="auto-style1">The variable can be a declared variable or a control 
+	property value. The expression could be a mathematical expression, a number, 
+	a string, a Boolean value (true or false) and more, as illustrated in the 
+	following examples:</p>
+	<p class="auto-style1"><strong>firstNumber=100<br />
+	secondNumber=firstNumber-99<br />
+	userName=”John Lyan”<br />
+	userpass.Text = password<br />
+	Label1.Visible = True<br />
+	Command1.Visible = false<br />
+	Label4.text = textbox1.Text<br />
+	ThirdNumber = Val(usernum1.Text)<br />
+	total = firstNumber + secondNumber+ThirdNumber<br />
+	MeanScore% = SumScores% / NumSubjects%<br />
+	X=sqr (16)<br />
+	TrimString= Ltrim (“ Visual Basic”, 4)<br />
+	Num=Int(Rnd*6)+1</strong></p>
+	<p class="auto-style1">In Visual Studio 2013
+
+
+, an&nbsp;error occurs when you try to 
+	assign a value to a variable of incompatible data type. For example, if you 
+	have declared a variable as an integer but you assigned a string value to 
+	it, an error occurred, as shown in Example 9.4:</p>
+	<p class="auto-style1"><strong class="auto-style1">Example 9.3</strong></p>
+	<p class="auto-style1"><strong>Private Sub Button1_Click(sender As Object, e As 
+	EventArgs) Handles Button1.Click<br />
+	Dim YourMessage As Integer<br />
+	YourMessage = “Happy Birthday!”<br />
+	MsgBox(YourMessage)<br />
+	End Sub</strong></p>
+	<p class="auto-style1">When you run the program, the following error 
+	messages will appear in a dialog box, as shown in Figure 9.2</p>
+	<p class="auto-style1">
+	<a class="auto-style1" href="Images/vb2013_figure9.2.jpg">
+	<img alt="vb2013_figure9.2" class="auto-style1" height="318" src="Images/vb2013_figure9.2.jpg" width="559" /></a></p>
+	<p class="auto-style1">&nbsp;</p>
+	<p class="auto-style2"><strong class="auto-style1">Figure 9.2&nbsp;</strong></p>
+	<p class="auto-style1">You can either break the program and continue to run 
+	the program.</p>
+	<h2 class="auto-style1">9.4 Scope of Declaration</h2>
+	<p class="auto-style1">In Visual Basic 2015, other than using the Dim 
+	keyword to declare the data, you can also use other keywords to declare the 
+	data. Three other keywords are private ,static and public. The forms are as 
+	shown below:</p>
+	<p class="auto-style1">Private VariableName as Datatype<br />
+	Static VariableName as Datatype<br />
+	Public VariableName as Datatype</p>
+	<p class="auto-style1">The above keywords indicate the scope of declaration.
+	<strong class="auto-style1">Private</strong> declares a local variable, or a 
+	variable that is local to a procedure or module. However, Private is rarely 
+	used, we normally use Dim to declare a local variable. The
+	<strong class="auto-style1">Static</strong> keyword declares a variable that 
+	is being used multiple times, even after a procedure has been terminated. 
+	Most variables created inside a procedure are discarded by Visual Basic when 
+	the procedure is finished, static keyword preserve the value of a variable 
+	even after the procedure is terminated. <strong class="auto-style1">Public</strong> 
+	is the keyword that declares a global variable, which means it can be used 
+	by all the procedures and modules of the whole program.</p>
+	<h2 class="auto-style1">&nbsp;<strong class="auto-style1">9.5 Declaring Constants</strong></h2>
+	<p class="auto-style1">Constants are different from variables in the sense 
+	that their values do not change during the running of the program.<span class="auto-style5">The 
+	syntax to declare a constant is</span></p>
+	<p class="auto-style1"><strong class="auto-style1">Const Constant Name As 
+	Data Type = Value</strong></p>
+	<p class="auto-style1"><strong class="auto-style1">Example 9.4</strong></p>
+	<p class="auto-style1">P Private Sub Button1_Click(sender As Object, e As 
+	EventArgs) Handles Button1.Click</p>
+	<p class="auto-style1"><strong>Const Pi As Single = 3.142<br />
+	Dim R As Single = 10<br />
+	Dim AreaCircle As Single<br />
+	AreaCircle = Pi * R ^ 2</strong></p>
+	<p class="auto-style1"><strong>MsgBox(“Area of circle with ” &amp; “radius” &amp; R &amp; “=” &amp; 
+	AreaCircle)</strong></p>
+	<p class="auto-style1"><strong>End Sub</strong></p>
+	<p class="auto-style1">Press F5 to run the program and clicking the button 
+	will produce the following message:</p>
+	<p class="auto-style1">
+	<a class="auto-style1" href="Images/vb2013_figure9.3.jpg">
+	<img alt="vb2013_figure9.3" class="auto-style1" height="155" src="Images/vb2013_figure9.3.jpg" width="245" /></a></p>
+	<p class="auto-style2"><strong class="auto-style1">&nbsp;&nbsp;&nbsp; Figure 
+	9.3</strong></p>
+	<p class="auto-style1">&nbsp;</p>
+	<h2 class="auto-style2">
+	<a class="auto-style1" href="lesson8-understanding-data.html">[<strong>Lesson 8]&nbsp;</strong></a><strong>&lt;&lt;<a class="auto-style1" href="index.html">&nbsp;</a></strong><strong><a class="auto-style1" href="index.html">[Contents]&nbsp;</a>&gt;&gt;
+	</strong><strong><a class="auto-style1" href="lesson10-arrays.html">[Lesson 10]</a></strong></h2>
+</div>
+
+</body>
+
+</html>

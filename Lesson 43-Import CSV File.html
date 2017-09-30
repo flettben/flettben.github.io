@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.auto-style1 {
+	font-size: large;
+}
+.auto-style2 {
+	font-family: "trebuchet ms", arial, sans-serif;
+	font-size: large;
+	color: rgb(85, 85, 85);
+}
+.auto-style4 {
+	color: rgb(0, 198, 240);
+	text-decoration: underline;
+}
+.auto-style5 {
+	font-size: x-large;
+	color: black;
+}
+</style>
+</head>
+
+<body>
+
+<ARTICLE class="post-4048 page type-page status-publish hentry" id="post-4048"><HEADER class="entry-header">
+<h1 class="auto-style1"><strong>Visual Studio 2013 Lesson : Import TXT file</strong></h1>
+</HEADER>
+<div class="auto-style1">
+	<h2 class="auto-style2"><strong class="auto-style1">
+	<a class="auto-style1" href="Lesson%2042_Import%20TXT%20file2.html">[Lesson 
+	42]&nbsp;</a><span class="auto-style4">&lt;&lt;</span><a class="auto-style1" href="index.html">[Contents]</a>&nbsp;<a class="auto-style1" href="Lesson%2044_write_to_CSV.html">&gt;&gt;[Lesson 
+	44]</a></strong></h2>
+	<div>
+		<span class="rdf-meta element-hidden" content="The System Life Cycle" property="dc:title">
+		</span>
+		<span class="rdf-meta element-hidden" content="0" datatype="xsd:integer" property="sioc:num_replies">
+		</span>
+		<div class="content">
+			<div class="field field-name-body field-type-text-with-summary field-label-hidden">
+				<div class="field-items">
+					<div class="field-item even" property="content:encoded">
+						<h2 style="font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;" class="auto-style5">
+						<strong>Import CSV file</strong></h2>
+						<p style="margin: 1em 0px 5px; font-size: 0.9em; line-height: 1.25em; color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+						Visual Studio features a command line that allows data to 
+						be imported rom various file types. <br />
+						Streamreader reads the files and adds the data to 
+						assigned objcets, strings or arrays. In the example the 
+						loop continues for the number of rows in the CSV <strong>
+						(While Not ioReader.EndOfData)</strong></p>
+						<p style="margin: 1em 0px 5px; font-size: 0.9em; line-height: 1.25em; color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+						The coding shown imports a CSV (Comma Separated value) Note the 
+						data in the text file is separated to smaller strings 
+						using the (,) comma. <br />
+						The following coding imports a CSV file,assigns each 
+						celi form each row in the CSV, assigns it to a string. 
+						This string could then be assigned to an array. </p>
+						<p style="margin: 1em 0px 5px; font-size: 0.9em; line-height: 1.25em; color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+						<br />
+						&#39;pass the file path and the file name to the 
+						StreamWriter Constructor<br />
+						objStreamWriter = New StreamWriter(&quot;G:\##Visual Studio 
+						3013\CSV array Visual Studio - working on Calculation - 
+						Copy\TestFile.csv&quot;, True) &#39;True appends file, False 
+						overwrites file<br />
+						&#39;write to file<br />
+						objStreamWriter.WriteLine(arrNumTickets(i) + &quot;,&quot; + 
+						arrMemNumber(i) + &quot;,&quot; + arrCode(i) + &quot;,&quot; + 
+						arrMethodSale(i)) &#39;Can just use .write<br />
+						&#39; close the file<br />
+						objStreamWriter.Close()</p>
+						<br />
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<h2 class="auto-style2"><strong class="auto-style1">
+		<a class="auto-style1" href="Lesson%2042_Import%20TXT%20file2.html">[Lesson 
+	42]&nbsp;</a><span class="auto-style4">&lt;&lt;</span><a class="auto-style1" href="index.html">[Contents]</a>&nbsp;<a class="auto-style1" href="Lesson%2044_write_to_CSV.html">&gt;&gt;[Lesson 
+	44]</a></strong></h2>
+</div>
+
+
+

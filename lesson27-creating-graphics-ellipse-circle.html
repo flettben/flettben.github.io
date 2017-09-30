@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Start learning Visual Studio 2013
+
+
+</title>
+
+
+
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<ARTICLE class="post-4929 page type-page status-publish hentry" id="post-4929"><HEADER class="entry-header">
+<h1 class="auto-style1"><strong>Visual Studio 2013
+
+
+ Lesson 27: Creating Graphics- Ellipse 
+and Circle</strong></h1>
+</HEADER>
+<div class="auto-style1">
+	<h2 class="auto-style2">
+	<a class="auto-style1" href="lesson26-creating-graphics-drawing-rectangle.html">
+	<strong>[Lesson 26] </strong></a><strong>&lt;&lt;
+	</strong><a class="auto-style1href=" href="index.html" Index.html"="">
+	<strong>[Contents] </strong></a><strong>&gt;&gt;
+	</strong>
+	<a class="auto-style1" href="lesson28-creating-graphics-drawing-text.html">
+	<strong>[Lesson 28]</strong></a></h2>
+	<h2 class="auto-style1">27.1 Drawing Ellipse</h2>
+	<p class="auto-style1">We have learned how to draw rectangles with various 
+	line styles in Visual Studio 2013
+
+
+ in the previous lesson. Now we shall learn 
+	how to draw ellipse and circle.First of all we need to understand the 
+	principle behind drawing an ellipse in Visual Studio 2013
+
+
+. The basic 
+	structure of most shapes is a rectangle, ellipse is no exception. Ellipse is 
+	an oval shape that is bounded by a rectangle, as shown in Figure 27.1</p>
+	<p class="auto-style1">
+	<img alt="" class="auto-style1" height="107" src="Images/lesson23_1.jpg" width="211" /></p>
+	<p class="auto-style1"><strong class="auto-style1">Figure 27.1</strong></p>
+	<div id="mycontent" class="auto-style1">
+		<div class="auto-style1">
+			Therefore, we need to create a Rectangle object before we can draw 
+			an ellipse. This rectangle serves as a bounding rectangle for the 
+			ellipse. However, you still need to use the
+			<strong class="auto-style1">DrawEllipse</strong> method to finish 
+			the job.&nbsp;On the other hand, we can also draw an ellipse with the
+			<strong class="auto-style1">DrawEllipse</strong> method without 
+			first creating a rectangle. We shall show you both ways.In the first 
+			method, let’s say you have created a rectangle object known as 
+			myRectangle and a pen object as myPen, then you can draw an ellipse 
+			using the following statement:<p class="auto-style1"></p>
+			<p class="auto-style1"><strong class="auto-style1">
+			myGraphics.DrawEllipse(myPen, myRectangle)</strong></p>
+			<p class="auto-style1">* Assume you have also already created the 
+			Graphics object myGraphics.</p>
+		</div>
+		<div class="auto-style1">
+			<br />
+   	<p class="auto-style1"><strong class="auto-style1">Example 27.1(a)</strong></p>
+	<p class="auto-style1">Private Sub BtnDraw_Click(sender As Object, e As 
+	EventArgs) Handles BtnDraw.Click</p>
+	<p class="auto-style1">Dim myPen As Pen<br />
+	myPen = New Pen(Drawing.Color.DarkTurquoise, 5)</p>
+	<p class="auto-style1">Dim myGraphics As Graphics = Me.CreateGraphics</p>
+	<p class="auto-style1"><strong>Dim myRectangle As New Rectangle</strong></p>
+	<p class="auto-style1"><strong>myRectangle.X = 40<br />
+	myRectangle.Y = 30<br />
+	myRectangle.Width = 200<br />
+	myRectangle.Height = 100</strong></p>
+	<p class="auto-style1"><strong>myGraphics.DrawEllipse(myPen, myRectangle)<br />
+	End Sub</strong></p>
+	<p class="auto-style1">The output image is shown in Figure 27.2</p>
+	<p class="auto-style1">
+	<a class="auto-style1" href="Images/vb2013_figure27.1.jpg">
+	<img alt="vb2013_figure27.1" class="auto-style1" height="300" src="Images/vb2013_figure27.1.jpg" width="300" /></a></p>
+	<p class="auto-style2">&nbsp;<strong class="auto-style1">Figure 27.2</strong></p>
+	<p class="auto-style1">The second method is using the
+	<strong class="auto-style1">DrawEllipse</strong> method without creating a 
+	rectangle object. Offcourse you still have to create the Graphics and the 
+	Pen objects. The syntax is:</p>
+	<p class="auto-style1">myGraphics.DrawEllipse(myPen, X,Y,Width, Height)</p>
+	<p class="auto-style1">Where (X,Y) are the coordinates of the upper left 
+	corner of the bounding rectangle, width is the width of the ellipse and 
+	height is the height of the ellipse.</p>
+	<div id="mycontent0" class="auto-style1">
+		<div class="auto-style1">
+			<strong class="auto-style1">Example 27.1(b)</strong>Private Sub 
+			BtnDraw_Click(sender As Object, e As EventArgs) Handles 
+			BtnDraw.Click<p class="auto-style1"></p>
+			<p class="auto-style1"><strong>Dim myPen As Pen</strong></p>
+			<p class="auto-style1"><strong>myPen = New Pen(Drawing.Color.DarkTurquoise, 
+			5)</strong></p>
+			<p class="auto-style1"><strong>Dim myGraphics As Graphics = 
+			Me.CreateGraphics</strong></p>
+			<p class="auto-style1"><strong>myGraphics.DrawEllipse(myPen, 40, 30, 200, 
+			100)</strong></p>
+			<p class="auto-style1">End Sub</p>
+		</div>
+		<div class="auto-style1">
+			<br />
+    	<h2 class="auto-style1">27.2 Drawing a Circle</h2>
+	<p class="auto-style1">After you have learned how to draw an ellipse, 
+	drawing a circle becomes very simple. We use exactly the same methods used 
+	in the preceding section but modify the width and height so that they are of 
+	the same values.</p>
+	<p class="auto-style1">The following examples draw the same circle.</p>
+	<p class="auto-style1"><strong class="auto-style1">Example 27.2(a)</strong></p>
+	<p class="auto-style1"><strong>Dim myPen As Pen</strong></p>
+	<p class="auto-style1"><strong>myPen = New Pen(Drawing.Color.DarkTurquoise, 5)</strong></p>
+	<p class="auto-style1"><strong>Dim myGraphics As Graphics = Me.CreateGraphics</strong></p>
+	<p class="auto-style1"><strong>Dim myRectangle As New Rectangle</strong></p>
+	<p class="auto-style1"><strong>myRectangle.X = 90<br />
+	myRectangle.Y = 30<br />
+	myRectangle.Width = 100<br />
+	myRectangle.Height = 100</strong></p>
+	<p class="auto-style1"><strong>myGraphics.DrawEllipse(myPen, myRectangle)</strong></p>
+	<p class="auto-style1"><strong class="auto-style1">Example 27.2(b)</strong></p>
+	<p class="auto-style1"><strong>Dim myPen As Pen</strong></p>
+	<p class="auto-style1"><strong>myPen = New Pen(Drawing.Color.DarkTurquoise, 5)</strong></p>
+	<p class="auto-style1"><strong>Dim myGraphics As Graphics = Me.CreateGraphics</strong></p>
+	<p class="auto-style1"><strong>myGraphics.DrawEllipse(myPen, 90, 30, 100, 100)</strong></p>
+	<p class="auto-style1">The output image is shown in Figure 27.3</p>
+	<p class="auto-style1">
+	<a class="auto-style1" href="Images/vb2013_figure27.2.jpg">
+	<img alt="vb2013_figure27.2" class="auto-style1" height="300" src="Images/vb2013_figure27.2.jpg" width="300" /></a></p>
+	<p class="auto-style2"><strong class="auto-style1">Figure 27.3</strong></p>
+	<h2 class="auto-style2">
+	<a class="auto-style1" href="lesson26-creating-graphics-drawing-rectangle.html">
+	<strong>[Lesson 26]&nbsp;</strong></a><strong>&lt;&lt;&nbsp;</strong><a class="auto-style1href=" href="index.html" Index.html"=""><strong>[Contents]&nbsp;</strong></a><strong>&gt;&gt;
+	</strong>
+	<a class="auto-style1" href="lesson28-creating-graphics-drawing-text.html">
+	<strong>[Lesson 28]</strong></a></h2>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Start learning Visual Studio 2013
+
+
+</title>
+
+
+
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<ARTICLE class="post-4961 page type-page status-publish hentry" id="post-4961"><HEADER class="entry-header">
+<h1 class="auto-style1"><strong>Visual Studio 2013
+
+
+ Lesson 28: Creating Graphics-Drawing 
+Text</strong></h1>
+</HEADER>
+<div class="auto-style1">
+	<h2 class="auto-style2">
+	<a class="auto-style1" href="lesson27-creating-graphics-ellipse-circle.html">
+	<strong>[Lesson 27]</strong></a><strong> &lt;&lt;
+	</strong><a class="auto-style1href=" href="index.html" Index.html"="">
+	<strong>[Contents] </strong></a><strong>&gt;&gt; 
+	<a class="auto-style1" href="lesson29-creating-graphics-polygon-pie.html">[</a></strong><strong><a class="auto-style1" href="lesson29-creating-graphics-polygon-pie.html">Lesson 
+	29]</a></strong></h2>
+	<p class="auto-style1">We have learned how to draw rectangle, ellipse and 
+	circle in Visual Studio 2013
+
+
+ in the preceding lessons, now we shall learn how 
+	to draw text on the screen. Yes, instead of using the Print command, you can 
+	also draw text on the screen.</p>
+	<h2 class="auto-style1"><strong class="auto-style1">28.1 Drawing Text</strong></h2>
+	<div id="mycontent" class="auto-style1">
+		<div class="auto-style1">
+			In order to draw text on the screen, we can use the DrawString 
+			method. The format is as follows:<p class="auto-style1"></p>
+			<p class="auto-style1"><strong class="auto-style1">
+			myGraphics.DrawString(myText, myFont, mybrush, X , Y)</strong></p>
+			<p class="auto-style1">Where myGraphics is the Graphics object, 
+			myText is the text you wish to display on the screen, myFont is the 
+			font object created by you, myBrush is the brush style created by 
+			you and X, Y are the coordinates of upper left corner of the Text.</p>
+			<p class="auto-style1">You can create the Font object in visual 
+			basic 2013 using the following statement:</p>
+			<p class="auto-style1"><strong>myFont = New System.Drawing.Font(“Verdana”, 
+			20)</strong></p>
+			<p class="auto-style1">Where the first argument of the font is the 
+			font typeface, and the second argument is the font size. You can add 
+			a third argument as font style, either bold, italic, underline. </p>
+		
+	<p class="auto-style1">Here are the examples:</p>
+	<p class="auto-style1"><strong>myFont = New System.Drawing.Font(“Verdana”, 20, 
+	FontStyle.Bold)myFont = New System.Drawing.Font(“Verdana”, 20, 
+	FontStyle.Underline)</strong></p>
+	<p class="auto-style1"><strong>myFont = New System.Drawing.Font(“Verdana”, 20, 
+	FontStyle.Italic)</strong></p>
+	<p class="auto-style1"><strong>myFont = New System.Drawing.Font(“Verdana”, 20, 
+	FontStyle.Regular)</strong></p>
+	<p class="auto-style1"><strong>To create your Brush object, you can use the 
+	following statement:</strong></p>
+	<p class="auto-style1"><strong>Dim myBrush As Brush</strong></p>
+	<p class="auto-style1"><strong>myBrush = New Drawing.SolidBrush(Color.BrushColor)
+	</strong>
+	</p>
+	<p class="auto-style1">Besides the seven colors, some of the common Brush 
+	Colors are AliceBlue, AquaMarine Beige, DarkMagenta, DrarkOliveGreen, 
+	SkyBlue and more. You don’t have to remember the names of all the colors, 
+	the intelliSense will let you browse through the colors in a drop-down menu 
+	once you type the dot after the word Color.</p>
+	<p class="auto-style1">Now we shall proceed to draw the font using the 
+	sample code below:</p>
+	<p class="auto-style1"><strong class="auto-style1">Example 28.1</strong></p>
+	<p class="auto-style1"><strong>Private Sub BtnDraw_Click(sender As Object, e As 
+	EventArgs) Handles BtnDraw.Click</strong></p>
+	<p class="auto-style1"><strong>Dim myGraphics As Graphics = Me.CreateGraphics<br />
+	Dim myFont As Font<br />
+	Dim myBrush As Brush</strong></p>
+	<p class="auto-style1"><strong>myBrush = New Drawing.SolidBrush(Color.DarkOrchid)<br />
+	myFont = New System.Drawing.Font(“Verdana”, 20, FontStyle.Underline)<br />
+	myGraphics.DrawString(“Visual Studio 2013
+
+
+”, myFont, myBrush, 10, 10)</strong></p>
+	<p class="auto-style1"><strong>End Sub</strong></p>
+	<p class="auto-style1">The runtime interface is as shown in Figure 28.1</p>
+	<div id="mycontent0" class="auto-style1">
+		<div class="auto-style1">
+			<a class="auto-style1" href="Images/vb2013_figure28.1.jpg">
+			<img alt="vb2013_figure28.1" class="auto-style1" height="300" src="Images/vb2013_figure28.1.jpg" width="300" /></a><p class="auto-style1">
+			</p>
+			<p class="auto-style2">&nbsp;<strong class="auto-style1">Figure 28.1</strong></p>
+		</div>
+		<div class="auto-style1">
+			<br />  	<p class="auto-style1">The preceding example can be modified if you don’t 
+	want to create the Font and the Brush objects. You can use the font of an 
+	existing object such as the Form and the System Colors. Replace the last 
+	line in the preceding example with this line(you need to delete the lines 
+	that create the Brush and the Font objects as well)</p>
+	<p class="auto-style1"><strong>myGraphics.DrawString(“Visual Studio 2013
+
+
+″, me.Font, 
+	System.Drawing.Brushes.DarkOrchid, 10, 10)</strong></p>
+	<p class="auto-style1">You can also add a InputBox which let the user enter 
+	his or her message then display the message on the screen.</p>
+	<p class="auto-style1">This is shown in Example 28.2</p>
+	<p class="auto-style1"><strong class="auto-style1">Example 28.2</strong></p>
+	<p class="auto-style1"><strong>Dim myGraphics As Graphics = Me.CreateGraphics</strong></p>
+	<p class="auto-style1"><strong>Dim myFont As Font</strong></p>
+	<p class="auto-style1"><strong>Dim myBrush As Brush</strong></p>
+	<p class="auto-style1"><strong>Dim userMsg As String</strong></p>
+	<p class="auto-style1"><strong>userMsg = InputBox(“What is your message?”, “Message 
+	Entry Form”, “Enter your message here”, 100, 200)</strong></p>
+	<p class="auto-style1"><strong>myBrush = New Drawing.SolidBrush(Color.DarkOrchid)</strong></p>
+	<p class="auto-style1"><strong>myFont = New System.Drawing.Font(“Verdana”, 20, 
+	FontStyle.Underline)</strong></p>
+	<p class="auto-style1"><strong>myGraphics.DrawString(userMsg, myFont, myBrush, 10, 
+	10)</strong></p>
+	<p class="auto-style1">&nbsp;</p>
+	<h2 class="auto-style2">
+	<a class="auto-style1" href="lesson27-creating-graphics-ellipse-circle.html">
+	<strong>[Lesson 27]</strong></a><strong>&nbsp;&lt;&lt;&nbsp;</strong><a class="auto-style1href=" href="index.html" Index.html"=""><strong>[Contents]&nbsp;</strong></a><strong>&gt;&gt;
+	</strong>
+	<a class="auto-style1" href="lesson29-creating-graphics-polygon-pie.html">
+	<strong>[Lesson 29]</strong></a></h2>
+</div>
+
+</body>
+
+</html>

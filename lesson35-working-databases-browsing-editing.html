@@ -1,0 +1,233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Start learning Visual Studio 2013
+
+
+</title>
+
+
+
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<style type="text/css">
+.auto-style1 {
+	text-decoration: underline;
+}
+.auto-style2 {
+	text-decoration: underline;
+	color: #00C6F0;
+}
+</style>
+</head>
+
+<body>
+
+<ARTICLE class="post-5116 page type-page status-publish hentry" id="post-5116"><HEADER class="entry-header">
+<h1 class="auto-style1"><strong>Visual Studio 2013
+
+
+ Lesson 35: Working with Databases- 
+Browsing and Editing</strong></h1>
+</HEADER>
+<div class="auto-style1">
+	<h2 class="auto-style2">
+	<a class="auto-style1" href="lesson34-working-databases-creating-connection.html">
+	<strong>[Lesson 34]</strong></a><strong> &lt;&lt;
+	</strong>
+	<strong><a class="auto-style1href=" href="index.html" Index.html"="">
+	[Contents]</a></strong><a class="auto-style1href=" href="lesson37-PseudoCode.html" Index.html"="">
+	<strong>&gt;&gt;</strong> <strong><span class="auto-style2">[Lesson 36]</span></strong></a></h2>
+	<p class="auto-style1">In preceding lessons, you have learned how to connect 
+	to a database as well as filling up the table with data in Visual Basic 
+	2013, now you shall &nbsp;learn how to manipulate the data in the database. 
+	Manipulating data means adding news records, editing records, deleting 
+	records, browsing records and more.</p>
+	<h2 class="auto-style1"><strong class="auto-style1">35.1 Browsing Records&nbsp;</strong></h2>
+	<p class="auto-style1">In previous lesson, we have learned how to display 
+	the first record using the showRecords sub procedure. &nbsp;In this lesson, we 
+	will create command buttons and write relevant codes to allow the user to 
+	browse the records forward and backward as well as fast forward to the last 
+	record and back to the first record.The first button we need to create is 
+	for the user to browse the first record. We can use button’s text&nbsp;<strong class="auto-style1">&lt;&lt;&nbsp;</strong>to 
+	indicate to the user that it is the button to move to the first record and 
+	button’s text <strong class="auto-style1">&gt;&gt;</strong> to move to the last 
+	record. &nbsp;Besides we can use button’s text <strong class="auto-style1">&lt;</strong> 
+	&nbsp;for moving to previous record and button’s text &gt; &nbsp;for moving to next 
+	record.</p>
+	<div id="mycontent" class="auto-style1">
+		<div class="auto-style1">
+			The code for moving to the first record is:<br />
+			<strong class="auto-style1">MyRowPosition = 0</strong><br />
+			<strong class="auto-style1">Me.showRecords()</strong><br />
+			The code for moving to previous record is:<br />
+			<strong class="auto-style1">If MyRowPosition &gt; 0 Then</strong><br />
+			<strong class="auto-style1">MyRowPosition = MyRowPosition – 1</strong><br />
+			<strong class="auto-style1">Me.showRecords()</strong><br />
+			<strong class="auto-style1">End If</strong><p class="auto-style1">
+			</p>
+			<p class="auto-style1">The code for moving to next record is:</p>
+			<p class="auto-style1"><strong class="auto-style1">If MyRowPosition 
+			&lt; (MyDataTbl.Rows.Count – 1) Then</strong><br />
+			<strong class="auto-style1">MyRowPosition = MyRowPosition + 1</strong><br />
+			<strong class="auto-style1">Me.showRecords()</strong><br />
+			<strong class="auto-style1">End If</strong> </p>
+		</div>
+	</div>
+	<p class="auto-style1">The code for moving to last record is:</p>
+	<p class="auto-style1"><strong class="auto-style1">If MyDataTbl.Rows.Count &gt; 
+	0 Then</strong><br />
+	<strong class="auto-style1">MyRowPosition = MyDataTbl.Rows.Count – 1</strong><br />
+	<strong class="auto-style1">Me.showRecords()</strong><br />
+	<strong class="auto-style1">End If</strong></p>
+	<h2 class="auto-style1"><strong class="auto-style1">35.2 &nbsp;Editing, Saving, 
+	Adding and Deleting Records</strong></h2>
+	<p class="auto-style1">You can edit any record by navigating to the record 
+	and change the data values. However, you need to save the data after editing 
+	them. You need to use the update method of the SqlDataAdapter to save the 
+	data. The code &nbsp;is:</p>
+	<div id="mycontent0" class="auto-style1">
+		<div class="auto-style1">
+			<strong class="auto-style1">If MyDataTbl.Rows.Count &lt;&gt; 0 Then</strong><br />
+			<strong class="auto-style1">
+			MyDataTbl.Rows(MyRowPosition)(“ContactName”) = txtName.Text</strong><br />
+			<strong class="auto-style1">MyDataTbl.Rows(MyRowPosition)(“state”) = 
+			txtState.Text</strong><br />
+			<strong class="auto-style1">MyDatAdp.Update(MyDataTbl)</strong><br />
+			<strong class="auto-style1">End If</strong><p class="auto-style1">
+			</p>
+			<p class="auto-style1">You can also add new record or new row to the 
+			table using the following code :</p>
+			<p class="auto-style1"><strong class="auto-style1">Dim MyNewRow As 
+			DataRow = MyDataTbl.NewRow()</strong><br />
+			<strong class="auto-style1">MyDataTbl.Rows.Add(MyNewRow)</strong><br />
+			<strong class="auto-style1">MyRowPosition = MyDataTbl.Rows.Count – 1</strong><br />
+			<strong class="auto-style1">Me.showRecords()</strong></p>
+		</div>
+	</div>
+	<p class="auto-style1">The code above will present a new record with blank 
+	fields for the user to enter the new data. After entering the data, he or 
+	she can then click the save button to save the data.</p>
+	<p class="auto-style1">Lastly, the user might want to delete the data. The 
+	code to delete the data is:</p>
+	<p class="auto-style1"><strong class="auto-style1">If MyDataTbl.Rows.Count 
+	&lt;&gt; 0 Then</strong><br />
+	<strong class="auto-style1">MyDataTbl.Rows(MyRowPosition).Delete()</strong><br />
+	<strong class="auto-style1">MyDatAdp.Update(MyDataTbl)</strong><br />
+	<strong class="auto-style1">MyRowPosition = 0</strong><br />
+	<strong class="auto-style1">Me.showRecords()</strong><br />
+	<strong class="auto-style1">End If</strong></p>
+	<p class="auto-style1">The Visual Studio 2013
+
+
+ database program interface is 
+	shown below:</p>
+	<p class="auto-style1"><strong class="auto-style1">The Code</strong></p>
+	<p class="auto-style1"><strong>Public Class Form1<br />
+	Private MyDatAdp As New SqlDataAdapter<br />
+	Private MyCmdBld As New SqlCommandBuilder<br />
+	Private MyDataTbl As New DataTable<br />
+	Private MyCn As New SqlConnection<br />
+	Private MyRowPosition As Integer = 0</strong></p>
+	<p class="auto-style1"><strong>Private Sub Form1_FormClosed(sender As Object, e As 
+	FormClosedEventArgs) Handles Me.FormClosed</strong></p>
+	<p class="auto-style1"><strong>MyCn.Close()<br />
+	MyCn.Dispose()<br />
+	End Sub<br />
+	Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load<br />
+	MyCn.ConnectionString = “Data Source=TOSHIBA-PC\SQL2012; 
+	AttachDbFilename=C:\Program Files\Microsoft SQL 
+	Server\MSSQL11.SQL2012\MSSQL\DATA\Test.mdf; ” &amp; _<br />
+	“User Instance=True;Integrated Security=SSPI”<br />
+	MyCn.Open()</strong></p>
+	<p class="auto-style1"><strong>MyDatAdp = New SqlDataAdapter(“Select* from 
+	Contacts”, MyCn)<br />
+	MyCmdBld = New SqlCommandBuilder(MyDatAdp)<br />
+	MyDatAdp.Fill(MyDataTbl)</strong></p>
+	<p class="auto-style1"><strong>Dim MyDataRow As DataRow = MyDataTbl.Rows(0)<br />
+	Dim strName As String<br />
+	Dim strState As String<br />
+	strName = MyDataRow(“ContactName”)<br />
+	strState = MyDataRow(“State”)<br />
+	TxtName.Text = strName.ToString<br />
+	TxtState.Text = strState.ToString<br />
+	Me.showRecords()</strong></p>
+	<p class="auto-style1"><strong>End Sub<br />
+	Private Sub showRecords()</strong></p>
+	<p class="auto-style1"><strong>If MyDataTbl.Rows.Count = 0 Then<br />
+	txtName.Text = “”<br />
+	txtState.Text = “”<br />
+	Exit Sub<br />
+	End If</strong></p>
+	<p class="auto-style1"><strong>txtName.Text = 
+	MyDataTbl.Rows(MyRowPosition)(“ContactName”).ToString<br />
+	TxtState.Text = MyDataTbl.Rows(MyRowPosition)(“State”).ToString<br />
+	End Sub</strong></p>
+	<p class="auto-style1"><strong>Private Sub BtnMoveFirst_Click(sender As Object, e As 
+	EventArgs) Handles BtnMoveFirst.Click<br />
+	MyRowPosition = 0<br />
+	Me.showRecords()<br />
+	End Sub</strong></p>
+	<p class="auto-style1"><strong>Private Sub BtnMovePrev_Click(sender As Object, e As 
+	EventArgs) Handles BtnMovePrev.Click<br />
+	If MyRowPosition &gt; 0 Then<br />
+	MyRowPosition = MyRowPosition – 1<br />
+	Me.showRecords()<br />
+	End If<br />
+	End Sub</strong></p>
+	<p class="auto-style1"><strong>Private Sub BtnMoveNext_Click(sender As Object, e As 
+	EventArgs) Handles BtnMoveNext.Click<br />
+	If MyRowPosition &lt; (MyDataTbl.Rows.Count – 1) Then<br />
+	MyRowPosition = MyRowPosition + 1<br />
+	Me.showRecords()<br />
+	End If<br />
+	End Sub</strong></p>
+	<p class="auto-style1"><strong>Private Sub BtnMoveLast_Click(sender As Object, e As 
+	EventArgs) Handles BtnMoveLast.Click<br />
+	If MyDataTbl.Rows.Count &gt; 0 Then<br />
+	MyRowPosition = MyDataTbl.Rows.Count – 1<br />
+	Me.showRecords()<br />
+	End If<br />
+	End Sub</strong></p>
+	<p class="auto-style1"><strong>Private Sub BtnAdd_Click(sender As Object, e As 
+	EventArgs) Handles BtnAdd.Click<br />
+	Dim MyNewRow As DataRow = MyDataTbl.NewRow()<br />
+	MyDataTbl.Rows.Add(MyNewRow)<br />
+	MyRowPosition = MyDataTbl.Rows.Count – 1</strong></p>
+	<p class="auto-style1"><strong>Me.showRecords()<br />
+	End Sub</strong></p>
+	<p class="auto-style1"><strong>Private Sub BtnDelete_Click(ByVal sender As Object, 
+	ByVal e As EventArgs) Handles BtnDelete.Click<br />
+	If MyDataTbl.Rows.Count &lt;&gt; 0 Then<br />
+	MyDataTbl.Rows(MyRowPosition).Delete()<br />
+	MyRowPosition = 0<br />
+	MyDatAdp.Update(MyDataTbl)<br />
+	Me.showRecords()<br />
+	End If<br />
+	End Sub</strong></p>
+	<p class="auto-style1"><strong>Private Sub BtnSave_Click(ByVal sender As Object, 
+	ByVal e As EventArgs) Handles BtnSave.Click</strong></p>
+	<p class="auto-style1"><strong>If MyDataTbl.Rows.Count &lt;&gt; 0 Then<br />
+	MyDataTbl.Rows(MyRowPosition)(“ContactName”) = TxtName.Text<br />
+	MyDataTbl.Rows(MyRowPosition)(“state”) = TxtState.Text<br />
+	MyDatAdp.Update(MyDataTbl)<br />
+	End If</strong></p>
+	<p class="auto-style1"><strong>End Sub<br />
+	End Class</strong></p>
+	<p class="auto-style1">
+	<img alt="" class="auto-style1" height="305" src="Images/vb2012_fig30.jpg" width="341" /></p>
+	<p class="auto-style1"><strong class="auto-style1">Figure 35.1</strong></p>
+	<h2 class="auto-style2">
+	<a class="auto-style1" href="lesson34-working-databases-creating-connection.html">
+	<strong>[Lesson 34]</strong></a><strong>&nbsp;&lt;&lt;&nbsp;</strong><a class="auto-style1href=" href="index.html" Index.html"=""><strong>[Contents]</strong></a>
+	<a class="auto-style1href=" href="lesson37-PseudoCode.html" Index.html"="">
+	<strong>&gt;&gt;</strong> <strong><span class="auto-style2">[Lesson 36]</span></strong></a></h2>
+</div>
+
+</body>
+
+</html>

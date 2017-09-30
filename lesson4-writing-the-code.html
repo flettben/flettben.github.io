@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Start learning Visual Studio 2013
+
+
+</title>
+
+
+
+
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+
+<h1 class="auto-style1"><strong>Visual Studio 2013
+
+
+ Lesson 4: Writing the Code</strong></h1>
+
+<div class="auto-style1">
+	<h2 class="auto-style2">
+	<a class="auto-style1" href="lesson3-adding-controls-to-the-form.html">
+	<strong>[Lesson 3] </strong> </a><strong>&lt;&lt;
+	</strong>
+	<a class="auto-style1" href="index.html"><strong>[Contents] </strong> </a>
+	<strong>&gt;&gt;
+	</strong>
+	<a class="auto-style1" href="lesson5-working-with-controls.html"><strong>[Lesson 5]</strong></a></h2>
+	<p class="auto-style1">In previous lesson, we have learned how to design the 
+	user interface by adding controls to the form and changing their properties. 
+	However, the controls on user interface alone will not work without adding 
+	code to them. In this lesson, we shall learn how to write code for all the 
+	controls so that they can interact with events triggered by the users. 
+	Before learning how to write Visual Studio 2013
+
+
+ code, let us dwell into the 
+	concept of event-driven programming</p>
+	<p class="auto-style1"><strong class="auto-style1">4.1 The Concept of 
+	Event-Driven Programming</strong><br />
+	Visual Studio 2013
+
+
+ is an event driven programming language&nbsp;because&nbsp;we need to 
+	write code to response to certain events triggered randomly by the user via 
+	the controls on the form. These events do not occur in a certain order. The 
+	events usually comprises but not limited to the user’s inputs. Some of the 
+	events are load, click, double click, drag and drop, pressing the keys and 
+	more.</p>
+	<div id="mycontent" class="auto-style1">
+		<div class="auto-style1">
+			<p class="auto-style1">Every form and and every control you place on 
+			the form has a set of events related to them.&nbsp;Some of the events are 
+			load, click, double click, drag and drop, pressing the keys and 
+			more. To view the events, double-click the control (object) on the 
+			form to enter the code window. &nbsp;The default event will appear at the 
+			top part on the right side of the code window. You need to click on 
+			the default event to view other events associated with the control. 
+			The code appears on the left side is the event procedure associated 
+			with the load event. Figure 4.1 illustrates the event procedure load 
+			associated with the default form .</p>
+		</div>
+		
+	<p class="auto-style1">
+	<a class="auto-style1" href="http://www.vbtutor.net/wordpress/wp-content/uploads/2014/01/vb2013_figure4.1.jpg">
+	<img alt="vb2013_figure4.1" class="auto-style1" height="692" src="http://www.vbtutor.net/wordpress/wp-content/uploads/2014/01/vb2013_figure4.1.jpg" width="960" /></a></p>
+	<p class="auto-style1"><strong class="auto-style1">Figure 4.1: Events 
+	associated with Form</strong></p>
+	<p class="auto-style1">Figure 4.2 shows the events associated with button</p>
+	<p class="auto-style1">
+	<a class="auto-style1" href="http://www.vbtutor.net/wordpress/wp-content/uploads/2014/01/vb2013_figure4.2.jpg">
+	<img alt="vb2013_figure4.2" class="auto-style1" height="692" src="http://www.vbtutor.net/wordpress/wp-content/uploads/2014/01/vb2013_figure4.2.jpg" width="960" /></a></p>
+	<p class="auto-style1"><strong class="auto-style1">&nbsp;<span class="auto-style5">Figure 
+	4.2</span></strong></p>
+	<p class="auto-style1"><strong class="auto-style1">4.2 Writing the Code</strong></p>
+	<div id="mycontent0" class="auto-style1">
+		<div class="auto-style1">
+			To start writing code in Visual Studio 2013
+
+
+, &nbsp;click on any part of 
+			the form to go into the code window as shown in Figure 4.1. This is 
+			the structure of an event procedure. In this case, the event 
+			procedure is to load Form1 and it starts with&nbsp;<strong class="auto-style1">Private 
+			Sub</strong>&nbsp;and end with&nbsp;<strong class="auto-style1">End Sub</strong>. 
+			This procedure includes the Form1 class and the event&nbsp;<strong class="auto-style1">Load</strong>, 
+			and they are bind together with an underscore, i.e. Form_Load. It 
+			does nothing other than loading an empty form. To make the load 
+			event does something, insert the statement<p class="auto-style1">
+			</p>
+			<p class="auto-style1"><strong>MsgBox( “Welcome to Visual Studio 2013
+
+
+”)</strong></p>
+			<p class="auto-style1"><strong>Public Class Form1Private Sub 
+			Form1_Load(ByVal sender As System.Object, ByVal e As 
+			System.EventArgs) Handles MyBase.Load</strong></p>
+			<p class="auto-style1"><strong>MsgBox( “My First Visual Studio 2013
+
+
+ Program”)</strong></p>
+			<p class="auto-style1"><strong>End Sub</strong></p>
+			<p class="auto-style1"><strong>End Class</strong></p>
+		</div>
+		<div class="auto-style1">
+
+	<p class="auto-style1">When you run the program, a message &nbsp;box display the 
+	text&nbsp;“My First Visual Studio 2013
+
+
+ Program” will appear, as show in Figure 
+	4.3. MsgBox is a built-in function in Visual Studio 2013
+
+
+ that display a 
+	message in a pop-up message box.</p>
+	<p class="auto-style2">
+	<a class="auto-style1" href="Images
+
+
+/vb2013_figure1.7.jpg">
+	<img alt="vb2013_figure1.7" class="auto-style1" height="155" src="Images
+
+
+/vb2013_figure1.7.jpg" width="249" /></a><strong class="auto-style1">Figure 
+	4.3</strong></p>
+	<p class="auto-style1">* You will notice that above Private Sub structure 
+	there is a preceding keyword Public Class Form1. This is the concept of an 
+	object oriented programming language.&nbsp;<span class="auto-style1">When we 
+	start a windows application in Visual Studio 2013
+
+
+, we will see a default form 
+	with the name Form1 appears in the IDE, it is actually the Form1 Class that 
+	inherits from the Form class&nbsp;</span><strong class="auto-style1">System.Windows.Forms.Form.&nbsp;</strong><span class="auto-style5">A 
+	class has events as it creates an instant of a class or an object.&nbsp;</span></p>
+	<p class="auto-style1">You can also write code to perform arithmetic 
+	calculation. For example, you can use the MsgBox and the arithmetic operator 
+	plus to perform an addition of two numbers, as shown below:</p>
+	<p class="auto-style1"><strong>Private Sub Form1_Load(sender As Object, e As 
+	EventArgs) Handles MyBase.LoadMsgBox(“2” &amp; “+” &amp; “5” &amp; “=” &amp; 2 + 5)End Sub</strong></p>
+	<p class="auto-style1">*The symbol &amp; (<i class="auto-style1">ampersand) </i>
+	is to perform&nbsp;string concatenation.</p>
+	<p class="auto-style1">The output is as shown in Figure 4.4</p>
+	<p class="auto-style2">
+	<a class="auto-style1" href="http://www.vbtutor.net/wordpress/wp-content/uploads/2014/01/vb2013_figure4.4.jpg">
+	<img alt="vb2013_figure4.4" class="auto-style1" height="155" src="http://www.vbtutor.net/wordpress/wp-content/uploads/2014/01/vb2013_figure4.4.jpg" width="154" /></a><strong class="auto-style1">Figure 
+	4.4&nbsp;</strong></p>
+	<p class="auto-style1">If you wish to close the window after the message, 
+	you can add the statement&nbsp;<strong class="auto-style1">Me.Close(), </strong>
+	as follows:</p>
+	<p class="auto-style1"><strong>Private Sub Form1_Load(sender As Object, e As 
+	EventArgs) Handles MyBase.Load</strong></p>
+	<p class="auto-style1"><strong>MsgBox(“2” &amp; “+” &amp; “5” &amp; “=” &amp; 2 + 5)<br />
+	Me.Close</strong></p>
+	<p class="auto-style1"><strong>End Sub</strong></p>
+	<p class="auto-style1">We will learn more about code writing in coming 
+	lessons</p>
+	<p class="auto-style1">&nbsp;</p>
+	<h2 class="auto-style2">
+	<a class="auto-style1" href="lesson3-adding-controls-to-the-form.html">
+	<strong>[Lesson 3]&nbsp;</strong></a><strong>&lt;&lt;&nbsp;</strong><a class="auto-style1" href="index.html"><strong>[Contents]&nbsp;</strong></a><strong>&gt;&gt;
+	</strong><a class="auto-style1" href="lesson5-working-with-controls.html">
+	<strong>[Lesson 5]</strong></a></h2>
+</div>
+
+
+
+</html>

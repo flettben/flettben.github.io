@@ -1,0 +1,257 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+<title>Implicit Explicit Declarations</title>
+</head>
+
+<body>
+
+<ARTICLE class="post-4048 page type-page status-publish hentry" id="post-4048"><HEADER class="entry-header">
+<h1 class="auto-style1"><strong>Visual Studio 2013 Lesson 40: Declarations</strong></h1>
+</HEADER>
+<div class="auto-style1">
+	<h2 class="auto-style2"><strong class="auto-style1">
+		<a class="auto-style1" href="Lesson%2039%20flowcharts.html">[Lesson 39]</a>&nbsp;&lt;&lt;<a class="auto-style1" href="index.html">[Contents]</a>&nbsp;&gt;&gt;<a class="auto-style1" href="Lesson%2041_Import%20TXT%20file.html">[Lesson 
+	41]</a></strong></h2>
+	<div>
+	
+		<h1 class="title" style="color: rgb(0, 0, 0); font-weight: normal; font-style: normal; font-variant: normal; font-stretch: normal; font-size: 2.769em; line-height: 1.167; font-family: 'Segoe UI', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif; margin-top: 0px; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+		Implicit and Explicit Declaration (Visual Basic)</h1>
+		<div id="mainSection" style="clear: both; color: rgb(0, 0, 0); font-family: 'Segoe UI', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 17.55px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+			<div id="mainBody">
+				<p style="color: rgb(42, 42, 42); margin-top: 0px; margin-bottom: 0px; padding-bottom: 15px; line-height: 18px;">
+				</p>
+				<div class="introduction">
+					<p style="color: rgb(42, 42, 42); margin-top: 0px; margin-bottom: 0px; padding-bottom: 15px; line-height: 18px;">
+					By default, the Visual Basic compiler enforces<span class="Apple-converted-space">&nbsp;</span><span class="parameter" style="font-style: italic;">explicit 
+					declaration</span>, which requires that you declare every 
+					variable before you use it. You can remove this requirement 
+					and permit<span class="Apple-converted-space">&nbsp;</span><span class="parameter" style="font-style: italic;">implicit 
+					declaration</span>.</p>
+					<p style="color: rgb(42, 42, 42); margin-top: 0px; margin-bottom: 0px; padding-bottom: 15px; line-height: 18px;">
+					Visual Basic provides a switch that controls explicit 
+					declaration. By default, this switch is set to<span class="Apple-converted-space">&nbsp;</span><span><span class="input" style="font-weight: 700;">On</span></span>, 
+					and the compiler enforces explicit declaration. If you turn 
+					this switch<span class="Apple-converted-space">&nbsp;</span><span><span class="input" style="font-weight: 700;">Off</span></span>, 
+					you can use variables without declaring them.</p>
+					<p style="color: rgb(42, 42, 42); margin-top: 0px; margin-bottom: 0px; padding-bottom: 15px; line-height: 18px;">
+					<span class="label" style="font-weight: 700;">Explicit 
+					Declaration Switch.</span><span class="Apple-converted-space">&nbsp;</span>You 
+					can set the explicit declaration switch<span class="Apple-converted-space">&nbsp;</span><span><span class="input" style="font-weight: 700;">On</span></span><span class="Apple-converted-space">&nbsp;</span>or<span class="Apple-converted-space">&nbsp;</span><span><span class="input" style="font-weight: 700;">Off</span></span><span class="Apple-converted-space">&nbsp;</span>in 
+					any of the following ways:</p>
+					<ul>
+						<li style="list-style-image: none;">
+						<p style="color: rgb(42, 42, 42); margin-top: 0px; margin-bottom: 0px; padding-bottom: 15px; line-height: 18px;">
+						Set the appropriate project property in the integrated 
+						development environment (IDE). Click<span class="Apple-converted-space">&nbsp;</span><span class="label" style="font-weight: 700;">&lt;ProjectName&gt; 
+						Properties</span>from the<span class="Apple-converted-space">&nbsp;</span><span class="label" style="font-weight: 700;">Project</span><span class="Apple-converted-space">&nbsp;</span>menu, 
+						and then click the<span class="Apple-converted-space">&nbsp;</span><span class="label" style="font-weight: 700;">Compile</span><span class="Apple-converted-space">&nbsp;</span>tab. 
+						You can set the default values for<span class="Apple-converted-space">&nbsp;</span><span class="label" style="font-weight: 700;">Option 
+						explicit</span>,<span class="Apple-converted-space">&nbsp;</span><span class="label" style="font-weight: 700;">Option 
+						strict</span>, and<span class="Apple-converted-space">&nbsp;</span><span class="label" style="font-weight: 700;">Option 
+						compare</span>.</p>
+						</li>
+						<li style="list-style-image: none;">
+						<p style="color: rgb(42, 42, 42); margin-top: 0px; margin-bottom: 0px; padding-bottom: 15px; line-height: 18px;">
+						Specify the<span class="Apple-converted-space">&nbsp;</span><span>/optionexplicit</span><span class="Apple-converted-space">&nbsp;</span>command-line 
+						compiler option.</p>
+						</li>
+						<li style="list-style-image: none;">
+						<p style="color: rgb(42, 42, 42); margin-top: 0px; margin-bottom: 0px; padding-bottom: 15px; line-height: 18px;">
+						Include the<span class="Apple-converted-space">&nbsp;</span><span>Option 
+						Explicit Statement (Visual Basic)</span><span class="Apple-converted-space">&nbsp;</span>at 
+						the beginning of your code.</p>
+						</li>
+					</ul>
+					<p style="color: rgb(42, 42, 42); margin-top: 0px; margin-bottom: 0px; padding-bottom: 15px; line-height: 18px;">
+					If you use the<span class="Apple-converted-space">&nbsp;</span><span><span class="input" style="font-weight: 700;">Option</span></span><span class="Apple-converted-space">&nbsp;</span><span><span class="input" style="font-weight: 700;">Explicit</span></span><span class="Apple-converted-space">&nbsp;</span>statement, 
+					that setting overrides both the project property and 
+					compiler option settings, but only for the source code file 
+					in which it appears.</p>
+					<p style="color: rgb(42, 42, 42); margin-top: 0px; margin-bottom: 0px; padding-bottom: 15px; line-height: 18px;">
+					<span class="label" style="font-weight: 700;">Performance 
+					Advantage.</span><span class="Apple-converted-space">&nbsp;</span>Setting<span class="Apple-converted-space">&nbsp;</span><span><span class="input" style="font-weight: 700;">Option</span></span><span class="Apple-converted-space">&nbsp;</span><span><span class="input" style="font-weight: 700;">Explicit</span></span><span class="Apple-converted-space">&nbsp;</span>to<span class="Apple-converted-space">&nbsp;</span><span><span class="input" style="font-weight: 700;">On</span></span><span class="Apple-converted-space">&nbsp;</span>has 
+					the advantage of forcing type inference to be made at 
+					compile time instead of run time. This improves performance.</p>
+				</div>
+				<div>
+					<h2 class="LW_CollapsibleArea_TitleDiv" style="color: rgb(0, 0, 0); font-family: 'Segoe UI Semibold', 'Segoe UI', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif; font-size: 13px; font-weight: normal; margin: 0px; padding-bottom: 5px; padding-top: 20px; font-style: normal !important;">
+					</h2>
+					<div>
+						<a class="LW_CollapsibleArea_TitleAhref" href="javascript:void(0)" role="button" style="cursor: text; outline: none; text-decoration: none; color: rgb(0, 0, 0);" title="">
+						<span class="LW_CollapsibleArea_Title" style="display: inline-block; font-family: 'Segoe UI Semibold', 'Segoe UI', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif; color: rgb(0, 0, 0); font-size: 1.769em;">
+						Implicit Declaration</span></a><div id="Anchor_0" class="LW_CollapsibleArea_Anchor_Div active" style="visibility: visible; width: 20px; height: 20px; float: right; padding-top: 7px;">
+							<a class="LW_CollapsibleArea_Anchor_Img" href="https://msdn.microsoft.com/library/xe53dz5w(v=vs.100).aspx#Anchor_0" style="display: inline-block; width: 20px; height: 20px; overflow: hidden; text-decoration: none; color: rgb(0, 0, 0); background: url(https://i-msdn.sec.s-msft.com/Areas/Epx/Content/Images/ImageSprite.png?v=635823572987228747) -502px -3px no-repeat scroll;" title="Copy and share the link for this section">
+							</a></div>
+						<div class="LW_CollapsibleArea_HrDiv" style="padding-top: 0px;">
+						</div>
+					</div>
+					<h2></h2>
+					<div class="sectionblock" style="padding-left: 15px; display: block; padding-bottom: 20px;">
+						<a id="sectionToggle0" style="text-decoration: none; color: rgb(0, 112, 159);">
+						</a>
+						<p style="color: rgb(42, 42, 42); margin-top: 0px; margin-bottom: 0px; padding-bottom: 15px; line-height: 18px;">
+						If you set<span class="Apple-converted-space">&nbsp;</span><span><span class="input" style="font-weight: 700;">Option</span></span><span class="Apple-converted-space">&nbsp;</span><span><span class="input" style="font-weight: 700;">Explicit</span></span><span class="Apple-converted-space">&nbsp;</span>to<span class="Apple-converted-space">&nbsp;</span><span><span class="input" style="font-weight: 700;">Off</span></span>, 
+						you can implicitly declare a variable by simply using it 
+						in your code. The compiler assigns the<span> <strong>
+						Object Data Type</strong></span><span class="Apple-converted-space">&nbsp;</span>to 
+						all implicitly declared variables. However, your 
+						application is more efficient if you declare all your 
+						variables explicitly and with a specific data type. This 
+						reduces the incidence of naming-conflict errors and 
+						spelling mistakes. It also lets the compiler detect 
+						potential run-time errors such as assigning an<span class="Apple-converted-space">&nbsp;</span><span><span class="input" style="font-weight: 700;">Integer</span></span><span class="Apple-converted-space">&nbsp;</span>to 
+						a<span class="Apple-converted-space">&nbsp;</span><span><span class="input" style="font-weight: 700;">Short</span></span>.</p>
+						<h3 class="subHeading" style="color: rgb(0, 0, 0); font-family: 'Segoe UI Semibold', 'Segoe UI', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif; font-size: 1.231em; font-weight: normal; margin: 0px; padding-bottom: 5px; padding-top: 5px;">
+						Potential Errors</h3>
+						<div class="subsection">
+							<h4 class="subHeading" style="color: rgb(0, 0, 0); font-size: 1.077em; font-family: 'Segoe UI Semibold', 'Segoe UI', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif; font-weight: normal; margin: 0px;">
+							Unintended New Variables</h4>
+							<div class="subsection">
+								<p style="color: rgb(42, 42, 42); margin-top: 0px; margin-bottom: 0px; padding-bottom: 15px; line-height: 18px;">
+								You can write a procedure in which you do not 
+								declare a local variable. The following example 
+								illustrates this.</p>
+								<div id="code-snippet-1" class="codeSnippetContainer" style="min-width: 0px; clear: both;" xmlns="">
+									<div class="codeSnippetContainerTabs" style="vertical-align: middle; height: 23px; position: relative; z-index: 1;">
+									</div>
+									<div class="codeSnippetContainerCodeContainer" style="border: 1px solid rgb(147, 147, 147); clear: both; margin-bottom: 12px; position: relative; top: -1px;">
+										<div class="codeSnippetToolBar" style="width: auto; height: auto;">
+											<div class="codeSnippetToolBarText" style="float: right; top: -8px; position: relative; width: auto; padding-left: 0px; padding-right: 0px; height: 0px; vertical-align: top; background-color: rgb(255, 255, 255);">
+											</div>
+										</div>
+										<div id="CodeSnippetContainerCode_657940fe-3ef3-4ec9-aa98-762f82237d46" class="codeSnippetContainerCode" dir="ltr" style="width: auto; margin: 0px; padding: 10px 21px;">
+											<div style="padding: 0px; margin: 0px; color: black;">
+												<pre style="padding: 5px; margin: 0px; font-style: normal; font-weight: normal; overflow: auto; word-wrap: normal; font-family: Consolas, Courier, monospace !important;">Function safeSqrt(num)
+&#39; Make sure num is positive for square root.
+    tempVal = Math.Abs(num)
+    Return Math.Sqrt(tempVal)
+End Function
+</pre>
+											</div>
+										</div>
+									</div>
+								</div>
+								<p style="color: rgb(42, 42, 42); margin-top: 0px; margin-bottom: 0px; padding-bottom: 15px; line-height: 18px;">
+								Visual Basic automatically creates<span class="Apple-converted-space">&nbsp;</span><span class="code" style="font-family: Consolas, Courier, monospace; color: rgb(0, 100, 0);">tempVal</span><span class="Apple-converted-space">&nbsp;</span>as 
+								a local variable, which you can use as if you 
+								had declared it explicitly. While this is 
+								convenient, it can lead to subtle errors in your 
+								code if you misspell a variable name. Suppose 
+								you had written the procedure in the preceding 
+								example as follows:</p>
+								<div id="code-snippet-2" class="codeSnippetContainer" style="min-width: 0px; clear: both;" xmlns="">
+									<div class="codeSnippetContainerTabs" style="vertical-align: middle; height: 23px; position: relative; z-index: 1;">
+									</div>
+									<div class="codeSnippetContainerCodeContainer" style="border: 1px solid rgb(147, 147, 147); clear: both; margin-bottom: 12px; position: relative; top: -1px;">
+										<div class="codeSnippetToolBar" style="width: auto; height: auto;">
+											<div class="codeSnippetToolBarText" style="float: right; top: -8px; position: relative; width: auto; padding-left: 0px; padding-right: 0px; height: 0px; vertical-align: top; background-color: rgb(255, 255, 255);">
+											</div>
+										</div>
+										<div id="CodeSnippetContainerCode_cb57f029-5f15-4942-a4ea-ae737d1d88c3" class="codeSnippetContainerCode" dir="ltr" style="width: auto; margin: 0px; padding: 10px 21px;">
+											<div style="padding: 0px; margin: 0px; color: black;">
+												<pre style="padding: 5px; margin: 0px; font-style: normal; font-weight: normal; overflow: auto; word-wrap: normal; font-family: Consolas, Courier, monospace !important;">Function safeSqrt(num)
+&#39; Make sure num is positive for square root.
+    tempVal = Math.Abs(num)
+    Return Math.Sqrt(temVal)
+End Function
+</pre>
+											</div>
+										</div>
+									</div>
+								</div>
+								<p style="color: rgb(42, 42, 42); margin-top: 0px; margin-bottom: 0px; padding-bottom: 15px; line-height: 18px;">
+								At first glance, this code looks the same. But 
+								because the<span class="Apple-converted-space">&nbsp;</span><span class="code" style="font-family: Consolas, Courier, monospace; color: rgb(0, 100, 0);">tempVal</span><span class="Apple-converted-space">&nbsp;</span>variable 
+								is misspelled as the argument to<span class="Apple-converted-space">&nbsp;</span><span class="code" style="font-family: Consolas, Courier, monospace; color: rgb(0, 100, 0);">Sqrt</span>, 
+								the compiler creates an additional local 
+								variable called<span class="Apple-converted-space">&nbsp;</span><span class="code" style="font-family: Consolas, Courier, monospace; color: rgb(0, 100, 0);">temVal</span>, 
+								which is never assigned a value, and your 
+								function always returns zero.</p>
+							</div>
+							<h4 class="subHeading" style="color: rgb(0, 0, 0); font-size: 1.077em; font-family: 'Segoe UI Semibold', 'Segoe UI', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif; font-weight: normal; margin: 0px;">
+							Unintended Existing Element Reference</h4>
+							<div class="subsection">
+								<p style="color: rgb(42, 42, 42); margin-top: 0px; margin-bottom: 0px; padding-bottom: 15px; line-height: 18px;">
+								When Visual Basic encounters a new name, it 
+								cannot determine whether you meant to declare a 
+								new variable implicitly, or whether you 
+								misspelled an existing variable name. Therefore 
+								it attempts to create a new variable with that 
+								name. There might be a variable or other 
+								programming element already defined with that 
+								name, and your code would use that definition 
+								unintentionally.</p>
+								<p style="color: rgb(42, 42, 42); margin-top: 0px; margin-bottom: 0px; padding-bottom: 15px; line-height: 18px;">
+								You can avoid problems with misnamed variables 
+								by using explicit declaration.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<h2 class="LW_CollapsibleArea_TitleDiv" style="color: rgb(0, 0, 0); font-family: 'Segoe UI Semibold', 'Segoe UI', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif; font-size: 13px; font-weight: normal; margin: 0px; padding-bottom: 5px; padding-top: 20px; font-style: normal !important;">
+					</h2>
+					<div>
+						<a class="LW_CollapsibleArea_TitleAhref" href="javascript:void(0)" role="button" style="cursor: text; outline: none; text-decoration: none; color: rgb(0, 0, 0);" title="">
+						<span class="LW_CollapsibleArea_Title" style="display: inline-block; font-family: 'Segoe UI Semibold', 'Segoe UI', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif; color: rgb(0, 0, 0); font-size: 1.769em;">
+						Explicit Declaration</span></a><div id="Anchor_1" class="LW_CollapsibleArea_Anchor_Div" style="visibility: hidden; width: 20px; height: 20px; float: right; padding-top: 7px;">
+							<a class="LW_CollapsibleArea_Anchor_Img" href="https://msdn.microsoft.com/library/xe53dz5w(v=vs.100).aspx#Anchor_1" style="display: inline-block; width: 20px; height: 20px; overflow: hidden; text-decoration: none; color: rgb(0, 0, 0); background: url(https://i-msdn.sec.s-msft.com/Areas/Epx/Content/Images/ImageSprite.png?v=635823572987228747) -502px -3px no-repeat scroll;" title="Copy and share the link for this section">
+							</a></div>
+						<div class="LW_CollapsibleArea_HrDiv" style="padding-top: 0px;">
+						</div>
+					</div>
+					<h2></h2>
+					<div class="sectionblock" style="padding-left: 15px; display: block; padding-bottom: 20px;">
+						<a id="sectionToggle1" style="text-decoration: none; color: rgb(0, 112, 159);">
+						</a>
+						<p style="color: rgb(42, 42, 42); margin-top: 0px; margin-bottom: 0px; padding-bottom: 15px; line-height: 18px;">
+						Had explicit declaration been in effect for the source 
+						file containing the<span class="Apple-converted-space">&nbsp;</span><span class="code" style="font-family: Consolas, Courier, monospace; color: rgb(0, 100, 0);">safeSqrt</span><span class="Apple-converted-space">&nbsp;</span>procedure 
+						in the preceding example, Visual Basic would have 
+						recognized<span class="Apple-converted-space">&nbsp;</span><span class="code" style="font-family: Consolas, Courier, monospace; color: rgb(0, 100, 0);">tempVal</span><span class="Apple-converted-space">&nbsp;</span>and<span class="Apple-converted-space">&nbsp;</span><span class="code" style="font-family: Consolas, Courier, monospace; color: rgb(0, 100, 0);">temVal</span><span class="Apple-converted-space">&nbsp;</span>as 
+						undeclared variables and generated errors for both of 
+						them. As a result, you would then explicitly declare<span class="Apple-converted-space">&nbsp;</span><span class="code" style="font-family: Consolas, Courier, monospace; color: rgb(0, 100, 0);">tempVal</span>. 
+						The following example illustrates this.</p>
+						<div id="code-snippet-3" class="codeSnippetContainer" style="min-width: 0px; clear: both;" xmlns="">
+							<div class="codeSnippetContainerTabs" style="vertical-align: middle; height: 23px; position: relative; z-index: 1;">
+							</div>
+							<div class="codeSnippetContainerCodeContainer" style="border: 1px solid rgb(147, 147, 147); clear: both; margin-bottom: 12px; position: relative; top: -1px;">
+								<div class="codeSnippetToolBar" style="width: auto; height: auto;">
+									<div class="codeSnippetToolBarText" style="float: right; top: -8px; position: relative; width: auto; padding-left: 0px; padding-right: 0px; height: 0px; vertical-align: top; background-color: rgb(255, 255, 255);">
+									</div>
+								</div>
+								<div id="CodeSnippetContainerCode_377ab595-8c1f-4db7-b7c3-7dfe0cc04ce9" class="codeSnippetContainerCode" dir="ltr" style="width: auto; margin: 0px; padding: 10px 21px;">
+									<div style="padding: 0px; margin: 0px; color: black;">
+										<pre style="padding: 5px; margin: 0px; font-style: normal; font-weight: normal; overflow: auto; word-wrap: normal; font-family: Consolas, Courier, monospace !important;">Function safeSqrt(ByVal num As Double) As Double
+&#39; Make sure num is positive for square root.
+   <strong> Dim tempVal As Double = Math.Abs(num)</strong>
+    Return Math.Sqrt(temVal)
+End Function
+</pre>
+									</div>
+								</div>
+							</div>
+						</div>
+						<p style="color: rgb(42, 42, 42); margin-top: 0px; margin-bottom: 0px; padding-bottom: 15px; line-height: 18px;">
+						With this revised code, you would understand the problem 
+						immediately because Visual Basic would display an error 
+						message for the incorrectly spelled<span class="Apple-converted-space">&nbsp;</span><span class="code" style="font-family: Consolas, Courier, monospace; color: rgb(0, 100, 0);">temVal</span>. 
+						Because explicit declaration helps you catch these kinds 
+						of errors, it is recommended that you use it with all 
+						your code.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<h2 class="auto-style2"><strong class="auto-style1">
+		<a class="auto-style1" href="Lesson%2039%20flowcharts.html">[Lesson 39]</a>&nbsp;&lt;&lt;<a class="auto-style1" href="index.html">[Contents]</a>&nbsp;&gt;&gt;<a class="auto-style1" href="Lesson%2041_Import%20TXT%20file.html">[Lesson 
+		41]</a></strong></h2>
+</div>
+
+
+

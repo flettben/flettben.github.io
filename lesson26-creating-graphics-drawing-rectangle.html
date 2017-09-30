@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Start learning Visual Studio 2013
+
+
+</title>
+
+
+
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<ARTICLE class="post-4910 page type-page status-publish hentry" id="post-4910"><HEADER class="entry-header">
+<h1 class="auto-style1"><strong>Visual Studio 2013
+
+
+ Lesson 26: Creating Graphics- 
+Rectangle</strong></h1>
+</HEADER>
+<div class="auto-style1">
+	<h2 class="auto-style2">
+	<a class="auto-style1" href="lesson25-working-graphics.html"><strong>[Lesson 25] 
+	</strong></a><strong>&lt;&lt; [</strong><a class="auto-style1href=" href="index.html" Index.html"=""><strong>Contents]</strong></a><strong> 
+	&gt;&gt;
+	</strong>
+	<a class="auto-style1" href="lesson27-creating-graphics-ellipse-circle.html">
+	<strong>[Lesson 27]</strong></a></h2>
+	<p class="auto-style1">In the in the preceding lesson , we have learned how 
+	to create Graphics and the Pen objects to draw straight lines in Visual 
+	Basic 2013 . Now we shall learn how to draw rectangles.</p>
+	<h2 class="auto-style1">26.1 Creating Rectangle</h2>
+	<p class="auto-style1">To draw a rectangle on the default form in Visual 
+	Basic 2013, there are two ways:</p>
+	<div id="mycontent" class="auto-style1">
+		<div class="auto-style1">
+			(i)The first &nbsp;is to draw a rectangle directly using the
+			<strong class="auto-style1">DrawRectangle</strong> method by 
+			specifying its upper-left corner’s coordinate and it width and 
+			height. You also need to create a Graphics and a Pen object to 
+			handle the actual drawing. The method of the Graphics object to draw 
+			the rectangle is DrawRectangle .<p class="auto-style1"></p>
+			<p class="auto-style1">The syntax is:</p>
+			<p class="auto-style1"><strong class="auto-style1">
+			myGrapphics.DrawRectangle(myPen, X, Y, width, height)</strong></p>
+			<p class="auto-style1">Where myGraphics is the variable name of the 
+			Graphics object and myPen is the variable name of the Pen object 
+			created by you. You can use any valid and meaningful variable names. 
+			X, Y is the coordinate of the upper left corner of the rectangle 
+			while width and height are self-explanatory, i.e, the width and 
+			height of the rectangle.</p>
+		</div>
+		
+	<p class="auto-style1">The &nbsp;code is as follows:</p>
+	<p class="auto-style1"><strong>Dim myPen As Pen</strong></p>
+	<p class="auto-style1"><strong>myPen = New Pen(Drawing.Color.Blue, 5)</strong></p>
+	<p class="auto-style1"><strong>Dim myGraphics As Graphics = Me.CreateGraphics</strong></p>
+	<p class="auto-style1"><strong>myGraphics.DrawRectangle(myPen, 0, 0, 100, 50)</strong></p>
+	<p class="auto-style1">(ii) The second way is to create a rectangle object 
+	first and then draw this triangle using the DrawRectangle method. The syntax 
+	is as shown below:</p>
+	<p class="auto-style1">myGraphics.DrawRectangle(myPen,myRectangle) where 
+	myRectangle is the rectangle object created by you, the user.</p>
+	<p class="auto-style1">The code to create a rectangtle object is as shown 
+	below:</p>
+	<p class="auto-style1"><strong>Dim myRectangle As New Rectangle</strong></p>
+	<p class="auto-style1"><strong>myRect.X = 10</strong></p>
+	<p class="auto-style1"><strong>myRect.Y = 10</strong></p>
+	<p class="auto-style1"><strong>myRect.Width = 100</strong></p>
+	<p class="auto-style1"><strong>myRect.Height = 50</strong></p>
+	<p class="auto-style1">You can also create a rectangle object using a 
+	one-line code as follows:</p>
+	<p class="auto-style1">Dim myRectangle As New Rectangle(X,Y,width, height)</p>
+	<p class="auto-style1">and the code to draw the above rectange is</p>
+	<p class="auto-style1">myGraphics.DrawRectangle(myPen, myRectangle)</p>
+	<p class="auto-style1"><strong class="auto-style5">26.2 Customizing Line 
+	Style of the Pen Object</strong></p>
+	<p class="auto-style1">The shape we draw so far are drawn with solid line, 
+	we can actually customize the line style of the Pen object so that we have 
+	dotted line, line consisting of dashes and more. For example, the syntax to 
+	draw with dotted line is shown below:</p>
+	<p class="auto-style1"><strong class="auto-style1">
+	myPen.DashStyle=Drawing.Drawing2D.DashStyle.Dot</strong></p>
+	<p class="auto-style1">Where the last argument Dot specifies a particular 
+	line DashStyle value, a line that makes up of dots here. Other DashStyles 
+	values are Dash, DashDot, DashDotDot and Solid.The following code draws a 
+	rectangle with blue dotted line.</p>
+	<p class="auto-style1"><strong>Private Sub Button1_Click(ByVal sender As 
+	System.Object, ByVal e As System.EventArgs) Handles Button1.ClickDim myPen 
+	As Pen</strong></p>
+	<p class="auto-style1"><strong>myPen = New Pen(Drawing.Color.Blue, 5)<br />
+	Dim myGraphics As Graphics = Me.CreateGraphics<br />
+	myPen.DashStyle = Drawing.Drawing2D.DashStyle.Dot<br />
+	myGraphics.DrawRectangle(myPen, 10, 10, 100, 50)</strong></p>
+	<p class="auto-style1"><strong>End Sub </strong> </p>
+	<p class="auto-style1">The output image is as &nbsp;shown in Figure 26.1</p>
+	<div id="mycontent0" class="auto-style1">
+		<div class="auto-style1">
+			<a class="auto-style1" href="Images/vb2013_figure26.1.jpg">
+			<img alt="vb2013_figure26.1" class="auto-style1" height="300" src="Images/vb2013_figure26.1.jpg" width="300" /></a><p class="auto-style1">
+			</p>
+			<p class="auto-style2"><strong class="auto-style1">&nbsp;Figure 26.1</strong></p>
+		</div>
+	</div>
+	<p class="auto-style6">If you change the DashStyle value to DashDotDot, you 
+	will get the following rectangle :</p>
+	<p class="auto-style2">
+	<a class="auto-style1" href="Images/vb2013_figure26.2.jpg">
+	<img alt="vb2013_figure26.2" class="auto-style1" height="300" src="Images/vb2013_figure26.2.jpg" width="300" /></a><strong class="auto-style1">Figure 
+	26.2</strong></p>
+	<h2 class="auto-style2">
+	<a class="auto-style1" href="lesson25-working-graphics.html"><strong>[Lesson 25]&nbsp;</strong></a><strong>&lt;&lt; 
+	<a class="auto-style1href=" href="index.html" Index.html"="">[</a></strong><strong><a class="auto-style1href=" href="index.html" Index.html"="">Contents]</a>&nbsp;&gt;&gt;
+	</strong>
+	<a class="auto-style1" href="lesson27-creating-graphics-ellipse-circle.html">
+	<strong>[Lesson 27]</strong></a></h2>
+</div>
+
+</body>
+
+</html>

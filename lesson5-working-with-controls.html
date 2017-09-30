@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Start learning Visual Studio 2013
+
+
+</title>
+
+
+
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+<ARTICLE class="post-4182 page type-page status-publish hentry" id="post-4182"><HEADER class="entry-header">
+<h1 class="auto-style1"><strong>Visual Studio 2013
+
+
+ Lesson 5: Working with Controls</strong></h1>
+</HEADER>
+<div class="auto-style1">
+	<h2 class="auto-style2">
+	<a class="auto-style1" href="lesson4-writing-the-code.html"><strong>[Lesson 4] 
+	</strong></a><strong>&lt;&lt;
+	</strong>
+	<a class="auto-style1" href="index.html"><strong>[Contents] </strong> </a>
+	<strong>&gt;&gt;
+	</strong><strong>
+	<a class="auto-style1" href="lesson6-working-with-list-box-and-combo-box.html">[Lesson 6]</a></strong></h2>
+	<p class="auto-style1">In previous lesson, we have learned how to write 
+	simple Visual Studio 2013
+
+
+ code. In this lesson, we will learn how to work 
+	with some common controls and write codes for them. Some of the commonly 
+	used controls are label, text box, button, list box and combo box. However, 
+	in this lesson, we shall only deal with the text box and the label, we shall 
+	deal with other controls later.</p>
+	<h2 class="auto-style1">5.1 Text Box</h2>
+	<div id="mycontent" class="auto-style1">
+		<div class="auto-style1">
+			The text box is the standard control for accepting input from the 
+			user as well as to display the output. It can handle string (text) 
+			and numeric data but not images or pictures.&nbsp;String in a text box 
+			can be converted to a numeric data by using the function Val(text). 
+			The following example illustrates a simple program that processes 
+			the input from the user.<p class="auto-style1"><b class="auto-style1">Example 5.1</b></p>
+			<p class="auto-style1">In this program, you add two text boxes and a 
+			button on the form. The two text boxes are used to accept inputs 
+			from the user . Besides, a button is also programmed to calculate 
+			the sum of the two numbers using the plus operator. The value enter 
+			into a text box is stored using the syntax
+			<strong class="auto-style1">Textbox1.Text</strong> , where Text is 
+			the one of the properties of text box.</p>
+		</div>
+	</div>
+	<p class="auto-style1">The following program will add the value in text box 
+	1 and value in text box 2 and output the sum in a message box.</p>
+	<p class="auto-style1">Private Sub Button1_Click(sender As Object, e As 
+	EventArgs) Handles Button1.Click<br />
+	MsgBox(The sum is &amp; Val(TextBox1.Text) + Val(TextBox2.Text))<br />
+	End Sub</p>
+	<p class="auto-style1">The output window:</p>
+	<div id="mycontent0" class="auto-style1">
+		<div class="auto-style1">
+			<a class="auto-style1" href="Images/vb2013_figure5.1.jpg">
+			<img alt="vb2013_figure5.1" class="auto-style1" height="300" src="Images/vb2013_figure5.1.jpg" width="300" /></a></div>
+		<div class="auto-style1">
+   	<br />
+		
+	</div>
+	<p class="auto-style1"><strong class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	&nbsp;Figure 5.1</strong></p>
+	<p class="auto-style1">After clicking Add button, you can get the answer in 
+	a message box, as shown in Figure 5.2:</p>
+	<p class="auto-style1">
+	<a class="auto-style1" href="Images/vb2013_figure5.2.jpg">
+	<img alt="vb2013_figure5.2" class="auto-style1" height="155" src="Images/vb2013_figure5.2.jpg" width="154" /></a></p>
+	<p class="auto-style1"><strong class="auto-style1">&nbsp;Figure 5.2&nbsp;</strong></p>
+	<h2 class="auto-style1">5.2 The Label</h2>
+	<p class="auto-style1">The label is a very useful control for Visual Basic, 
+	as it is not only used to provide instructions and guides to the users, it 
+	can also be used to display outputs. It is different from text box because 
+	it can only display static text, which means the user cannot change the 
+	text. Using the syntax Label.Text, it can display text and numeric data . 
+	You can change its text in the properties window and also at runtime.</p>
+	<p class="auto-style1"><strong class="auto-style1">Example 5.2</strong></p>
+	<p class="auto-style1">Based on Example 5.1, you now add two labels, one is 
+	to display the text Sum= and the other label is to display the answer of the 
+	Sum. For the first label, change the text property of the label by typing 
+	Sum= over the default text Label1. Further, change its font to bold and font 
+	size to 10. For the second label, delete the default text Label2 and change 
+	its font to bold and font size to 10. Besides that, change its background 
+	color to white.</p>
+	<p class="auto-style1">In this program, instead of showing the sum in a 
+	message box, we wish to display the sum on the label.</p>
+	<p class="auto-style1"><strong class="auto-style1">The Code</strong></p>
+	<p class="auto-style1">Private Sub Button1_Click(sender As Object, e As 
+	EventArgs) Handles Button1.Click<br />
+	Label2.Text = Val(TextBox1.Text) + Val(TextBox2.Text)<br />
+	End Sub</p>
+	<p class="auto-style1">*The function Val is to convert text to numeric 
+	value. Without using Val, you will see that two numbers are joined together 
+	without adding them.</p>
+	<p class="auto-style1">The output is as shown in Figure 5.3</p>
+	<p align="center" class="auto-style1">
+	<a class="auto-style1" href="Images/vb2013_figure-5.3.jpg">
+	<img alt="vb2013_figure 5.3" class="auto-style1" height="300" src="Images/vb2013_figure-5.3.jpg" width="300" /></a></p>
+	<h4 align="center" class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	Figure 5.3</h4>
+	<p class="auto-style1">&nbsp;</p>
+	<h2 class="auto-style2">
+	<a class="auto-style1" href="lesson4-writing-the-code.html"><strong>[Lesson 4]&nbsp;</strong></a><strong>&lt;&lt;&nbsp;</strong><a class="auto-style1" href="index.html"><strong>[Contents]&nbsp;</strong></a><strong>&gt;&gt;
+	</strong><strong>
+	<a class="auto-style1" href="lesson6-working-with-list-box-and-combo-box.html">[Lesson 6]</a></strong></h2>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Start learning Visual Studio 2013
+
+
+</title>
+
+
+
+<title>Visual Studio 2013
+
+
+ Lesson 31</title>
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<ARTICLE class="post-4969 page type-page status-publish hentry" id="post-4969"><HEADER class="entry-header">
+<h1 class="auto-style1"><strong>Visual Studio 2013
+
+
+ Lesson 31: Using Timer</strong></h1>
+</HEADER>
+<div class="auto-style1">
+	<h2 class="auto-style2">
+	<a class="auto-style1" href="lesson30-creating-graphics-filling-shapes-color.html">
+	<strong>[Lesson 30] </strong></a><strong>&lt;&lt;<a class="auto-style1href=" href="index.html" Index.html"="">
+	</a></strong><strong>
+	<a class="auto-style1href=" href="index.html" Index.html"="">[Contents]</a> &gt;&gt;
+	</strong><a class="auto-style1" href="lesson32-creating-animation.html">
+	<strong>[Lesson 32]</strong></a></h2>
+	<p class="auto-style1">Timer is a useful control in Visual Studio 2013
+
+
+. It 
+	can be used to program events that are time related. For example, you need 
+	timer to create a clock, a stop watch, a dice, animation and more. Timer is 
+	a hidden control at runtime, like the engine of an automobile. We shall 
+	illustrate the usage of timer using a few examples.</p>
+	<h2 class="auto-style1">31.1 Creating a Digital Clock</h2>
+	<div id="mycontent" class="auto-style1">
+		<div class="auto-style1">
+			To create the clock, first of all start a new project in Visual 
+			Basic 2013 Express and select a new Windows Application. You can 
+			give the project any name you wish, but we will name it MyClock. 
+			Change the text of the Form1 to MyClock in the properties window. 
+			Now add the Timer control to the form by double-clicking it in the 
+			ToolBox. Next, insert a label control into the form. Change the Font 
+			size of the label to any size you wish, and set the Font alignment 
+			to be middle center. Before we forget, you shall also set the 
+			Interval property of the Timer control to 1000, which reflects a one 
+			second interval(1 unit is 1 millisecond). Remember to set the 
+			MaximizeBox property of Form1 to false so that the user cannot 
+			enlarge the clock. You also need to ensure that the Enabled property 
+			of the Timer control is set to True so that the clock starts running 
+			as soon as it is loaded.</div>
+		
+	<p class="auto-style1">Now, you are ready for the coding. Actually you would 
+	be surprise that what you need to create a clock is only a one-line code, 
+	that is:</p>
+	<p class="auto-style1"><strong class="auto-style1">Label1.Text = TimeOfDay</strong></p>
+	<p class="auto-style1"><strong>*TimeOfDay() is a Visual Studio 2013
+
+
+ function that 
+	returns the current time today based on your computer system time.</strong></p>
+	<p class="auto-style1"><strong>Click on the Timer control and enter the code above 
+	,as shown below:</strong></p>
+	<p class="auto-style1"><strong>Private Sub Timer1_Tick(ByVal sender As 
+	System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick</strong></p>
+	<p class="auto-style1"><strong>LblClock.Text = TimeOfDay</strong></p>
+	<p class="auto-style1"><strong>End Sub</strong></p>
+	<p class="auto-style1">The digital clock is as shown in Figure 31.1</p>
+	<div id="mycontent0" class="auto-style1">
+		<div class="auto-style1">
+			<p class="auto-style2">
+			<a class="auto-style1" href="Images/vb2013_figure31.1.jpg">
+			<img alt="vb2013_figure31.1" class="auto-style1" height="300" src="Images/vb2013_figure31.1.jpg" width="300" /></a><strong class="auto-style1">Figure 
+			31.1</strong></p>
+		</div>
+		<div class="auto-style1">
+			<br />  	<h2 class="auto-style1">&nbsp;<strong class="auto-style1">31.2 Creating a 
+	Stopwatch</strong></h2>
+	<p class="auto-style1">We can create a simple stopwatch using the Timer 
+	control. Start a new project and name it stopwatch. Change the Form1 caption 
+	to Stopwatch. Insert the Timer control into the form and set its interval to 
+	1000 which is equal to one second. Besides that, set the timer Enabled 
+	property to False so that it will not start ticking when the program is 
+	started. Insert three &nbsp;buttons and change their names to BtnStart, BtnStop 
+	and BtnReset respectively. Change their text to “Start”, “Stop” and “Reset” 
+	accordingly. Now, enter the code as follows:</p>
+	<p class="auto-style1"><strong>Private Sub BtnStart_Click(sender As Object, e As 
+	EventArgs) Handles BtnStart.Click<br />
+	Timer1.Enabled = True<br />
+	End Sub</strong></p>
+	<p class="auto-style1"><strong>Private Sub Timer1_Tick(sender As Object, e As 
+	EventArgs) Handles Timer1.Tick<br />
+	LblPanel.Text = Val(LblPanel.Text) + 1<br />
+	End Sub</strong></p>
+	<p class="auto-style1"><strong>Private Sub BtnStop_Click(sender As Object, e As 
+	EventArgs) Handles BtnStop.Click<br />
+	Timer1.Enabled = False<br />
+	End Sub</strong></p>
+	<p class="auto-style1"><strong>Private Sub BtnReset_Click(sender As Object, e As 
+	EventArgs) Handles BtnReset.Click<br />
+	LblPanel.Text = 0<br />
+	End Sub</strong></p>
+	<p class="auto-style1">The Interface of the Stopwatch is as shown in Figure 
+	31.2</p>
+	<p class="auto-style2">
+	<a class="auto-style1" href="Images/vb2013_figure31.2.jpg">
+	<img alt="vb2013_figure31.2" class="auto-style1" height="300" src="Images/vb2013_figure31.2.jpg" width="300" /></a><strong class="auto-style1">Figure 
+	31.2</strong></p>
+	<h2 class="auto-style1">&nbsp;<strong class="auto-style1">31.3 Creating a Digital 
+	Dice</strong></h2>
+	<p class="auto-style1">We can create a digital dice easily using the Timer 
+	Control. To create a dice, you need to generate random numbers using the Rnd 
+	function. Rnd generates numbers between 0 and 1. The following statement&nbsp;<span class="auto-style1">generates 
+	random integers from 1 to 6&nbsp;</span></p>
+	<p class="auto-style1"><strong class="auto-style1">n = Int(1 + Rnd() * 6)</strong></p>
+	<p class="auto-style1">In the code, we introduce the variable m to control 
+	the length of time of the rolling process. If m is more than 1000, then the 
+	rolling process will stop by setting the timer enabled property to False. 
+	Set the timer interval to 10 so that the number changes every 0.01 second.</p>
+	<p class="auto-style1"><strong class="auto-style1">The Code</strong></p>
+	<p class="auto-style1"><strong>Public Class Form1<br />
+	Dim n, m As Integer</strong></p>
+	<p class="auto-style1"><strong>Private Sub Timer1_Tick(sender As Object, e As 
+	EventArgs) Handles Timer1.Tick<br />
+	m = m + 10</strong></p>
+	<p class="auto-style1"><strong>If m &lt; 1000 Then</strong></p>
+	<p class="auto-style1"><strong>n = Int(1 + Rnd() * 6)</strong></p>
+	<p class="auto-style1"><strong>LblDice.Text = n</strong></p>
+	<p class="auto-style1"><strong>Else</strong></p>
+	<p class="auto-style1"><strong>Timer1.Enabled = False</strong></p>
+	<p class="auto-style1"><strong>m = 0</strong></p>
+	<p class="auto-style1"><strong>End If</strong></p>
+	<p class="auto-style1"><strong>End Sub</strong></p>
+	<p class="auto-style1"><strong>Private Sub BtnRoll_Click(sender As Object, e As 
+	EventArgs) Handles BtnRoll.Click</strong></p>
+	<p class="auto-style1"><strong>Timer1.Enabled = True</strong></p>
+	<p class="auto-style1"><strong>End Sub</strong></p>
+	<p class="auto-style1"><span class="auto-style5"><strong>End Class</strong></span><br />
+	Running the program produces a dice with fast changing numbers which stops 
+	at a certain number. The interface is as &nbsp;shown in Figure 31.3</p>
+	<p class="auto-style1">
+	<a class="auto-style1" href="Images/vb2013_figure31.3.jpg">
+	<img alt="vb2013_figure31.3" class="auto-style1" height="300" src="Images/vb2013_figure31.3.jpg" width="300" /></a></p>
+	<p class="auto-style2"><strong class="auto-style1">&nbsp;Figure 31.3</strong></p>
+	<h2 class="auto-style2">
+	<a class="auto-style1" href="lesson30-creating-graphics-filling-shapes-color.html">
+	<strong>[Lesson 30]&nbsp;</strong></a><strong>&lt;&lt;&nbsp;</strong><a class="auto-style1href=" href="index.html" Index.html"=""><strong>[Contents]</strong></a><strong>&nbsp;&gt;&gt;
+	</strong><a class="auto-style1" href="lesson32-creating-animation.html">
+	<strong>[Lesson 32]</strong></a></h2>
+</div>
+
+</body>
+
+</html>

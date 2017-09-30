@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Start learning Visual Studio 2013
+
+
+</title>
+
+
+
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<ARTICLE class="post-4886 page type-page status-publish hentry" id="post-4886"><HEADER class="entry-header">
+<h1 class="auto-style1"><strong>Visual Studio 2013
+
+
+ Lesson 25: Creating Graphics- The 
+Basic Concept</strong></h1>
+</HEADER>
+<div class="auto-style1">
+	<h2 class="auto-style2">
+	<a class="auto-style1" href="lesson24-object-oriented-programming.html">
+	<strong>[Lesson 24]</strong></a><strong> &lt;&lt;
+	</strong><a class="auto-style1href=" href="index.html" Index.html"="">
+	<strong>[Contents] </strong></a><strong>&gt;&gt; 
+	<a class="auto-style1" href="lesson26-creating-graphics-drawing-rectangle.html">[</a></strong><strong><a class="auto-style1" href="lesson26-creating-graphics-drawing-rectangle.html">Lesson 
+	26]</a></strong></h2>
+	<h2 class="auto-style1">25.1 Introduction</h2>
+	<p class="auto-style1">Creating graphics is easy in earlier versions of 
+	Visual Basic because they have built-in drawing tools. For example, In 
+	Visual Basic 6, the drawing tools are included in the toolbox where the 
+	programmer just need to drag the shape controls into the form to create 
+	rectangle, square, ellipse,circle and more. However, its simplicity has the 
+	shortcomings, you don’t have many choices in creating customized drawings.</p>
+	<div id="mycontent" class="auto-style1">
+		<div class="auto-style1">
+			Since Visual Basic evolved into an object oriented programming 
+			language under the VB.net framework, shape controls are no longer 
+			available. Now the programmer needs to write code to create various 
+			shapes and drawings. Even though the learning curve is steeper, the 
+			programmer can write powerful code to create all kinds of graphics. 
+			You can even design your own controls<p class="auto-style1"></p>
+			<p class="auto-style1">Visual Studio 2013
+
+
+ offers various graphics 
+			capabilities that enable programmers to write code that can create 
+			all kinds of shapes and even fonts. In this lesson,you will learn 
+			how to write code to draw lines and shapes on the Visual Studio 2013
+
+
+ 
+			IDE.</p>
+		</div>
+		<div class="auto-style1">
+			<br />
+   	<h2 class="auto-style1"><strong class="auto-style1">25.2 Creating the 
+	Graphics Object</strong></h2>
+	<p class="auto-style1">Before you can draw anything on a form, you need to 
+	create the Graphics object in Visual Studio 2013
+
+
+. A graphics object is 
+	created using the <strong class="auto-style1">CreateGraphics()</strong> 
+	method. You can create a graphics object that draw to the form itself or a 
+	control.<br />
+	To draw graphics on the default form, you can use the following statement:<strong class="auto-style1">Dim 
+	myGraphics As Graphics =me.CreateGraphics</strong>To draw in a picture box, 
+	you can use the following statement:</p>
+	<p class="auto-style1"><strong>Dim myGraphics As 
+	Graphics = PictureBox1.CreateGraphics</strong></p>
+	<p class="auto-style1">You can also use the text box as a drawing surface, 
+	the statement is:</p>
+	<p class="auto-style1"><strong class="auto-style1">Dim myGraphics As 
+	Graphics = TextBox1.CreateGraphics</strong></p>
+	<p class="auto-style1">The Graphics object that is created does not draw 
+	anything on the screen until you call the methods of the Graphics object. In 
+	addition,you need to create the Pen object as the drawing tool. We shall 
+	examine the code that can create a pen in the following section.</p>
+	<h2 class="auto-style1"><strong class="auto-style1">25.3 Creating a Pen</strong></h2>
+	<p class="auto-style1">A Pen can be created using the following code:</p>
+	<p class="auto-style1"><strong class="auto-style1">myPen = New 
+	Pen(Brushes.Color, LineWidth)</strong></p>
+	<p class="auto-style1">where myPen is a Pen variable. You can use any 
+	variable name instead of myPen. The first argument of the pen object defines 
+	the color of the drawing line and the second argument defines the width of 
+	the drawing line. For example, the following code created a pen that can 
+	draw a dark magenta line and the width of the line is 10 pixels:</p>
+	<p class="auto-style1"><strong class="auto-style1">myPen = New 
+	Pen(Brushes.DarkMagenta, 10)</strong></p>
+	<p class="auto-style1"><span class="auto-style5">You can also create a Pen 
+	using the following statement:</span></p>
+	<p class="auto-style1"><strong class="auto-style1">Dim myPen As Pen</strong></p>
+	<p class="auto-style1"><strong class="auto-style1">myPen = New 
+	Pen(Drawing.Color.Blue, 5)</strong></p>
+	<p class="auto-style1">Where the first argument define the color(here is 
+	blue, you can change that to red or whatever color you want) and the second 
+	argument is the width of the drawing line.</p>
+	<p class="auto-style1">Having created the Graphics and the Pen objects, you 
+	are now ready to draw graphics on the screen which we will show you in the 
+	following section.</p>
+	<h2 class="auto-style1"><strong class="auto-style1">25.4 Drawing a Line</strong></h2>
+	<p class="auto-style1">In this section, we will show you how to draw a 
+	straight line on the Form.</p>
+	<p class="auto-style1">First of all, launch Visual Studio 2013
+
+
+ Express. In 
+	the start up page, drag a button into the form. Double click on the button 
+	and key in the following code.</p>
+	<p class="auto-style1">P<strong>rivate Sub BtnDraw_Click(sender As Object, e As 
+	EventArgs) Handles BtnDraw.Click<br />
+	Dim myGraphics As Graphics = Me.CreateGraphics</strong></p>
+	<p class="auto-style1"><strong>Dim myPen As Pen</strong></p>
+	<p class="auto-style1"><strong>myPen = New Pen(Brushes.DarkMagenta, 20)</strong></p>
+	<p class="auto-style1"><strong>myGraphics.DrawLine(myPen, 60, 180, 220, 50)<br />
+	End Sub</strong></p>
+	<p class="auto-style1">The second created the Graphics object and the third 
+	and fourth line create the Pen object. The fifth draw a line on the Form 
+	using the DrawLine method. The first argument use the Pen object created by 
+	you, the second argument and the third arguments define the coordinate the 
+	starting point of the line, the fourth and the last arguments define the 
+	ending coordinate of the line. The syntax of the Drawline argument is</p>
+	<p class="auto-style1"><strong class="auto-style1">object.DrawLine(Pen, x1, 
+	y1, x2, y2)</strong></p>
+	<p class="auto-style1">For the above example, the starting coordinate is 
+	(60,80) and the ending coordinate is (220,50)</p>
+	<p class="auto-style1">Figure 25.1 shows the line created by the program.</p>
+	<div id="mycontent0" class="auto-style1">
+		<div class="auto-style1">
+			<p class="auto-style2">
+			<a class="auto-style1" href="Images/vb2013_figure25.1.jpg">
+			<img alt="vb2013_figure25.1" class="auto-style1" height="300" src="Images/vb2013_figure25.1.jpg" width="300" /></a><strong class="auto-style1">Figure 
+			25.1</strong></p>
+		</div>
+		<div class="auto-style1">
+			<br />
+    	<h2 class="auto-style2">
+		<a class="auto-style1" href="lesson24-object-oriented-programming.html">
+		<strong>[Lesson 24]</strong></a><strong>&nbsp;&lt;&lt;&nbsp;</strong><a class="auto-style1href=" href="index.html" Index.html"=""><strong>[Contents]&nbsp;</strong></a><strong>&gt;&gt;
+		</strong>
+		<a class="auto-style1" href="lesson26-creating-graphics-drawing-rectangle.html">
+		<strong>[Lesson 26]</strong></a></h2>
+</div>
+
+</body>
+
+</html>

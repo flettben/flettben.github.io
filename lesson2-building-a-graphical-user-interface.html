@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<link href="style/style.css" rel="stylesheet" type="text/css" /></head>
+
+<body>
+
+<ARTICLE class="post-4048 page type-page status-publish hentry" id="post-4048"><HEADER class="entry-header">
+<h1 class="auto-style1"><strong>Visual Studio 2013
+
+
+ Lesson 2: Building the Interface1- 
+Customizing the Form</strong></h1>
+</HEADER>
+<div class="auto-style1">
+	<h2 class="auto-style2"><strong class="auto-style1">
+	<a class="auto-style1" href="lesson1-introduction.html">[Lesson 1]</a>&nbsp;&lt;&lt;<a class="auto-style1" href="index.html">[Contents]</a>&nbsp;&gt;&gt;<a class="auto-style1" href="lesson3-adding-controls-to-the-form.html">[Lesson 
+	3]</a></strong></h2>
+	<div id="mycontent" class="auto-style1">
+		<div class="auto-style1">
+			As Visual Studio 2013
+
+
+ is a GUI-based programming language, the first 
+			step in developing an application is to build a graphical user 
+			interface.&nbsp;To build a graphical user interface, you need to add 
+			controls from the toolbox to the form and then customize their 
+			properties. Note that the the default form is also a control by 
+			itself and you can change its properties first before adding 
+			additional controls. After adding controls to the form, you then 
+			need to write code for all the controls so that they can response to 
+			events triggered by the user’s actions such as clicking the mouse. 
+			Therefore, Visual Studio 2013
+
+
+ is also an event-driven programming 
+			language. We will learn more about the concept of event-driven 
+			programming and coding in later lessons.</div>
+		<div class="auto-style1">
+			<ins id="aswift_2_expand" class="auto-style3" style="border-image: none; width: 336px; height: 280px; visibility: visible; position: relative;">
+			<ins id="aswift_2_anchor" class="auto-style4" style="border-image: none; width: 336px; height: 280px; visibility: visible; position: relative;">
+			</ins></ins></div>
+	</div>
+	<p class="auto-style1"><strong class="auto-style1">2.1 Changing the 
+	Properties of the Default-Form using the Properties Window</strong></p>
+	<p class="auto-style1">When you start a new Visual Studio 2013
+
+
+ project, the 
+	IDE will display the default form along with the Solution Explorer window 
+	and the Properties window for the form as shown in Figure 2.1</p>
+	<p class="auto-style1">
+	<a class="auto-style1" href="Images/vb2013_figure2.1.jpg">
+	<img alt="vb2013_figure2.1" class="auto-style1" height="692" src="Images/vb2013_figure2.1.jpg" width="960" /></a></p>
+	<p class="auto-style1"><strong class="auto-style1">&nbsp;Figure 2.1: Initial 
+	VB2013 IDE</strong></p>
+	<p class="auto-style1">The properties window displays all properties related 
+	to Form1 and their corresponding attributes or values. You can change the 
+	name of the form, the title of the form, the background color, the 
+	foreground color , the size and more. Now customize the following 
+	properties:</p>
+	
+		<p class="auto-style1">The output interface is shown in Figure 2.2. Notice 
+	that the title has been changed from Form1 to My First Program, background 
+	changed to blue color and the window cannot be maximized.</p>
+	<div id="mycontent0" class="auto-style1">
+		<div class="auto-style1">
+			<a class="auto-style1" href="Images/vb2013_figure2.2.jpg">
+			<img alt="vb2013_figure2.2" class="auto-style1" height="300" src="Images/vb2013_figure2.2.jpg" width="300" /></a></div>
+		<div class="auto-style1">
+			<br />
+			<ins id="aswift_3_expand" class="auto-style3" style="border-image: none; width: 336px; height: 280px; visibility: visible; position: relative;">
+			<ins id="aswift_3_anchor" class="auto-style4" style="border-image: none; width: 336px; height: 280px; visibility: visible; position: relative;">
+			</ins></ins></div>
+	</div>
+	<div>
+	<p class="auto-style1"><strong class="auto-style1">Figure 2.2</strong></p>
+	<p class="auto-style1"><strong class="auto-style1">2.2&nbsp;Changing the 
+	Properties of the Default-Form at Run-Time</strong></p>
+	<p class="auto-style1">You can also change the properties of the form at 
+	run-time by writing the relevant codes. The default form &nbsp;is an object and 
+	an instant of the form can be denoted by the name<strong class="auto-style1"> 
+	Me.&nbsp;</strong>The property of the object can be defined by specifying the 
+	object’s name followed by a dot or period:</p>
+	<p class="auto-style1"><b>ObjectName.property</p>
+	<p class="auto-style1">For example, we can set the background of the form to 
+	blue using the following code</b></p>
+	<p class="auto-style4">Me.BackColor=Color.Blue</p>
+	<p class="auto-style4">To achieve the same interface as in Figure 2.2, type 
+	in the following code by clicking the form to enter the code window:</p>
+	<p class="auto-style4">Public Class Form1</p>
+	<p class="auto-style1"><span class="auto-style1"><b>Private Sub Form1_Load(ByVal sender As System.Object, 
+	ByVal e As System.EventArgs) Handles MyBase.Load</p>
+	<p class="auto-style1">Me.Text = “My First VB2013 Program”</p>
+	<p class="auto-style1">Me.BackColor = Color.Blue</p>
+	<p class="auto-style1">Me.MaximizeBox=False</p>
+	<p class="auto-style1">Me.MinimizeBox = True</p>
+	<p class="auto-style1">End Sub</b></p>
+	<p class="auto-style1"></span><strong><span class="auto-style1">End Class</span></strong></p>
+	<b>
+	</b>
+	<table class="auto-style1">
+		<tbody class="auto-style1">
+			<tr class="auto-style1">
+				<th class="auto-style1">Property</th>
+				<th class="auto-style1">Value</th>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style1">Name</td>
+				<td class="auto-style1">MyForm</td>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style1">Text</td>
+				<td class="auto-style1">My First Program</td>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style1">BackColor</td>
+				<td class="auto-style1">Blue</td>
+			</tr>
+			<tr class="auto-style1">
+				<td class="auto-style1">MaximizeBox</td>
+				<td class="auto-style1">False</td>
+			</tr>
+		</table>
+	
+	<h2 class="auto-style2"><strong class="auto-style1">
+	<a class="auto-style1" href="lesson1-introduction.html">[Lesson 1]</a>&nbsp;&lt;&lt;<a class="auto-style1" href="index.html">[Contents]</a>&nbsp;&gt;&gt;<a class="auto-style1" href="lesson3-adding-controls-to-the-form.html">[Lesson 
+	3]</a></strong></h2>
+</div>
+
+
+

@@ -1,0 +1,261 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Start learning Visual Studio 2013
+
+
+</title>
+
+
+
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+<ARTICLE class="post-4182 page type-page status-publish hentry" id="post-4182"><HEADER class="entry-header">
+<h1 class="auto-style1">
+<strong>Visual Studio 2013
+
+
+ Lesson 6: Working with List Box and Combo Box</strong></h1>
+</HEADER>
+<div class="auto-style1">
+	<h2 class="auto-style2">
+	<a class="auto-style1" href="lesson5-working-with-controls.html"><strong>[Lesson 
+	5] 
+	</strong></a><strong>&lt;&lt;
+	</strong>
+	<a class="auto-style1" href="index.html"><strong>[Contents] </strong> </a>
+	<strong>&gt;&gt;
+	<a class="auto-style1" href="lesson7-displaying-images-with-the-picture-box.html">[Lesson 
+	7]</a></strong></h2>
+	</div>
+ 
+	<p class="auto-style1" style="min-width: 80%; font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	In previous lesson, we have just mastered the usage of text boxes and labels 
+	in Visual Studio 2013
+
+
+. In this lesson,we shall learn two more important 
+	controls, the list box and the combo box. Both controls are used to display 
+	a list of items. However, they differ slightly in the ways they display the 
+	items. The list box displays the items all at once in a text area whilst 
+	combo box displays only one item initially and the user needs to click on 
+	the handle of the combo box to view the items in a drop-down list.</p>
+	<h2 class="auto-style1" style="clear: both; font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	6.1 List Box</h2>
+	<div id="mycontent" class="auto-style1" style="border: 0px none inherit; font-size: 16px; margin: 0.5em; padding: 0px 0px 2em; position: relative; width: 1005px; overflow: hidden;">
+		<div class="auto-style1" style="border: 0px none inherit; font-size: 16px; margin: 0px; padding: 0px;">
+			The function of the List Box is to present a list of items where the 
+			user can click and select the items from the list.&nbsp;<span class="auto-style1" style="font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">&nbsp;Items 
+			can be added at design time and at runtime. The items can also be 
+			removed at design time and also at runtime.</span><p class="auto-style1" style="min-width: 80%; font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+			</p>
+			<p class="auto-style1" style="min-width: 80%; font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+			<strong class="auto-style1" style="font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+			6.1.1 Adding Items to a List Box</strong></p>
+			<p class="auto-style1" style="min-width: 80%; font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+			<span class="auto-style1" style="font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+			To demonstrate how to add items at design time, start a new project 
+			and insert a list box on the form. Right-click on the list box to 
+			access the properties window. Next, click on collection of the Item 
+			property, you will be presented with String Collection Editor 
+			whereby you can enter the items one by one by typing the text and 
+			press the Enter key, as shown in Figure 6.1 :</span></p>
+		</div>
+	
+	</div>
+	<p class="auto-style1" style="min-width: 80%; font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	<a class="auto-style1" href="Images/vb2013_figure6.1.jpg" style="text-decoration: none; outline: none; color: rgb(33, 117, 155); font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	<img alt="vb2013_figure6.1" class="auto-style5" height="363" src="Images/vb2013_figure6.1.jpg" style="font-size: 16px; border: 0px none inherit; margin: 0.857143rem 0px; padding: 0px; max-width: 100%; height: auto; width: auto;" width="570" /></a><br />
+	<strong class="auto-style1" style="font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	Figure 6.1: String Collection Editor&nbsp;</strong></p>
+	<p class="auto-style1" style="min-width: 80%; font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	After clicking on the OK button, the items will be displayed in the text 
+	box, as shown in Figure 6.2</p>
+	<p class="auto-style1" style="min-width: 80%; font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	&nbsp;</p>
+		
+	<p class="auto-style1" style="min-width: 80%; font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	<span class="auto-style1" style="font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	Items can also be&nbsp;</span><span class="auto-style6" style="line-height: 1.7142; font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">added 
+	at runtime using the&nbsp;</span><b class="auto-style6" style="line-height: 1.7142; font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">Add( 
+	) method</b><span class="auto-style6" style="line-height: 1.7142; font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">. 
+	Before we proceed further, we need to know that Visual Studio 2013
+
+
+ is a full 
+	fledged object oriented programming language. Therefore, Visual Studio 2013
+
+
+ 
+	comprises objects . All objects have methods and properties, and they can 
+	are differentiated and connected by hierarchy. For a list box, Item is an 
+	object subordinated to the object ListBox . Item comprises a method call 
+	Add() that is used to add items to the list box. To add an item to a list 
+	box, you can use the following syntax:</span></p>
+	<p class="auto-style1" style="min-width: 80%; font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	<strong class="auto-style1" style="font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	ListBox.Item.Add(“Text”)</strong></p>
+	<p class="auto-style1" style="min-width: 80%; font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	For example, if you wish to add a new item to ListBox1 above, you can key-in 
+	the following statement</p>
+	<p class="auto-style1" style="min-width: 80%; font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	Private Sub Button1_Click(sender As Object, e As EventArgs) Handles 
+	Button1.Click<br />
+	ListBox1.Items.Add(“Nokia”)<br />
+	End Sub</p>
+	<p class="auto-style1" style="min-width: 80%; font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	The item “Nokia” will be added to the end of the list, as shown in Figure 
+	6.3</p>
+	<p class="auto-style1" style="min-width: 80%; font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	<a class="auto-style1" href="Images/vb2013_figure6.3.jpg" style="text-decoration: none; outline: none; color: rgb(33, 117, 155); font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	<img alt="vb2013_figure6.3" class="auto-style5" height="300" src="Images/vb2013_figure6.3.jpg" style="font-size: 16px; border: 0px none inherit; margin: 0.857143rem 0px; padding: 0px; max-width: 100%; height: auto; width: auto;" width="300" /></a></p>
+	<p class="auto-style2" style="min-width: 80%; text-align: center; font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	<strong class="auto-style1" style="font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	Figure 6.3&nbsp;</strong></p>
+	<p class="auto-style1" style="min-width: 80%; font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	You can also allow the user to add their own items using the InputBox 
+	function, as follows:</p>
+	<p class="auto-style1" style="min-width: 80%; font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	Private Sub Button1_Click(sender As Object, e As EventArgs) Handles 
+	Button1.Click<br />
+	Dim myitem<br />
+	myitem = InputBox(“Enter your Item”)<br />
+	ListBox1.Items.Add(myitem)<br />
+	End Sub</p>
+	<p class="auto-style1" style="min-width: 80%; font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	* The keyword Dim is to declare the variable myitem. You will learn more 
+	about variables in coming lessons</p>
+	<p class="auto-style1" style="min-width: 80%; font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	<strong class="auto-style1" style="font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	6.1.2 Removing Items from a List Box</strong></p>
+	<p class="auto-style1" style="min-width: 80%; font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	To remove items at design time, simply open the String Collection Editor and 
+	delete the items at line by line or all at once using the Delete key.</p>
+	<p class="auto-style1" style="min-width: 80%; font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	To remove the items at runtime, you can use the<span class="Apple-converted-space">&nbsp;</span><strong class="auto-style1" style="font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">Remove</strong><span class="Apple-converted-space">&nbsp;</span>method, 
+	as illustrated in the following example. In this example, add a second 
+	button and label it “Remove Items”. Click on this button and enter the 
+	following code:</p>
+	<p class="auto-style1" style="min-width: 80%; font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	Private Sub Button2_Click(sender As Object, e As EventArgs) Handles 
+	Button2.Click<br />
+	ListBox1.Items.Remove(“Ipad”)<br />
+	End Sub</p>
+	<p class="auto-style1" style="min-width: 80%; font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	The item “Ipad” will be removed after running the program. You can also let 
+	the user choose which item to delete.</p>
+	<p class="auto-style1" style="min-width: 80%; font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	To clear all the items at once, use the clear method, as illustrated in the 
+	following example. In this example, add a button and label it “Clear Items”</p>
+	<p class="auto-style1" style="min-width: 80%; font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	Private Sub Button3_Click(sender As Object, e As EventArgs) Handles 
+	Button2.Click<br />
+	ListBox1.Items.Clear()<br />
+	End Sub</p>
+	<h2 class="auto-style1" style="clear: both; font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	&nbsp;6.2 Combo Box</h2>
+	<p class="auto-style1" style="min-width: 80%; font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	In Visual Studio 2013
+
+
+, the function of the Combo Box is also to present a 
+	list of items where the user can click and select the items from the list. 
+	However, the user needs to click on the handle(small arrowhead) on the right 
+	of the combo box to see the items which are presented in a drop-down list.</p>
+	<p class="auto-style1" style="min-width: 80%; font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	<strong class="auto-style1" style="font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	6.2.1 Adding Items to a Combo Box</strong></p>
+	<p class="auto-style1" style="min-width: 80%; font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	In order to add items to the list at design time, you can also use the 
+	String Collection Editor. You will also need type an item under the text 
+	property in order to display the default item at runtime.</p>
+	<p class="auto-style1" style="min-width: 80%; font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	<a class="auto-style1" href="Images/vb2013_figure6.1.jpg" style="text-decoration: none; outline: none; color: rgb(33, 117, 155); font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	<img alt="vb2013_figure6.1" class="auto-style5" height="363" src="Images/vb2013_figure6.1.jpg" style="font-size: 16px; border: 0px none inherit; margin: 0.857143rem 0px; padding: 0px; max-width: 100%; height: auto; width: auto;" width="570" /></a></p>
+	<p class="auto-style2" style="min-width: 80%; text-align: center; font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	&nbsp;<strong class="auto-style1" style="font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">Figure 
+	6.4&nbsp;</strong></p>
+	<p class="auto-style1" style="min-width: 80%; font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	<a class="auto-style1" href="Images/vb2013_figure6.4.jpg" style="text-decoration: none; outline: none; color: rgb(33, 117, 155); font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	<img alt="vb2013_figure6.4" class="auto-style5" height="300" src="Images/vb2013_figure6.4.jpg" style="font-size: 16px; border: 0px none inherit; margin: 0.857143rem 0px; padding: 0px; max-width: 100%; height: auto; width: auto;" width="300" /></a></p>
+	<p class="auto-style1" style="min-width: 80%; font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	&nbsp;</p>
+	<p class="auto-style2" style="min-width: 80%; text-align: center; font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	<strong class="auto-style1" style="font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	Figure 6.5</strong></p>
+	<p class="auto-style1" style="min-width: 80%; font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	&nbsp;</p>
+	<p class="auto-style1" style="min-width: 80%; font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	After clicking the handle of the right side of the combo box, the user will 
+	be able to view all the items.</p>
+	<p class="auto-style1" style="min-width: 80%; font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	<a class="auto-style1" href="Images/vb2013_figure6.5.jpg" style="text-decoration: none; outline: none; color: rgb(33, 117, 155); font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	<img alt="vb2013_figure6.5" class="auto-style5" height="300" src="Images/vb2013_figure6.5.jpg" style="font-size: 16px; border: 0px none inherit; margin: 0.857143rem 0px; padding: 0px; max-width: 100%; height: auto; width: auto;" width="300" /></a></p>
+	<p class="auto-style2" style="min-width: 80%; text-align: center; font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	&nbsp;<strong class="auto-style1" style="font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">&nbsp; 
+	Figure 6.6</strong></p>
+	<p class="auto-style1" style="min-width: 80%; font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	Besides, you may add items using the&nbsp;<b class="auto-style1" style="font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">Add() 
+	method</b>. For example, if you wish to add a number of items to Combo box 
+	1, you can key in the following statement</p>
+	<p class="auto-style1" style="min-width: 80%; font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	Private Sub Button1_Click(sender As Object, e As EventArgs) Handles 
+	Button1.Click<br />
+	ComboBox1.Items.Add(“Nokia”)<br />
+	End Sub</p>
+	<p class="auto-style2" style="min-width: 80%; text-align: center; font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	<a class="auto-style1" href="Images/vb2013_figure6.6.jpg" style="text-decoration: none; outline: none; color: rgb(33, 117, 155); font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	<img alt="vb2013_figure6.6" class="auto-style5" height="300" src="Images/vb2013_figure6.6.jpg" style="font-size: 16px; border: 0px none inherit; margin: 0.857143rem 0px; padding: 0px; max-width: 100%; height: auto; width: auto;" width="300" /></a><strong class="auto-style1" style="font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">&nbsp;Figure 
+	6.7</strong></p>
+	<p class="auto-style1" style="min-width: 80%; font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	You can also allow the user to add their own items using the InputBox 
+	function, as follows:</p>
+	<p class="auto-style1" style="min-width: 80%; font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	Private Sub Button1_Click(sender As Object, e As EventArgs) Handles 
+	Button1.Click<br />
+	Dim myitem<br />
+	myitem = InputBox(“Enter your Item”)<br />
+	ComboBox1.Items.Add(myitem)<br />
+	End Sub</p>
+	<p class="auto-style1" style="min-width: 80%; font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	<strong class="auto-style1" style="font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	6.2.2 Removing Items from a Combo Box</strong></p>
+	<p class="auto-style1" style="min-width: 80%; font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	To remove items at design time, simply open the String Collection Editor and 
+	delete the items at line by line or all at once using the Delete key.</p>
+	<p class="auto-style1" style="min-width: 80%; font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	To remove the items at runtime, you can use the&nbsp;<strong class="auto-style1" style="font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">Remove</strong>&nbsp;method, 
+	as illustrated in the following example. In this example, add a second 
+	button and label it “Remove Items”. Click on this button and enter the 
+	following code:</p>
+	<p class="auto-style1" style="min-width: 80%; font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	Private Sub Button2_Click(sender As Object, e As EventArgs) Handles 
+	Button2.Click<br />
+	ComboBox1.Items.Remove(“Ipad”)<br />
+	End Sub</p>
+	<p class="auto-style1" style="min-width: 80%; font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	The item “Ipad” will be removed after running the program. You can also let 
+	the user choose which item to delete.</p>
+	<p class="auto-style1" style="min-width: 80%; font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	To clear all the items at once, use the clear method, as illustrated in the 
+	following example. In this example, add a button and label it “Clear Items”</p>
+	<p class="auto-style1" style="min-width: 80%; font-size: 16px; border: 0px none inherit; margin: 0px; padding: 0px;">
+	Private Sub Button3_Click(sender As Object, e As EventArgs) Handles 
+	Button2.Click<br />
+	ComboBox1.Items.Clear()<br />
+	End Sub</p>
+		<h2 class="auto-style2">
+	<a class="auto-style1" href="lesson5-working-with-controls.html"><strong>[Lesson 5]&nbsp;</strong></a>
+		<a class="auto-style1" href="Index.html" </a><strong>&lt;&lt;&nbsp;[Contents]
+		</strong>
+		</a>&nbsp;<a class="auto-style1" href="lesson7-displaying-images-with-the-picture-box.html" </a><strong>&gt;&gt;&nbsp;[Lesson 7]</strong></h2>
+</div>
+
+</body>
+
+</html>

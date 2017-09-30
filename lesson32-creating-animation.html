@@ -1,0 +1,247 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Start learning Visual Studio 2013
+
+
+</title>
+
+
+
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<ARTICLE class="post-4971 page type-page status-publish hentry" id="post-4971"><HEADER class="entry-header">
+<h1 class="auto-style1"><strong>Visual Studio 2013
+
+
+ Lesson 32: Creating Animation</strong></h1>
+</HEADER>
+<div class="auto-style1">
+	<h2 class="auto-style2">
+	<a class="auto-style1" href="lesson31-using-timer.html"><strong>[Lesson 31] 
+	</strong></a><strong>&lt;&lt;
+	</strong><a class="auto-style1href=" href="index.html" Index.html"="">
+	<strong>[Contents] </strong></a><strong>&gt;&gt;
+	</strong><strong>
+	<a class="auto-style1" href="lesson33-working-databases-introduction.html">[Lesson 33]</a></strong></h2>
+	<p class="auto-style1">Although Visual Studio 2013
+
+
+ is a programming language 
+	designed for creating business and other industrial applications and not for 
+	creating animation, it can be used to create animation.&nbsp;In the preceding 
+	lesson, we have actually learned how to create animation using timer. In 
+	fact, the programs we have created in previous lesson such as the stop watch 
+	and the digital dice are animated programs. In this lesson, we shall show 
+	you more advanced animated programs.</p>
+	<h2 class="auto-style1"><strong class="auto-style1">32.1 Creating Motion</strong></h2>
+	<div id="mycontent" class="auto-style1">
+		<div class="auto-style1">
+			We can create a continuously moving object using timer.&nbsp;The motion 
+			can be from left to right or from top to bottom motion or diagonal.<p class="auto-style1">
+			</p>
+			<p class="auto-style1">First , insert a picture box into the form. 
+			In the picture box properties window,select the image property and 
+			click to import an image file from your &nbsp;storage devices such as 
+			your hard drive, your pen drive or DVD drive. We have inserted an 
+			image of a bunch of grapes.Next, insert a Timer control into the 
+			form and set its interval property to 100, which is equivalent to 
+			0.1 second. Finally, add two buttons to the form, name one of them 
+			as AnimateBtn and the other one as StopBtn, and change to caption to 
+			Animate and Stop respectively.</p>
+		</div>
+		<div class="auto-style1">
+			<br />
+   	<p class="auto-style1">We make use of the Left property of the picture box 
+	to create the motion. PictureBox.Left means the distance of the PictureBox 
+	from the left border of the Form . Now click on the Timer control and type 
+	in the following code:</p>
+	<p class="auto-style1"><strong>Private Sub Timer1_Tick(ByVal sender As 
+	System.Object, ByVal e As System.EventArgs) Handles Timer1.TickIf 
+	PictureBox1.Left &lt; Me.Width ThenPictureBox1.Left = PictureBox1.Left + 10</strong></p>
+	<p class="auto-style1"><strong>Else</strong></p>
+	<p class="auto-style1"><strong>PictureBox1.Left = 0</strong></p>
+	<p class="auto-style1"><strong>End If</strong></p>
+	<p class="auto-style1"><strong>End Sub</strong></p>
+	<p class="auto-style1">In the code above, Me.Width represents the width of 
+	the Form. If the distance of the PictureBox from the left is less than the 
+	width of the Form, a value of 10 is added to the distance of the PictureBox 
+	from the left border each time the Timer tick, or every 0.1 second in this 
+	example. When the distance of the PictureBox from the left border is equal 
+	to the width of the form, the distance from the left border is set to 0, 
+	which move the PictureBox object to the left border and then move left 
+	again, thus creates an oscillating motion from left to right. We need to 
+	insert a button to stop motion. The code is:</p>
+	<p class="auto-style1"><strong>Timer1.Enabled = False</strong></p>
+	<p class="auto-style1"><strong>To animate the PictureBox object, we insert a button 
+	and enter the following code:</strong></p>
+	<p class="auto-style1"><strong>Timer1.Enabled = True</strong></p>
+	<p class="auto-style1">The runtime interface</p>
+	<div id="mycontent0" class="auto-style1">
+		<div class="auto-style1">
+			<img alt="" class="auto-style1" height="300" src="Images/vb2010_lesson28_2.jpg" width="300" />
+			<p class="auto-style1"><strong class="auto-style1">Figure 32.1</strong></p>
+			<strong class="auto-style1"></strong>
+			<p class="auto-style1"><strong class="auto-style1"></strong></p>
+		</div>
+		<div class="auto-style1">
+			<br />
+    	<h2 class="auto-style1">32.2 Creating a Graphical Dice</h2>
+	<p class="auto-style1">In preceding lessons, we have learned how to create 
+	graphics and draw objects on the form. Now we shall use the previous 
+	knowledge to create an animated graphical dice using timer.</p>
+	<p class="auto-style1">In this program, we need to insert a timer and set 
+	its interval to 100, which means the drawings will refresh every 0.1 second. 
+	Next, insert a picture box which is used as the surface of a dice. Finally, 
+	add a button and change its text to Roll . Under the Timer sub procedure, we 
+	create the Graphics object and the Pen object &nbsp;following the procedures we 
+	have learned in preceding lessons. Next, we use a Do loop and the Select 
+	Case structure to cycle through all six surfaces of the dice. To create six 
+	random cases, we use the syntax<strong class="auto-style1"> n = Int(6 * 
+	Rnd()) + 1</strong>.&nbsp;We can stop the loop by introducing a variable t and 
+	the loop until condition. The condition we set here is t&gt;1000, you can use 
+	any figure you wish.</p>
+	<p class="auto-style1"><strong class="auto-style1">The code</strong></p>
+	<p class="auto-style1"><strong>Private Sub BtnRoll_Click(sender As Object, e As 
+	EventArgs) Handles BtnRoll.Click</strong></p>
+	<p class="auto-style1"><strong>Timer1.Enabled = True</strong></p>
+	<p class="auto-style1"><strong>End Sub</strong></p>
+	<p class="auto-style1"><strong>Private Sub Timer1_Tick(sender As Object, e As 
+	EventArgs) Handles Timer1.Tick<br />
+	Dim t As Integer<br />
+	t = 0<br />
+	Do</strong></p>
+	<p class="auto-style1"><strong>MyPicBox.Refresh()</strong></p>
+	<p class="auto-style1"><strong>Dim n As Integer<br />
+	Dim myPen As Pen</strong></p>
+	<p class="auto-style1"><strong>myPen = New Pen(Drawing.Color.DarkTurquoise, 10)<br />
+	Dim myGraphics As Graphics = MyPicBox.CreateGraphics<br />
+	n = Int(6 * Rnd()) + 1</strong></p>
+	<p class="auto-style1"><strong>Select Case n</strong></p>
+	<p class="auto-style1"><strong>Case 1<br />
+	myGraphics.DrawEllipse(myPen, 80, 80, 10, 10)</strong></p>
+	<p class="auto-style1"><strong>Case 2<br />
+	myGraphics.DrawEllipse(myPen, 40, 40, 10, 10)<br />
+	myGraphics.DrawEllipse(myPen, 120, 120, 10, 10)</strong></p>
+	<p class="auto-style1"><strong>Case 3<br />
+	myGraphics.DrawEllipse(myPen, 40, 40, 10, 10)<br />
+	myGraphics.DrawEllipse(myPen, 80, 80, 10, 10)<br />
+	myGraphics.DrawEllipse(myPen, 120, 120, 10, 10)</strong></p>
+	<p class="auto-style1"><strong>Case 4<br />
+	myGraphics.DrawEllipse(myPen, 40, 40, 10, 10)<br />
+	myGraphics.DrawEllipse(myPen, 120, 40, 10, 10)<br />
+	myGraphics.DrawEllipse(myPen, 40, 120, 10, 10)<br />
+	myGraphics.DrawEllipse(myPen, 120, 120, 10, 10)<br />
+	Case 5<br />
+	myGraphics.DrawEllipse(myPen, 40, 40, 10, 10)<br />
+	myGraphics.DrawEllipse(myPen, 120, 40, 10, 10)<br />
+	myGraphics.DrawEllipse(myPen, 80, 80, 10, 10)<br />
+	myGraphics.DrawEllipse(myPen, 40, 120, 10, 10)<br />
+	myGraphics.DrawEllipse(myPen, 120, 120, 10, 10)</strong></p>
+	<p class="auto-style1"><strong>Case 6<br />
+	myGraphics.DrawEllipse(myPen, 40, 40, 10, 10)<br />
+	myGraphics.DrawEllipse(myPen, 120, 40, 10, 10)<br />
+	myGraphics.DrawEllipse(myPen, 40, 80, 10, 10)<br />
+	myGraphics.DrawEllipse(myPen, 120, 80, 10, 10)<br />
+	myGraphics.DrawEllipse(myPen, 40, 120, 10, 10)<br />
+	myGraphics.DrawEllipse(myPen, 120, 120, 10, 10)<br />
+	End Select<br />
+	t = t + 1<br />
+	Loop Until t &gt; 1000<br />
+	Timer1.Enabled = False<br />
+	End Sub</strong></p>
+	<p class="auto-style1">The runtime interface is as shown in Figure 32.2</p>
+	<p class="auto-style1">
+	<a class="auto-style1" href="Images/vb2013_figure32.2.jpg">
+	<img alt="vb2013_figure32.2" class="auto-style1" height="300" src="Images/vb2013_figure32.2.jpg" width="300" /></a></p>
+	<p class="auto-style1">&nbsp;</p>
+	<p class="auto-style2"><strong class="auto-style1">Figure 32.2</strong></p>
+	<h2 class="auto-style1">32.3 Creating a Slot Machine</h2>
+	<p class="auto-style1">In this program, we add three picture boxes, a timer, 
+	a button and a label. Set the timer interval to 10, which means the images 
+	will refresh every 0.01 second. In the code, we shall introduce four 
+	variables m,a, b and c, where m is used to stop the timer and a,b,c are used 
+	to generate random images using the syntax&nbsp;Int(1 + Rnd() * 3). &nbsp;To load the 
+	images, we use the following syntax:</p>
+	<p class="auto-style1"><strong class="auto-style1">PictureBox.Image = 
+	Image.FromFile(Path of the image file)</strong></p>
+	<p class="auto-style1">We employ the If…Then structure to control the timer 
+	and the Select Case…..End Select structure to generate the random images. 
+	The label is used to display the message of the outcomes.</p>
+	<p class="auto-style1"><strong class="auto-style1">The Code</strong></p>
+	<p class="auto-style1"><strong>Public Class Form1<br />
+	Dim m, a, b, c As Integer<br />
+	Private Sub BtnSpin_Click(sender As Object, e As EventArgs) Handles 
+	BtnSpin.Click<br />
+	Timer1.Enabled = True<br />
+	End Sub</strong></p>
+	<p class="auto-style1"><strong>Private Sub Timer1_Tick(sender As Object, e As 
+	EventArgs) Handles Timer1.Tick<br />
+	m = m + 10<br />
+	If m &lt; 1000 Then</strong></p>
+	<p class="auto-style1"><strong>a = Int(1 + Rnd() * 3)</strong></p>
+	<p class="auto-style1"><strong>b = Int(1 + Rnd() * 3)</strong></p>
+	<p class="auto-style1"><strong>c = Int(1 + Rnd() * 3)</strong></p>
+	<p class="auto-style1"><strong>Select Case a<br />
+	Case 1<br />
+	PictureBox1.Image = Image.FromFile(“C:\Users\Toshiba\Documents\Liew 
+	Folder\vb2010\vb2010_Image\apple.gif”)<br />
+	Case 2<br />
+	PictureBox1.Image = Image.FromFile(“C:\Users\Toshiba\Documents\Liew 
+	Folder\vb2010\vb2010_Image\grape.gif”)<br />
+	Case 3<br />
+	PictureBox1.Image = Image.FromFile(“C:\Users\Toshiba\Documents\Liew 
+	Folder\vb2010\vb2010_Image\strawberry.gif”)</strong></p>
+	<p class="auto-style1"><strong>End Select</strong></p>
+	<p class="auto-style1"><strong>Select Case b<br />
+	Case 1<br />
+	PictureBox2.Image = Image.FromFile(“C:\Users\Toshiba\Documents\Liew 
+	Folder\vb2010\vb2010_Image\apple.gif”)<br />
+	Case 2<br />
+	PictureBox2.Image = Image.FromFile(“C:\Users\Toshiba\Documents\Liew 
+	Folder\vb2010\vb2010_Image\grape.gif”)<br />
+	Case 3<br />
+	PictureBox2.Image = Image.FromFile(“C:\Users\Toshiba\Documents\Liew 
+	Folder\vb2010\vb2010_Image\strawberry.gif”)</strong></p>
+	<p class="auto-style1"><strong>End Select<br />
+	Select Case c<br />
+	Case 1<br />
+	PictureBox3.Image = Image.FromFile(“C:\Users\Toshiba\Documents\Liew 
+	Folder\vb2010\vb2010_Image\apple.gif”)<br />
+	Case 2<br />
+	PictureBox3.Image = Image.FromFile(“C:\Users\Toshiba\Documents\Liew 
+	Folder\vb2010\vb2010_Image\grape.gif”)<br />
+	Case 3<br />
+	PictureBox3.Image = Image.FromFile(“C:\Users\Toshiba\Documents\Liew 
+	Folder\vb2010\vb2010_Image\strawberry.gif”)</strong></p>
+	<p class="auto-style1"><strong>End Select</strong></p>
+	<p class="auto-style1"><strong>Else<br />
+	Timer1.Enabled = False<br />
+	m = 0<br />
+	If a = b And b = c Then</strong></p>
+	<p class="auto-style1"><strong>LblMsg.Text = “Jackpot! You won $1,000,000”<br />
+	Else<br />
+	LblMsg.Text = “No luck, try again”</strong></p>
+	<p class="auto-style1"><strong>End If<br />
+	End If<br />
+	End Sub<br />
+	End Class</strong></p>
+	<p class="auto-style1">The runtime interface is shown in Figure 32.3</p>
+	<p class="auto-style1">
+	<a class="auto-style1" href="Images/vb2013_figure32.3.jpg">
+	<img alt="vb2013_figure32.3" class="auto-style1" height="300" src="Images/vb2013_figure32.3.jpg" width="300" /></a></p>
+	<p class="auto-style2"><strong class="auto-style1">Figure 32.3&nbsp;</strong></p>
+	<h2 class="auto-style2">
+	<a class="auto-style1" href="lesson31-using-timer.html"><strong>[Lesson 31]&nbsp;</strong></a><strong>&lt;&lt;&nbsp;</strong><a class="auto-style1href=" href="index.html" Index.html"=""><strong>[Contents]&nbsp;</strong></a><strong>&gt;&gt;
+	</strong>
+	<a class="auto-style1" href="lesson33-working-databases-introduction.html">
+	<strong>[Lesson 33]</strong></a></h2>
+</div>
+
+</body>
+
+</html>

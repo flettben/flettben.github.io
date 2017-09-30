@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Start learning Visual Studio 2013
+
+
+</title>
+
+
+
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<ARTICLE class="post-4625 page type-page status-publish hentry" id="post-4625"><HEADER class="entry-header">
+<h1 class="auto-style1"><strong>Visual Studio 2013
+
+
+ Lesson 17: Creating Functions</strong></h1>
+</HEADER>
+<div class="auto-style1">
+	<h2 class="auto-style2">
+	<a class="auto-style1" href="lesson16-sub-procedures.html"><strong>[Lesson 16]</strong></a><strong> &lt;&lt;
+	</strong><a class="auto-style1href=" href="index.html" Index.html"="">
+	<strong>[Contents]</strong></a><strong> &gt;&gt;
+	</strong><a class="auto-style1" href="lesson18-the-math-functions.html">
+	<strong>[Lesson 18]</strong></a></h2>
+	<p class="auto-style1">A function is similar to a sub procedure in the sense 
+	that both are called by the main procedure to fulfill certain tasks. 
+	However, there is one difference, a function returns a value whilst a sub 
+	procedure does not. There are two types of functions, the built-in functions 
+	(or internal functions) and the functions created by the programmers, or 
+	simply called user-defined functions.</p>
+	<p class="auto-style1"><strong class="auto-style1">17.1 Creating 
+	User-Defined Functions</strong></p>
+	<div id="mycontent" class="auto-style1">
+		<div class="auto-style1">
+			To create a user define function in Visual Studio 2013
+
+
+, you can type 
+			the function procedure directly into the code window as follows:<p class="auto-style1">
+			</p>
+			<p class="auto-style1"><strong class="auto-style1">Public Function 
+			functionName (Argument As dataType,……….) As dataType</strong><br />
+			or<br />
+			<strong class="auto-style1">Private Function functionName (Argument 
+			As dataType,……….) As dataType</strong>The keyword Public indicates 
+			that the function is applicable to the whole project and<br />
+			the keyword Private indicates that the function is only applicable 
+			to a certain module or procedure. Argument is a parameter that can 
+			pass a value back to the function. You can include as many arguments 
+			as you can.</p>
+		
+	<p class="auto-style1"><strong class="auto-style1">Example 17.1: BMI 
+	Calculator</strong></p>
+	<p class="auto-style1">This BMI calculator is a Visual Studio 2013
+
+
+ program 
+	that can calculate the body mass index, or BMI of a person based on the body 
+	weight in kilogram and the body height in meter. BMI can be calculated using 
+	the formula weight/( height )2, where weight is measured in kg and height in 
+	meter. If you only know your weight and height in lb and feet, then you need 
+	to convert them to the metric system.</p>
+	<p class="auto-style1">If your BMI is more than 30, you are considered 
+	obese. You can refer to the following range of BMI values for your weight 
+	status.</p>
+	<ul class="auto-style1">
+		<li class="auto-style1">Underweight = &lt;18.5</li>
+		<li class="auto-style1">Normal weight = 18.5-24.9</li>
+		<li class="auto-style1">Overweight = 25-29.9</li>
+		<li class="auto-style1">Obesity = BMI of 30 or greater</li>
+	</ul>
+	<p class="auto-style1"><strong class="auto-style1">The Code</strong></p>
+	<p class="auto-style1"><strong>Public Class Form1</strong></p>
+	<p class="auto-style1"><strong>Private Function BMI(Height As Single, weight As 
+	Single) As Double<br />
+	BMI = weight / Height ^ 2</strong></p>
+	<p class="auto-style1"><strong>End Function</strong></p>
+	<p class="auto-style1"><strong>Private Sub BtnCal_Click(sender As Object, e As 
+	EventArgs) Handles BtnCal.Click</strong></p>
+	<p class="auto-style1"><strong>Dim h As Single, w As Single<br />
+	h = Val(TextBox1.Text)<br />
+	w = Val(TextBox2.Text)<br />
+	LblBMI.Text = BMI(h, w)<br />
+	End Sub<br />
+	End Class</strong></p>
+	<p class="auto-style1">The output</p>
+	<div id="mycontent0" class="auto-style1">
+		<div class="auto-style1">
+			<a class="auto-style1" href="Images/vb2013_figure17.1.jpg">
+			<img alt="vb2013_figure17.1" class="auto-style1" height="300" src="Images/vb2013_figure17.1.jpg" width="300" /></a></div>
+		<div class="auto-style1">
+			<br />  	<p class="auto-style5"><strong class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	Figure 17.1&nbsp;</strong></p>
+	<p class="auto-style1"><strong class="auto-style1">Example 17.2: Future 
+	Value Calculator</strong></p>
+	<p class="auto-style1">The concept of future value is related to time value 
+	of money. For example, if you deposit your money in a bank as a savings 
+	account or a fixed deposit account for a certain period of time, you will 
+	earn a certain amount of money based on the compound interest computed 
+	periodically, and this amount is added to the principal if you continue to 
+	keep the money in the bank. Interest for the following period is now 
+	computed based on the initial principal plus the interest (the amount which 
+	becomes your new principal). Subsequent interests are computed in the same 
+	way.</p>
+	<p class="auto-style1">For example, let’s say you deposited $1000 in a bank 
+	and the bank is paying you 5% compound interest annually. After the first 
+	year, you will earn an interest of $1000×0.05=$50 . Your new principal will 
+	be $1000+$1000×0.05=$1000(1+0.05)=$1000(1.05)=$1050.</p>
+	<p class="auto-style1">After the second year, your new principal is 
+	$1000(1.05)x1.05=$1000(1.05)2 =$1102.50. This new principal is called the 
+	future value.</p>
+	<p class="auto-style1">Following the above calculation, the future value 
+	after n years will be</p>
+	<p class="auto-style1">FV = PV * (1 + i / 100)n</p>
+	<p class="auto-style1">Where PV represents the present value, FV represents 
+	the future value , i is the interest rate and n is the number of periods 
+	(Normally months or years).</p>
+	<p class="auto-style1"><strong class="auto-style1">&nbsp;The Code</strong></p>
+	<p class="auto-style1"><strong>Public Class Form1<br />
+	Private Function FV(pv As Single, i As Single, n As Integer) As Double</strong></p>
+	<p class="auto-style1"><strong>FV = pv * (1 + i / 100) ^ n</strong></p>
+	<p class="auto-style1"><strong>End Function</strong></p>
+	<p class="auto-style1"><strong>Private Sub 
+	BtnCal_Click(sender As Object, e As EventArgs) Handles BtnCal.Click</strong></p>
+	<p class="auto-style1"><strong>Dim FutureVal As Single<br />
+	Dim PresentVal As Single<br />
+	Dim interest As Single<br />
+	Dim period As Integer<br />
+	PresentVal = TxtPV.Text</strong></p>
+	<p class="auto-style1"><strong>interest = TxtInt.Text<br />
+	period = TxtN.Text</strong></p>
+	<p class="auto-style1"><strong>FutureVal = FV(PresentVal, interest, period)<br />
+	LblFV.Text = Format(FutureVal, “$#,##0.00”)<br />
+	End Sub<br />
+	End Class</strong></p>
+	<p class="auto-style1"><strong class="auto-style1">The Output</strong></p>
+	<p class="auto-style1">
+	<a class="auto-style1" href="Images/vb2013_figure17.2.jpg">
+	<img alt="vb2013_figure17.2" class="auto-style1" height="311" src="Images/vb2013_figure17.2.jpg" width="315" /></a></p>
+	<p class="auto-style2"><strong class="auto-style1">&nbsp;Figure 17.2</strong></p>
+	<p class="auto-style1"><strong class="auto-style1">&nbsp;17.2 Passing Arguments 
+	by Value and by Reference</strong></p>
+	<p class="auto-style1">Functions can be called by value or called by 
+	reference. &nbsp;By default, the arguments in the function are passed by 
+	reference. If arguments are passed by reference, original data will be 
+	modified and no longer preserved. On the one hand, if arguments are passed 
+	by value, original data will be preserved. The keyword to pass arguments by 
+	reference is <strong class="auto-style1">ByRef</strong> and the keyword to 
+	pass arguments by value is <strong class="auto-style1">ByVal.</strong></p>
+	<p class="auto-style1">For example,</p>
+	<p class="auto-style1"><span class="auto-style6">Private Function FV(ByVal 
+	pv As Single, ByRef i As Single, n As Integer) As Double</span></p>
+	<p class="auto-style1">The function FV receives pv by value, i by reference 
+	and n by reference. Notice that although ByRef is not use to pass n, by 
+	default it is passed by reference.</p>
+	<p class="auto-style1"><strong class="auto-style1">Example 17.2(a)</strong></p>
+	<p class="auto-style1">In this example, we created two functions that 
+	compute the square root of a number , the first uses the keyword ByRef and 
+	the second uses the keyword ByVal.</p>
+	<p class="auto-style1"><strong class="auto-style1">The Code</strong></p>
+	<p class="auto-style1"><strong>Public Class Form1</strong></p>
+	<p class="auto-style1"><strong>Private Sub Form1_Load(sender As Object, e As 
+	EventArgs) Handles MyBase.Load</strong></p>
+	<p class="auto-style1"><strong>End Sub<br />
+	Private Function sqroot(ByRef x As Single) As Double<br />
+	x = x ^ 0.5<br />
+	sqroot = x<br />
+	End Function<br />
+	Private Function sqroot1(ByVal y As Single) As Double<br />
+	y = y ^ 0.5<br />
+	sqroot1 = y<br />
+	End Function</strong></p>
+	<p class="auto-style1"><strong>Private Sub Button1_Click(sender As Object, e As 
+	EventArgs) Handles Button1.Click<br />
+	Dim u As Single<br />
+	u = 9<br />
+	MsgBox(3 * sqroot(u), , “ByRef”)<br />
+	MsgBox(“Value of u is ” &amp; u, , “ByRef”)</strong></p>
+	<p class="auto-style1"><strong>End Sub</strong></p>
+	<p class="auto-style1"><strong>Private Sub Button2_Click(sender As Object, e As 
+	EventArgs) Handles Button2.Click<br />
+	Dim u As Single<br />
+	u = 9<br />
+	MsgBox(3 * sqroot1(u), , “ByVal”)<br />
+	MsgBox(“Value of u is ” &amp; u, , “ByVal”)<br />
+	End Sub<br />
+	End Class</strong></p>
+	<p class="auto-style1"><strong class="auto-style1">The Output</strong></p>
+	<p class="auto-style1"><strong class="auto-style1">Case 1: Passing argument 
+	using ByRef</strong></p>
+	<p class="auto-style1">
+	<a class="auto-style1" href="Images/vb2013_figure17.3.jpg">
+	<img alt="vb2013_figure17.3" class="auto-style1" height="155" src="Images/vb2013_figure17.3.jpg" width="161" /></a></p>
+	<p class="auto-style2">&nbsp;<strong class="auto-style1">Figure 17.3</strong></p>
+	<p class="auto-style1">Notice that the value of u has been changed to 3</p>
+	<p class="auto-style1"><strong class="auto-style1">Case 2: Passing argument 
+	using ByVal</strong></p>
+	<p class="auto-style1">
+	<a class="auto-style1" href="Images/vb2013_figure17.4.jpg">
+	<img alt="vb2013_figure17.4" class="auto-style1" height="155" src="Images/vb2013_figure17.4.jpg" width="161" /></a></p>
+	<p class="auto-style2">&nbsp;<strong class="auto-style1">Figure 17.4</strong></p>
+	<p class="auto-style1">Notice that the value of u remains unchanged.</p>
+	<p class="auto-style1">&nbsp;</p>
+	<h2 class="auto-style2"><strong>&nbsp;</strong><a class="auto-style1" href="lesson16-sub-procedures.html"><strong>[Lesson 
+	16]</strong></a><strong>&nbsp;&lt;&lt;&nbsp;</strong><a class="auto-style1href=" href="index.html" Index.html"=""><strong>[Contents]&nbsp;</a>&gt;&gt;<a class="auto-style1" href="lesson18-the-math-functions.html">
+	</a></strong><strong>
+	<a class="auto-style1" href="lesson18-the-math-functions.html">[Lesson 18]</a></strong></h2>
+</div>
+
+</body>
+
+</html>

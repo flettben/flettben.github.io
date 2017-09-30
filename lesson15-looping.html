@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Start learning Visual Studio 2013
+
+
+</title>
+
+
+
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<ARTICLE class="post-4574 page type-page status-publish hentry" id="post-4574"><HEADER class="entry-header">
+<h1 class="auto-style1"><strong>Visual Studio 2013
+
+
+ Lesson 15: Looping</strong></h1>
+</HEADER>
+<div class="auto-style1">
+	<h2 class="auto-style2">
+	<a class="auto-style1" href="lesson14-making-decisions-using-select-case.html">
+	<strong>[Lesson 14]</strong></a><strong> &lt;&lt;
+	</strong><a class="auto-style1href=" href="index.html" Index.html"="">
+	<strong>[Contents]</strong></a><strong> &gt;&gt;
+	</strong><strong><a class="auto-style1" href="lesson16-sub-procedures.html">[Lesson 16]</a></strong></h2>
+	<div id="mycontent" class="auto-style1">
+		<div class="auto-style1">
+			We will often need to write code that does a job repeatedly until a 
+			certain condition is met, this process is &nbsp;called &nbsp;looping .&nbsp;Visual 
+			Basic 2013 allows a procedure to run repetitively as many times as 
+			long as the processor and memory could support. &nbsp;For example, we can 
+			design a program that adds a series of numbers until the sum exceeds 
+			a certain value, or a program that asks the user to enter data 
+			repeatedly until he or she enters the word ‘Finish’. In Visual Basic 
+			2013, there are three types of Loops, &nbsp;the
+			<strong class="auto-style1">For…..Next</strong> loop, the<strong class="auto-style1"> 
+			Do </strong>loop<strong class="auto-style1">&nbsp;</strong>and the
+			<strong class="auto-style1">While…..End While</strong> loop</div>
+		
+	<h2 class="auto-style1">15.1 For….Next Loop</h2>
+	<div id="mycontent0" class="auto-style1">
+		<div class="auto-style1">
+			The most common loop in Visual Studio 2013
+
+
+ is the For….Next loop. The 
+			structure of a For…Next loop is as shown below:<p class="auto-style1">
+			</p>
+			<p class="auto-style1"><strong class="auto-style1">For</strong> 
+			counter=startNumber<strong class="auto-style1"> to</strong> 
+			endNumber (<strong class="auto-style1">Step increment</strong>)</p>
+			<p class="auto-style1">One or more Visual Studio 2013
+
+
+ statements</p>
+			<p class="auto-style1"><strong class="auto-style1">Next</strong></p>
+			<p class="auto-style1">To exit a For…..Next Loop, you can place the
+			<strong class="auto-style1">Exit For</strong> statement within the 
+			loop; and it is normally used together with the If….Then statement. 
+			For its application, you can refer to example 15.1 d.</p>
+		</div>
+		<div class="auto-style1">
+			<br />
+	<p class="auto-style1"><strong class="auto-style1">Example 15.1 a</strong></p>
+	<p class="auto-style1"><strong>Dim counter as Integer</strong></p>
+	<p class="auto-style1"><strong>For counter=1 to 10<br />
+	ListBox1.Items.Add (counter)<br />
+	Next</strong><br />
+	* The program will enter number 1 to 10 into the list box.</p>
+	<p class="auto-style1"><strong class="auto-style1">Example 15.1b</strong></p>
+	<p class="auto-style1"><strong>Dim counter , sum As Integer</strong></p>
+	<p class="auto-style1"><strong>For counter=1 to 100 step 10<br />
+	sum+=counter<br />
+	ListBox1.Items.Add (sum)<br />
+	Next</strong></p>
+	<p class="auto-style1">* The program will calculate the sum of the numbers 
+	as follows:</p>
+	<p class="auto-style1">sum=0+10+20+30+40+……</p>
+	<p class="auto-style1"><strong class="auto-style1">Example 15.1c</strong></p>
+	<p class="auto-style1"><strong>Dim counter, sum As Integer</strong></p>
+	<p class="auto-style1"><strong>sum = 1000<br />
+	For counter = 100 To 5 Step -5<br />
+	sum – = counter<br />
+	ListBox1.Items.Add(sum)<br />
+	Next</strong><br />
+	*Notice that increment can be negative.</p>
+	<p class="auto-style1">The program will compute the<br />
+	subtraction as follow:<br />
+	1000-100-95-90-……….</p>
+	<p class="auto-style1"><strong class="auto-style1">Example 15.1d</strong></p>
+	<p class="auto-style1">Dim n as Integer</p>
+	<p class="auto-style1"><strong>For n=1 to 10<br />
+	If n&gt;6 then<br />
+	Exit For<br />
+	End If<br />
+	Else<br />
+	ListBox1.Items.Add ( n)<br />
+	Next<br />
+	End If<br />
+	Next</strong></p>
+	<p class="auto-style1">The process will stop when n is greater than 6.</p>
+	<h2 class="auto-style1">15.2 Do Loop</h2>
+	<p class="auto-style1">The Do Loop structures are</p>
+	<p class="auto-style1">a) Do While condition<br />
+	Block of one or more Visual Studio 2013
+
+
+ statements<br />
+	Loop</p>
+	<p class="auto-style1">b) Do<br />
+	Block of one or more Visual Studio 2013
+
+
+ statements<br />
+	Loop While condition</p>
+	<p class="auto-style1">c) Do Until condition<br />
+	Block of one or more Visual Basic 2012 statements<br />
+	Loop</p>
+	<p class="auto-style1">d) Do<br />
+	Block of one or more Visual Basic 2012 statements<br />
+	Loop Until condition</p>
+	<p class="auto-style1">* Exiting the Loop</p>
+	<p class="auto-style1">Sometime we need exit to exit a loop prematurely 
+	because a certain<br />
+	condition is fulfilled. The syntax to use is <strong class="auto-style1">
+	Exit Do</strong>. Lets examine the following examples:</p>
+	<p class="auto-style1"><strong class="auto-style1">Example 15.2(a)</strong></p>
+	<p class="auto-style1"><strong>Do while counter &lt;=1000</strong></p>
+	<p class="auto-style1"><strong>TextBox1.Text=counter<br />
+	counter +=1</strong></p>
+	<p class="auto-style1">Loop</p>
+	<p class="auto-style1">* The above example will keep on adding until counter 
+	&gt;1000.</p>
+	<p class="auto-style1">The above example can be rewritten as</p>
+	<p class="auto-style1"><strong>Do<br />
+	TextBox1.Text=counter<br />
+	counter+=1<br />
+	Loop until counter&gt;1000</strong></p>
+	<p class="auto-style1">&nbsp;</p>
+	<p class="auto-style1"><strong class="auto-style1">Example 15.2(b)</strong></p>
+	<p class="auto-style1">Private Sub Button1_Click(ByVal sender As 
+	System.Object, ByVal e As System.EventArgs) Handles Button1.Click</p>
+	<p class="auto-style1"><strong>Dim sum, n As Integer</strong></p>
+	<p class="auto-style1"><strong>ListBox1.Items.Add(“n” &amp; vbTab &amp; “Sum”)<br />
+	ListBox1.Items.Add(“———————-”)<br />
+	Do<br />
+	n += 1<br />
+	sum += n<br />
+	ListBox1.Items.Add(n &amp; vbTab &amp; sum)<br />
+	If n = 100 Then<br />
+	Exit Do<br />
+	End If<br />
+	Loop</strong></p>
+	<p class="auto-style1"><strong>End Sub</strong></p>
+	<p class="auto-style1">* The loop in the above example can be replaced by 
+	the following loop:</p>
+	<p class="auto-style1"><strong>Do Until n = 10<br />
+	n += 1<br />
+	sum += n<br />
+	ListBox1.Items.Add(n &amp; vbTab &amp; sum)</strong></p>
+	<p class="auto-style1">Loop</p>
+	<p class="auto-style1">The output is as shown in Figure 15.1</p>
+	<p class="auto-style1">
+	<a class="auto-style1" href="Images/vb2013_figure15.1.jpg">
+	<img alt="vb2013_figure15.1" class="auto-style1" height="300" src="Images/vb2013_figure15.1.jpg" width="300" /></a></p>
+	<p class="auto-style1"><strong class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	Figure 15.1</strong></p>
+	<h2 class="auto-style1">15.3 While….End While Loop</h2>
+	<p class="auto-style1">The structure of a While….End While Loop is very 
+	similar to the Do Loop. it takes the following form:</p>
+	<p class="auto-style1">While conditions</p>
+	<p class="auto-style1">Visual Studio 2013
+
+
+ statements</p>
+	<p class="auto-style1">End While</p>
+	<p class="auto-style1"><strong class="auto-style1">Example 15.3</strong></p>
+	<p class="auto-style1"><strong>Private Sub Button1_Click(sender As Object, e As 
+	EventArgs) Handles Button1.Click</strong><br />
+	<strong>Dim sum, n As Integer<br />
+	ListBox1.Items.Add(“n” &amp; vbTab &amp; “sum”)<br />
+	ListBox1.Items.Add(“———————-“)</strong></p>
+	<p class="auto-style1"><strong>While n &lt;&gt; 10</strong></p>
+	<p class="auto-style1"><strong>n += 1<br />
+	sum += n<br />
+	ListBox1.Items.Add(n &amp; vbTab &amp; sum)</strong></p>
+	<p class="auto-style1"><strong>End While</strong></p>
+	<p class="auto-style1"><strong>End Sub</strong></p>
+	<h2 class="auto-style2">
+	<a class="auto-style1" href="lesson14-making-decisions-using-select-case.html">
+	<strong>[Lesson 14]</strong></a><strong>&nbsp;&lt;&lt;&nbsp;</strong><a class="auto-style1href=" href="index.html" Index.html"=""><strong>[Contents]</strong></a><strong>&nbsp;&gt;&gt;
+	</strong><a class="auto-style1" href="lesson16-sub-procedures.html"><strong>[Lesson 16]</strong></a></h2>
+</div>
+
+</body>
+
+</html>

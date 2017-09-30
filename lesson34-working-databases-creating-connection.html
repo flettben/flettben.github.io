@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Start learning Visual Studio 2013
+
+
+</title>
+
+
+
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<ARTICLE class="post-5103 page type-page status-publish hentry" id="post-5103"><HEADER class="entry-header">
+<h1 class="auto-style1"><strong>Visual Studio 2013
+
+
+ Lesson 34: Working with 
+Databases-Creating Connection</strong></h1>
+</HEADER>
+<div class="auto-style1">
+	<h2 class="auto-style2">
+	<a class="auto-style1" href="lesson33-working-databases-introduction.html">
+	<strong>[Lesson 33] </strong></a><strong>&lt;&lt;
+	</strong><a class="auto-style1href=" href="index.html" Index.html"="">
+	<strong>[Contents] </strong></a><strong>&gt;&gt;
+	</strong>
+	<a class="auto-style1" href="lesson35-working-databases-browsing-editing.html">
+	<strong>[Lesson 35]</strong></a></h2>
+	<h2 class="auto-style1">34.1 Creating Connection to a Database using ADO.NET</h2>
+	<div id="mycontent" class="auto-style1">
+		<div class="auto-style1">
+			In Visual Studio 2013
+
+
+, we need to create connection to a database 
+			before we can access its data. Before we begin, let’s create a new 
+			database. Since we are using SQL Server 2012 as the database engine, 
+			we will use <strong class="auto-style1">Microsoft Studio Management 
+			Express</strong> to create a database with the mdf extension. We 
+			shall name this database file as test.mdf. After creating the 
+			database, build a table called Contacts and create two fields and 
+			name them ContactName and State respectively. Enter a few data in 
+			the table and click Save All to save the data. Now we are ready to 
+			connect to this new database.<p class="auto-style1"></p>
+			<p class="auto-style1">ADO.NET offers a number of connection objects 
+			such as <strong class="auto-style1">OleDbConnection</strong>,
+			<strong class="auto-style1">SqlConnection</strong> and more. 
+			OleDbConnection is used to access OLEDB data such as Microsoft 
+			Access whilst SqlCOnnection is used to access data provided by 
+			Microsoft SQL server. Since we will work with SQL database in our 
+			example, we will use the SqlConnection object. </p>
+		</div>
+			<p class="auto-style1">To initialize the variable to a new SqlConnection 
+	object, we use the following syntax:</p>
+	<p class="auto-style1"><strong class="auto-style1">Private MyCn As New 
+	SqlConnection</strong></p>
+	<div id="mycontent0" class="auto-style1">
+		<div class="auto-style1">
+			Having created the instance of the SqlConnecton object, the next 
+			step is to establish a connection to the data source using the
+			<strong class="auto-style1">SQL ConnectionString</strong> property. 
+			The syntax is:<p class="auto-style1"></p>
+			<p class="auto-style1"><strong class="auto-style1">
+			MyCn.ConnectionString</strong> = “<span class="auto-style5">Data 
+			Source=TOSHIBA-PC\SQL2012; AttachDbFilename=C:\Program 
+			Files\Microsoft SQL Server\MSSQL11.SQL2012\MSSQL\DATA\Test.mdf; ” &amp; 
+			_</span><br />
+			<span class="auto-style5">“User Instance=True;Integrated 
+			Security=SSPI</span>”* You need to change the reference to the SQL 
+			server (TOSHIBA-PC\SQL2012) as well as the path to database file
+			<em class="auto-style1">Test.mdf</em> .After establishing connection 
+			to the database, you can open the database using the following 
+			syntax:<strong class="auto-style1">MyCn.Open()</strong></p>
+		</div>
+		<div class="auto-style1">
+			<br />  	<h2 class="auto-style1">34.2 Populating Data in ADO.NET</h2>
+	<p class="auto-style1">Establishing connection to a database in Visual Basic 
+	2013 using SqlConnection alone will not present anything tangible things to 
+	the user to manipulate the data until we add more relevant objects and write 
+	relevant codes to the project.</p>
+	<p class="auto-style1">The next step is to create an instance of the<strong class="auto-style1"> 
+	SqlDataAdpater</strong> in our code so that we can populate the DataTable 
+	with data from the data source. Besides, you also need to create an instance 
+	of the <strong class="auto-style1">DataTable</strong>. Other than that, you 
+	should also create an instance of the <strong class="auto-style1">
+	SqlCommandBuilder</strong> which is used to manipulate data such as updating 
+	and deleting data in the data table and send the changes back to the data 
+	source. The statements are:</p>
+	<p class="auto-style1"><strong class="auto-style1">Private MyDatAdp As New 
+	SqlDataAdapter</strong><br />
+	<strong class="auto-style1">Private MyCmdBld As New SqlCommandBuilder</strong><br />
+	<strong class="auto-style1">Private MyDataTbl As New DataTable</strong></p>
+	<p class="auto-style1">Besides that, we need to declare a variable to keep 
+	track of the user’s current row within the data table. The statement is</p>
+	<p class="auto-style1"><strong class="auto-style1">Private MyRowPosition As 
+	Integer = 0</strong></p>
+	<p class="auto-style1">Having created the above of objects, you need to 
+	include the following statements in the Sub Form_Load event to start filling 
+	the DataTable with data from the data source. The statements are as follows:</p>
+	<p class="auto-style1"><strong class="auto-style1">MyDatAdp = New 
+	SqlDataAdapter(“Select* from Contacts”, MyCn)</strong><br />
+	<strong class="auto-style1">MyCmdBld = New SqlCommandBuilder(MyDatAdp)</strong><br />
+	<strong class="auto-style1">MyDatAdp.Fill(MyDataTbl)</strong></p>
+	<p class="auto-style1">After filling up the DataTable , we need to write 
+	code to access the data. To access data in the DataTable means that we need 
+	to access the rows in the table. We can achieve this by using the DataRow 
+	object. For example, we can write the following to access the first row of 
+	the table and present the data via two text boxes with the name txtName and 
+	txtState respectively:</p>
+	<p class="auto-style1"><strong>Dim MyDataRow As DataRow = MyDataTbl.Rows(0)<br />
+	Dim strName As String<br />
+	Dim strState As String<br />
+	strName = MyDataRow(“ContactName”)<br />
+	strState = MyDataRow(“State”)<br />
+	txtName.Text = strName.ToString<br />
+	txtState.Text = strState.ToStringMe.showRecords()</strong></p>
+	<p class="auto-style1">* The two fields being referenced here are 
+	ContactName and State. Note Index 0 means first row.</p>
+	<p class="auto-style1">showRecords() is a sub procedure created to show data 
+	in the text boxes. The code is as follows:</p>
+	<p class="auto-style1"><strong>Private Sub showRecords()If MyDataTbl.Rows.Count = 0 
+	Then<br />
+	txtName.Text = “”<br />
+	txtState.Text = “”<br />
+	Exit Sub<br />
+	End IftxtName.Text = MyDataTbl.Rows(MyRowPosition)(“ContactName”).ToString<br />
+	txtState.Text = MyDataTbl.Rows(MyRowPosition)(“State”).ToString</strong></p>
+	<p class="auto-style1"><strong>End Sub</strong></p>
+	<p class="auto-style1"><strong class="auto-style1">The Code</strong></p>
+	<p class="auto-style1"><strong>Public Class Form1</strong></p>
+	<p class="auto-style1"><strong>Private MyDatAdp As New SqlDataAdapter<br />
+	Private MyCmdBld As New SqlCommandBuilder<br />
+	Private MyDataTbl As New DataTable<br />
+	Private MyCn As New SqlConnection<br />
+	Private MyRowPosition As Integer = 0</strong></p>
+	<p class="auto-style1"><strong>Private Sub Form1_Load(sender As Object, e As 
+	EventArgs) Handles MyBase.Load</strong></p>
+	<p class="auto-style1"><strong>MyCn.ConnectionString = “</strong><span class="auto-style5"><strong>Data 
+	Source=TOSHIBA-PC\SQL2012; AttachDbFilename=C:\Program Files\Microsoft SQL 
+	Server\MSSQL11.SQL2012\MSSQL\DATA\Test.mdf; ” &amp; _</strong></span><strong><br />
+	</strong>
+	<span class="auto-style5"><strong>“User Instance=True;Integrated Security=SSPI</strong></span>”<strong><br />
+	MyCn.Open()</strong></p>
+	<p class="auto-style1"><strong>MyDatAdp = New SqlDataAdapter(“Select* from 
+	Contacts”, MyCn)<br />
+	MyCmdBld = New SqlCommandBuilder(MyDatAdp)<br />
+	MyDatAdp.Fill(MyDataTbl)</strong></p>
+	<p class="auto-style1"><strong>Dim MyDataRow As DataRow = MyDataTbl.Rows(0)<br />
+	Dim strName As String<br />
+	Dim strState As String<br />
+	strName = MyDataRow(“ContactName”)<br />
+	strState = MyDataRow(“State”)<br />
+	TxtName.Text = strName.ToString<br />
+	TxtState.Text = strState.ToString<br />
+	Me.showRecords()</strong></p>
+	<p class="auto-style1"><strong>End Sub</strong></p>
+	<p class="auto-style1"><strong>Private Sub showRecords()</strong></p>
+	<p class="auto-style1"><strong>If MyDataTbl.Rows.Count = 0 Then<br />
+	txtName.Text = “”<br />
+	txtState.Text = “”<br />
+	Exit Sub<br />
+	End If</strong></p>
+	<p class="auto-style1"><strong>txtName.Text = 
+	MyDataTbl.Rows(MyRowPosition)(“ContactName”).ToString<br />
+	TxtState.Text = MyDataTbl.Rows(MyRowPosition)(“State”).ToString</strong></p>
+	<p class="auto-style1"><strong>End Sub</strong></p>
+	<p class="auto-style1"><strong>End Class</strong></p>
+	<p class="auto-style1">The output interface</p>
+	<p class="auto-style2">
+	<a class="auto-style1" href="Images/vb2013_figure34.1.jpg">
+	<img alt="vb2013_figure34.1" class="auto-style1" height="300" src="Images/vb2013_figure34.1.jpg" width="300" /></a><strong class="auto-style1">Figure 
+	34.1</strong></p>
+	<p class="auto-style6">We shall discuss how to navigate the database and 
+	manipulate data in &nbsp;next lesson.</p>
+	<h2 class="auto-style2">
+	<a class="auto-style1" href="lesson33-working-databases-introduction.html">
+	<strong>[Lesson 33]&nbsp;</strong></a><strong>&lt;&lt;&nbsp;</strong><a class="auto-style1href=" href="index.html" Index.html"=""><strong>[Contents]&nbsp;</strong></a><strong>&gt;&gt;&nbsp;</strong><a class="auto-style1" href="lesson3-adding-controls-to-the-form.html"><strong>[Lesson 
+	35]</strong></a></h2>
+</div>
+
+</body>
+
+</html>

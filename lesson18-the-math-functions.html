@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Start learning Visual Studio 2013
+
+
+</title>
+
+
+
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<ARTICLE class="post-4680 page type-page status-publish hentry" id="post-4680"><HEADER class="entry-header">
+<h1 class="auto-style1"><strong>Visual Studio 2013
+
+
+ Lesson 18: The Math Functions</strong></h1>
+</HEADER>
+<div class="auto-style1">
+	<h2 class="auto-style2">
+	<a class="auto-style1" href="lesson17-function-part-1-user-defined-function.html">
+	<strong>[Lesson 17]</strong></a><strong> &lt;&lt;
+	</strong><a class="auto-style1href=" href="index.html" Index.html"="">
+	<strong>[Contents]</strong></a><strong> &gt;&gt;</strong><a class="auto-style1" href="lesson19-formatting-functions.html"><strong>[Lesson 
+	19]</strong></a></h2>
+	<div id="mycontent" class="auto-style1">
+		<div class="auto-style1">
+			In lesson 11, we have learned how to write codes in Visual Basic 
+			2013 that perform mathematical operations using standard 
+			mathematical operators. However, for more complex mathematical 
+			calculations, we need to use the built-in math functions in Visual 
+			Basic 2013. There are numerous built-in mathematical functions in 
+			Visual Studio 2013
+
+
+ which we shall introduce them one by one in this 
+			lesson.<p class="auto-style1"></p>
+			<h2 class="auto-style1">18.1 The Abs function</h2>
+			<p class="auto-style1">The Abs function returns the absolute value 
+			of a given number.<br />
+			The syntax is</p>
+			<p class="auto-style1"><strong class="auto-style1">Math. Abs 
+			(number)</strong></p>
+			<p class="auto-style1">* The Math keyword here indicates that the 
+			Abs function belong to the Math class. However, not all mathematical 
+			functions belong to the Math class.</p>
+		</div>
+		<div class="auto-style1">
+	<br />
+			<!-- vb2013 lesson18 large rect --><br />
+   	<p class="auto-style1"><strong class="auto-style1">Example 18.1</strong></p>
+	<p class="auto-style1">In this example, we shall add a text box control for 
+	the user to input his or her number and a label control to display the 
+	absolute value of the number. We need to use the Val function to convert 
+	text &nbsp;to numeric value. Rename the textbox as TxtNum and the label as 
+	LblAbs.</p>
+	<p class="auto-style1"><strong class="auto-style1">The Code&nbsp;</strong></p>
+	<p class="auto-style1"><strong>Private Sub BtnComp_Click(sender As Object, e As 
+	EventArgs) Handles BtnComp.Click</strong></p>
+	<p class="auto-style1"><strong>LblAbs.Text = Math.Abs(Val(TxtNum.Text))</strong></p>
+	<p class="auto-style1"><strong>End Sub</strong></p>
+	<p class="auto-style1">The output</p>
+	<div id="mycontent0" class="auto-style1">
+		<div class="auto-style1">
+			<a class="auto-style1" href="Images/vb2013_figure18.1.jpg">
+			<img alt="vb2013_figure18.1" class="auto-style1" height="300" src="Images/vb2013_figure18.1.jpg" width="300" /></a><p class="auto-style1">
+			</p>
+			<p class="auto-style2">&nbsp;<strong class="auto-style1">Figure 18.1</strong></p>
+		</div>
+		<div class="auto-style1">
+			<br />
+			<!-- vb2013 lesson18 large rect --><br />
+    	<h2 class="auto-style1"><strong class="auto-style1">18.2 The Exp function</strong></h2>
+	<p class="auto-style1">The Exp function returns &nbsp;the exponential value of a 
+	given number. For example, Exp(1)=e=2.71828182</p>
+	<p class="auto-style1">The syntax is</p>
+	<p class="auto-style1"><strong class="auto-style1">Math.Exp (number)</strong></p>
+	<p class="auto-style1"><strong class="auto-style1">&nbsp;Example 18.2</strong></p>
+	<p class="auto-style1">In this example, we shall add a text box control for 
+	the user to input his or her number and a label control to display the 
+	exponential value of the number. Rename the textbox as TxtNum and the label 
+	as LblAbs.</p>
+	<p class="auto-style1"><strong class="auto-style1">The Code</strong></p>
+	<p class="auto-style1"><strong>Private Sub BtnComp_Click(sender As Object, e As 
+	EventArgs) Handles BtnComp.Click</strong></p>
+	<p class="auto-style1"><strong>LblExp.Text = Math.Exp(Val(TxtNum.Text))</strong></p>
+	<p class="auto-style1"><strong>End Sub</strong></p>
+	<p class="auto-style1">The Output</p>
+	<p class="auto-style1">
+	<a class="auto-style1" href="Images/vb2013_figure18.2.jpg">
+	<img alt="vb2013_figure18.2" class="auto-style1" height="300" src="Images/vb2013_figure18.2.jpg" width="300" /></a></p>
+	<p class="auto-style2">&nbsp;<strong class="auto-style1">Figure 18.2&nbsp;</strong></p>
+	<h2 class="auto-style5"><strong class="auto-style1">18.3 The Fix Function</strong></h2>
+	<p class="auto-style5">The Fix function truncates the decimal part of a 
+	positive number and returns the largest integer smaller than the number. 
+	However, when the number is negative, it returns the smallest integer larger 
+	than the number. Fix does not belong to the Math class therefore we do not 
+	use the Math keyword.</p>
+	<p class="auto-style5"><strong class="auto-style1">Example 18.3</strong></p>
+	<p class="auto-style1"><strong>Private Sub BtnComp_Click(sender As Object, e As 
+	EventArgs) Handles BtnComp.Click</strong></p>
+	<p class="auto-style1"><strong>LblFixNum1.Text = Fix(Val(TxtPosNum.Text))<br />
+	LblFixNum2.Text = Fix(Val(TxtNegNum.Text))</strong></p>
+	<p class="auto-style1"><strong>End Sub</strong></p>
+	<p class="auto-style1">The Output</p>
+	<p class="auto-style1">
+	<a class="auto-style1" href="Images/vb2013_figure18.3.jpg">
+	<img alt="vb2013_figure18.3" class="auto-style1" height="300" src="Images/vb2013_figure18.3.jpg" width="311" /></a></p>
+	<p class="auto-style2">&nbsp;<strong class="auto-style1">Figure 18.3</strong></p>
+	<h2 class="auto-style1"><strong class="auto-style1">18.4 The Int Function</strong></h2>
+	<p class="auto-style1">The Int is a function that converts a number into an 
+	integer by truncating its decimal part and the resulting integer is the 
+	largest integer that is smaller than he number. For example</p>
+	<p class="auto-style1">Int(2.4)=2, Int(6.9)=6 , Int(-5.7)=-6, 
+	Int(-99.8)=-100</p>
+	<h2 class="auto-style1"><strong class="auto-style1">18.5 The Log Function</strong></h2>
+	<p class="auto-style1">The Log function is the function that returns the 
+	natural logarithm of a number.</p>
+	<p class="auto-style1"><strong class="auto-style1">Example 18.4</strong></p>
+	<p class="auto-style1"><strong>Private Sub BtnComp_Click(sender As Object, e As 
+	EventArgs) Handles BtnComp.Click</strong></p>
+	<p class="auto-style1"><strong>LblLog.Text = Math.Log(Val(TxtNum.Text))</strong></p>
+	<p class="auto-style1"><strong>End Sub</strong></p>
+	<p class="auto-style1">The Output</p>
+	<p class="auto-style1">
+	<a class="auto-style1" href="Images/vb2013_figure18.4.jpg">
+	<img alt="vb2013_figure18.4" class="auto-style1" height="300" src="Images/vb2013_figure18.4.jpg" width="311" /></a></p>
+	<p class="auto-style1">&nbsp;</p>
+	<p class="auto-style2"><strong class="auto-style1">Figure 18.4</strong></p>
+	<p class="auto-style1"><strong class="auto-style6">18.6 The Rnd( ) Function</strong></p>
+	<p class="auto-style1">Rnd is a very useful function in Visual Studio 2013
+
+
+ . 
+	We use the Rnd funciton to write code that involves chance and probability. 
+	The Rnd function returns a random value between 0 and 1. Random numbers in 
+	their original form are not very useful in programming until we convert them 
+	to integers. For example, if we need to obtain a random output of 6 integers 
+	ranging from 1 to 6, which makes the program behave like a virtual dice, we 
+	need to convert the random numbers to integers using the formula 
+	Int(Rnd*6)+1.</p>
+	<p class="auto-style1"><strong class="auto-style1">Example 18.5</strong></p>
+	<p class="auto-style1"><strong>Private Sub BtnGen_Click(sender As Object, e As 
+	EventArgs) Handles BtnGen.Click</strong></p>
+	<p class="auto-style1"><strong>LblRnd.Text = Int(VBMath.Rnd() * 6) + 1</strong></p>
+	<p class="auto-style1"><strong>End Sub</strong></p>
+	<p class="auto-style1">Notice that the Rnd() function &nbsp;belongs to the VBMath 
+	class in Visual Studio 2013
+
+
+. This is different from Visual Basic 2012, where 
+	you can omit the VBMath keyword.</p>
+	<p class="auto-style1">In this example, Int(Rnd*6) will generate a random 
+	integer between 0 and 5 because the function Int truncates the decimal part 
+	of the random number and returns an integer. After adding 1, you will get a 
+	random number between 1 and 6 every time you click the command button. For 
+	example, let say the random number generated is 0.98, after multiplying it 
+	by 6, it becomes 5.88, and using the integer function Int(5.88) will convert 
+	the number to 5; and after adding 1 you will get 6.</p>
+	<p class="auto-style1">The Output</p>
+	<p class="auto-style1">
+	<a class="auto-style1" href="Images/vb2013_figure18.5.jpg">
+	<img alt="vb2013_figure18.5" class="auto-style1" height="300" src="Images/vb2013_figure18.5.jpg" width="300" /></a></p>
+	<p class="auto-style1">&nbsp;</p>
+	<p class="auto-style2"><strong class="auto-style1">Figure 18.5</strong></p>
+	<p class="auto-style1">*We shall learn &nbsp;how to create an animated dice using 
+	a Timer control in later lesson</p>
+	<h2 class="auto-style1"><strong class="auto-style1">18.7 The Round Function</strong></h2>
+	<p class="auto-style1">The Round function is the function that rounds up a 
+	number to a certain number of decimal places. The Format is Round (n, m) 
+	which means to round a number n to m decimal places. For example, Math.Round 
+	(7.2567, 2) =7.26</p>
+	<p class="auto-style1"><strong class="auto-style1">Example 18.6</strong></p>
+	<p class="auto-style1"><strong>Private Sub 
+	Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click</strong></p>
+	<p class="auto-style1"><strong>Label1.Text = Math.Round(Val(TextBox1.Text), 2)</strong></p>
+	<p class="auto-style1"><strong>End Sub</strong></p>
+	<p class="auto-style1">The Output</p>
+	<p class="auto-style1">
+	<a class="auto-style1" href="Images/vb2013_figure18.6.jpg">
+	<img alt="vb2013_figure18.6" class="auto-style1" height="300" src="Images/vb2013_figure18.6.jpg" width="300" /></a></p>
+	<p class="auto-style2">&nbsp;<strong class="auto-style1">Figure 18.6</strong></p>
+	<h2 class="auto-style2">
+	<a class="auto-style1" href="lesson17-function-part-1-user-defined-function.html">
+	<strong>[Lesson 17]</strong></a><strong>&nbsp;&lt;&lt;&nbsp;</strong><a class="auto-style1href=" href="index.html" Index.html"=""><strong>[Contents]</strong></a><strong>&nbsp;&gt;&gt;</strong><a class="auto-style1" href="lesson19-formatting-functions.html"><strong>[Lesson 
+	19]</strong></a></h2>
+</div>
+
+</body>
+
+</html>
